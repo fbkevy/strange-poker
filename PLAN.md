@@ -1,4 +1,6 @@
-# Poker Fund — Web App Plan
+# Strange Poker (SP) — Web App Plan
+
+> "Strange Poker" / **SP** is the name of this system.
 
 ## Context
 
