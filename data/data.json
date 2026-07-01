@@ -1,0 +1,5579 @@
+{
+  "players": [
+    "Dec",
+    "Pauli",
+    "Kev",
+    "Caoimh",
+    "Dave",
+    "Fran"
+  ],
+  "config": {
+    "chipMin": 6000,
+    "chipMax": 9000,
+    "winDecrement": 500,
+    "secondDecrement": 250,
+    "lossIncrement": 500,
+    "lossStreakForIncrement": 3,
+    "mainEntry": 20,
+    "afterEntry": 5,
+    "secondPlaceShare": 0.35,
+    "straightFlushBonus": 5,
+    "royalFlushBonus": 10
+  },
+  "events": [
+    {
+      "id": 2,
+      "srcRow": 2,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "7/4 (settle)",
+      "type": "settle",
+      "note": "<-- Total buy-ins",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 20.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 3,
+      "srcRow": 3,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "9/6 (settle)",
+      "type": "settle",
+      "note": "",
+      "deltas": {
+        "Dec": -60.0,
+        "Pauli": 60.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 4,
+      "srcRow": 4,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "10/3 (settle)",
+      "type": "settle",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": -130.0,
+        "Caoimh": 0.0,
+        "Dave": 130.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 5,
+      "srcRow": 5,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "11/7 (settle)",
+      "type": "settle",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 150.0,
+        "Kev": 0.0,
+        "Caoimh": -50.0,
+        "Dave": -100.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 6,
+      "srcRow": 6,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "01/17 (settle)",
+      "type": "settle",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 140.0,
+        "Kev": -140.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 7,
+      "srcRow": 7,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "03/06 (settle)",
+      "type": "settle",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": -155.0,
+        "Caoimh": 0.0,
+        "Dave": 155.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 8,
+      "srcRow": 8,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "06/05 (settle)",
+      "type": "settle",
+      "note": "",
+      "deltas": {
+        "Dec": -10.0,
+        "Pauli": 0.0,
+        "Kev": 60.0,
+        "Caoimh": -50.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 9,
+      "srcRow": 9,
+      "block": "ledger",
+      "date": "2022-10-22",
+      "rawLabel": "10/22/2022 (settle)",
+      "type": "settle",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": -150.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 150.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 10,
+      "srcRow": 10,
+      "block": "ledger",
+      "date": "2024-07-16",
+      "rawLabel": "07/16/2024 (settle)",
+      "type": "settle",
+      "note": "",
+      "deltas": {
+        "Dec": -210.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 210.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 11,
+      "srcRow": 11,
+      "block": "ledger",
+      "date": "2025-05-06",
+      "rawLabel": "5/6/2025 (settle)",
+      "type": "settle",
+      "note": "",
+      "deltas": {
+        "Dec": -425.0,
+        "Pauli": 425.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 13,
+      "srcRow": 13,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "bet",
+      "type": "bet",
+      "note": "",
+      "deltas": {
+        "Dec": 10.0,
+        "Pauli": 0.0,
+        "Kev": -10.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 14,
+      "srcRow": 14,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "bet",
+      "type": "bet",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 10.0,
+        "Kev": -10.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 15,
+      "srcRow": 15,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "bet",
+      "type": "bet",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 10.0,
+        "Kev": 0.0,
+        "Caoimh": -10.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 16,
+      "srcRow": 16,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "bet",
+      "type": "bet",
+      "note": "",
+      "deltas": {
+        "Dec": -10.0,
+        "Pauli": 10.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 17,
+      "srcRow": 17,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "bet",
+      "type": "bet",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 10.0,
+        "Caoimh": -10.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 18,
+      "srcRow": 18,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "bet",
+      "type": "bet",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 50.0,
+        "Kev": 0.0,
+        "Caoimh": -50.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 19,
+      "srcRow": 19,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "Straight Flush",
+      "type": "bonus",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 15.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 20,
+      "srcRow": 20,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "Straight Flush",
+      "type": "bonus",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 15.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 21,
+      "srcRow": 21,
+      "block": "ledger",
+      "date": "2021-07-13",
+      "rawLabel": "7/13/2021 (eurobet)",
+      "type": "bet",
+      "note": "",
+      "deltas": {
+        "Dec": 80.0,
+        "Pauli": -20.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 22,
+      "srcRow": 22,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "Socceraid Donation",
+      "type": "misc",
+      "note": "",
+      "deltas": {
+        "Dec": -40.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 40.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 23,
+      "srcRow": 23,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "bet",
+      "type": "bet",
+      "note": "",
+      "deltas": {
+        "Dec": -10.0,
+        "Pauli": 0.0,
+        "Kev": 10.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 24,
+      "srcRow": 24,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "bet",
+      "type": "bet",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 10.0,
+        "Kev": -10.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 25,
+      "srcRow": 25,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "bet",
+      "type": "bet",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": -5.0,
+        "Kev": 0.0,
+        "Caoimh": 5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 26,
+      "srcRow": 26,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "Euro 24 Sweepstake",
+      "type": "misc",
+      "note": "",
+      "deltas": {
+        "Dec": -10.0,
+        "Pauli": -10.0,
+        "Kev": -10.0,
+        "Caoimh": -10.0,
+        "Dave": 50.0,
+        "Fran": -10.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 27,
+      "srcRow": 27,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "Straight Flush",
+      "type": "bonus",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 25.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 28,
+      "srcRow": 28,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "Rome: Fran pays Kevin",
+      "type": "misc",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 153.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": -153.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 29,
+      "srcRow": 29,
+      "block": "ledger",
+      "date": null,
+      "rawLabel": "Rome: Cao pays Kevin",
+      "type": "misc",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": -68.0,
+        "Caoimh": 68.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 43,
+      "srcRow": 43,
+      "block": "game",
+      "date": null,
+      "rawLabel": "6/20 (game)",
+      "type": "after",
+      "note": "max 9,000",
+      "deltas": {
+        "Dec": 40.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 44,
+      "srcRow": 44,
+      "block": "game",
+      "date": null,
+      "rawLabel": "7/18 (game)",
+      "type": "after",
+      "note": "Unique Royal flush to one person winning the hand, everyone at table gives 10 each (even if not in hand)",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": 60.0,
+        "Caoimh": 0.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 45,
+      "srcRow": 45,
+      "block": "game",
+      "date": null,
+      "rawLabel": "8/15 (game)",
+      "type": "after",
+      "note": "No second place for €5 game",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 0.0,
+        "Kev": 80.0,
+        "Caoimh": -20.0,
+        "Dave": -40.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 46,
+      "srcRow": 46,
+      "block": "game",
+      "date": null,
+      "rawLabel": "8/29 (game)",
+      "type": "after",
+      "note": "First 2-7 of the session wins a bonus 500 from every other player, they must show. hold cards only. 1000 for 5e gamr",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": 60.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 47,
+      "srcRow": 47,
+      "block": "game",
+      "date": null,
+      "rawLabel": "9/5 (game)",
+      "type": "after",
+      "note": "Straight flush with the winning hand = 5 yoyo",
+      "deltas": {
+        "Dec": 100.0,
+        "Pauli": -20.0,
+        "Kev": -40.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 48,
+      "srcRow": 48,
+      "block": "game",
+      "date": null,
+      "rawLabel": "9/19 (game) #1",
+      "type": "main",
+      "note": "when playing with 6. 2nd place gets 35% , 5e game just money back for 2nd",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": 80.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 6500.0,
+        "Pauli": 6500.0,
+        "Kev": 4000.0,
+        "Caoimh": 6500.0,
+        "Dave": 8500.0,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 49,
+      "srcRow": 49,
+      "block": "game",
+      "date": null,
+      "rawLabel": "9/19 (game) #2",
+      "type": "main",
+      "note": "when achieving 2nd: decrement 250",
+      "deltas": {
+        "Dec": 40.0,
+        "Pauli": -10.0,
+        "Kev": -10.0,
+        "Caoimh": -10.0,
+        "Dave": -10.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 7000.0,
+        "Kev": 4000.0,
+        "Caoimh": 6500.0,
+        "Dave": 8500.0,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 50,
+      "srcRow": 50,
+      "block": "game",
+      "date": null,
+      "rawLabel": "10/3 (game)",
+      "type": "main",
+      "note": "Or splitting decrements split (500",
+      "deltas": {
+        "Dec": -40.0,
+        "Pauli": -20.0,
+        "Kev": -40.0,
+        "Caoimh": 120.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": 6500.0,
+        "Kev": 4000.0,
+        "Caoimh": 6500.0,
+        "Dave": 8000.0,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 51,
+      "srcRow": 51,
+      "block": "game",
+      "date": null,
+      "rawLabel": "10/17 (game)",
+      "type": "main",
+      "note": "2-7 does count as a split.",
+      "deltas": {
+        "Dec": 100.0,
+        "Pauli": -20.0,
+        "Kev": -40.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": 6500.0,
+        "Kev": 4000.0,
+        "Caoimh": 6000.0,
+        "Dave": 9000.0,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 1.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": null
+      }
+    },
+    {
+      "id": 52,
+      "srcRow": 52,
+      "block": "game",
+      "date": null,
+      "rawLabel": "10/24 (game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -40.0,
+        "Pauli": -20.0,
+        "Kev": -40.0,
+        "Caoimh": -20.0,
+        "Dave": 140.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5000.0,
+        "Pauli": 7000.0,
+        "Kev": 4500.0,
+        "Caoimh": 6000.0,
+        "Dave": 8000.0,
+        "Fran": 8000.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 0.0,
+        "Kev": 1.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": null
+      }
+    },
+    {
+      "id": 53,
+      "srcRow": 53,
+      "block": "game",
+      "date": null,
+      "rawLabel": "11/7 (game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -60.0,
+        "Kev": -20.0,
+        "Caoimh": 120.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 5000.0,
+        "Pauli": 7000.0,
+        "Kev": 4500.0,
+        "Caoimh": 6000.0,
+        "Dave": 7500.0,
+        "Fran": 7500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 2.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": null
+      }
+    },
+    {
+      "id": 54,
+      "srcRow": 54,
+      "block": "game",
+      "date": null,
+      "rawLabel": "11/21 (game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": 80.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": 7500.0,
+        "Kev": 5000.0,
+        "Caoimh": 5500.0,
+        "Dave": 7500.0,
+        "Fran": 7500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": null
+      }
+    },
+    {
+      "id": 55,
+      "srcRow": 55,
+      "block": "game",
+      "date": null,
+      "rawLabel": "11/21 (game) #2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 0.0,
+        "Kev": -5.0,
+        "Caoimh": 15.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 56,
+      "srcRow": 56,
+      "block": "game",
+      "date": null,
+      "rawLabel": "12/5 (game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 0.0,
+        "Kev": 100.0,
+        "Caoimh": -40.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": 7500.0,
+        "Kev": 4500.0,
+        "Caoimh": 5500.0,
+        "Dave": 7500.0,
+        "Fran": 7500.0
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 57,
+      "srcRow": 57,
+      "block": "game",
+      "date": null,
+      "rawLabel": "12/19(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 0.0,
+        "Kev": 120.0,
+        "Caoimh": -40.0,
+        "Dave": -40.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": null,
+        "Kev": 4000.0,
+        "Caoimh": 5500.0,
+        "Dave": 7500.0,
+        "Fran": 8000.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 1.0,
+        "Dave": 1.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 58,
+      "srcRow": 58,
+      "block": "game",
+      "date": null,
+      "rawLabel": "01/02(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 120.0,
+        "Pauli": -20.0,
+        "Kev": -40.0,
+        "Caoimh": 0.0,
+        "Dave": -40.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 7500.0,
+        "Kev": 3500.0,
+        "Caoimh": 6000.0,
+        "Dave": 8000.0,
+        "Fran": 8000.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 0.0,
+        "Kev": 1.0,
+        "Caoimh": 0.0,
+        "Dave": 1.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 59,
+      "srcRow": 59,
+      "block": "game",
+      "date": null,
+      "rawLabel": "01/16(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": -40.0,
+        "Kev": -20.0,
+        "Caoimh": 120.0,
+        "Dave": -40.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": 8000.0,
+        "Kev": 3500.0,
+        "Caoimh": 6000.0,
+        "Dave": 8000.0,
+        "Fran": 8000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 1.0,
+        "Kev": 0.0,
+        "Caoimh": 1.0,
+        "Dave": 1.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 60,
+      "srcRow": 60,
+      "block": "game",
+      "date": null,
+      "rawLabel": "01/31(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -40.0,
+        "Pauli": 0.0,
+        "Kev": 80.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": null,
+        "Kev": 3500.0,
+        "Caoimh": 5500.0,
+        "Dave": 8000.0,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 0.0,
+        "Kev": 1.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 61,
+      "srcRow": 61,
+      "block": "game",
+      "date": null,
+      "rawLabel": "02/06(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 100.0,
+        "Pauli": 0.0,
+        "Kev": -20.0,
+        "Caoimh": -40.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": null,
+        "Kev": 3000.0,
+        "Caoimh": 5500.0,
+        "Dave": 8500.0,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 1.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 62,
+      "srcRow": 62,
+      "block": "game",
+      "date": "2021-02-20",
+      "rawLabel": "2/20/2021(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": 100.0,
+        "Caoimh": -40.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 5000.0,
+        "Pauli": 7998.0,
+        "Kev": 3000.0,
+        "Caoimh": 5500.0,
+        "Dave": 8500.0,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 2.0,
+        "Caoimh": 1.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 63,
+      "srcRow": 63,
+      "block": "game",
+      "date": "2021-03-06",
+      "rawLabel": "03/06/21(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -60.0,
+        "Pauli": 0.0,
+        "Kev": -60.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": 160.0
+      },
+      "chips": {
+        "Dec": 5000.0,
+        "Pauli": 7997.5,
+        "Kev": 3000.0,
+        "Caoimh": 6000.0,
+        "Dave": 8500.0,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": 2.0,
+        "Pauli": 0.0,
+        "Kev": 2.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 64,
+      "srcRow": 64,
+      "block": "game",
+      "date": "2021-03-20",
+      "rawLabel": "03/20/21(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 0.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": 80.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": null,
+        "Kev": 3500.0,
+        "Caoimh": 6000.0,
+        "Dave": 9000.0,
+        "Fran": 8000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 1.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 65,
+      "srcRow": 65,
+      "block": "game",
+      "date": "2021-04-03",
+      "rawLabel": "04/03/21(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 80.0,
+        "Pauli": 0.0,
+        "Kev": -40.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": null,
+        "Kev": 3500.0,
+        "Caoimh": 6000.0,
+        "Dave": null,
+        "Fran": 8000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 1.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 66,
+      "srcRow": 66,
+      "block": "game",
+      "date": "2021-04-17",
+      "rawLabel": "04/17/21(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 120.0,
+        "Pauli": -20.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": -40.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5000.0,
+        "Pauli": 8500.0,
+        "Kev": 4000.0,
+        "Caoimh": 6500.0,
+        "Dave": 8000.0,
+        "Fran": 8000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 1.0,
+        "Caoimh": 0.0,
+        "Dave": 1.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 67,
+      "srcRow": 67,
+      "block": "game",
+      "date": "2021-05-01",
+      "rawLabel": "05/01/21(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 140.0,
+        "Kev": -20.0,
+        "Caoimh": -40.0,
+        "Dave": -40.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 4500.0,
+        "Pauli": 8500.0,
+        "Kev": 4000.0,
+        "Caoimh": 6500.0,
+        "Dave": 8000.0,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 1.0,
+        "Caoimh": 1.0,
+        "Dave": 1.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 68,
+      "srcRow": 68,
+      "block": "game",
+      "date": "2021-05-15",
+      "rawLabel": "05/15/21(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 120.0,
+        "Pauli": 0.0,
+        "Kev": -60.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 4500.0,
+        "Pauli": 8000.0,
+        "Kev": 4500.0,
+        "Caoimh": 7000.0,
+        "Dave": 8500.0,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 2.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 69,
+      "srcRow": 69,
+      "block": "game",
+      "date": "2021-05-15",
+      "rawLabel": "05/15/21 (game) #2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 25.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 70,
+      "srcRow": 70,
+      "block": "game",
+      "date": "2021-05-29",
+      "rawLabel": "05/29/21(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 0.0,
+        "Kev": -40.0,
+        "Caoimh": 100.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 4000.0,
+        "Pauli": null,
+        "Kev": 5000.0,
+        "Caoimh": 7000.0,
+        "Dave": 8500.0,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 2.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 71,
+      "srcRow": 71,
+      "block": "game",
+      "date": "2021-06-05",
+      "rawLabel": "06/05/21(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -40.0,
+        "Pauli": -20.0,
+        "Kev": -20.0,
+        "Caoimh": 100.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 4000.0,
+        "Pauli": 8000.0,
+        "Kev": 5000.0,
+        "Caoimh": 6500.0,
+        "Dave": null,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 72,
+      "srcRow": 72,
+      "block": "game",
+      "date": "2021-06-05",
+      "rawLabel": "6/05/2021(game)#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 20.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 73,
+      "srcRow": 73,
+      "block": "game",
+      "date": "2021-06-19",
+      "rawLabel": "06/19/2021(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -40.0,
+        "Kev": 140.0,
+        "Caoimh": -40.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 4500.0,
+        "Pauli": 8000.0,
+        "Kev": 5500.0,
+        "Caoimh": 6000.0,
+        "Dave": 8500.0,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 1.0,
+        "Kev": 1.0,
+        "Caoimh": 1.0,
+        "Dave": 1.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 74,
+      "srcRow": 74,
+      "block": "game",
+      "date": "2021-07-03",
+      "rawLabel": "07/03/2021(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 0.0,
+        "Kev": -20.0,
+        "Caoimh": -40.0,
+        "Dave": -20.0,
+        "Fran": 100.0
+      },
+      "chips": {
+        "Dec": 4500.0,
+        "Pauli": null,
+        "Kev": 5000.0,
+        "Caoimh": 6000.0,
+        "Dave": 9000.0,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 1.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 75,
+      "srcRow": 75,
+      "block": "game",
+      "date": "2021-07-03",
+      "rawLabel": "07/03/2021(game)#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 0.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 20.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 76,
+      "srcRow": 76,
+      "block": "game",
+      "date": "2021-07-17",
+      "rawLabel": "07/17/2021(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -40.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": -20.0,
+        "Dave": 80.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 4500.0,
+        "Pauli": 8500.0,
+        "Kev": 5000.0,
+        "Caoimh": 6500.0,
+        "Dave": 9000.0,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 77,
+      "srcRow": 77,
+      "block": "game",
+      "date": "2021-08-08",
+      "rawLabel": "08/08/2021(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 100.0,
+        "Pauli": -20.0,
+        "Kev": -40.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5000.0,
+        "Pauli": 8499.0,
+        "Kev": 5000.0,
+        "Caoimh": 6500.0,
+        "Dave": null,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 1.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 78,
+      "srcRow": 78,
+      "block": "game",
+      "date": "2021-08-14",
+      "rawLabel": "08/14/2021(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -40.0,
+        "Pauli": 0.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": 100.0
+      },
+      "chips": {
+        "Dec": 4500.0,
+        "Pauli": 8499.0,
+        "Kev": 5500.0,
+        "Caoimh": 6500.0,
+        "Dave": 8500.0,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 79,
+      "srcRow": 79,
+      "block": "game",
+      "date": "2021-08-28",
+      "rawLabel": "08/28/2021(game)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 0.0,
+        "Kev": -5.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 10.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 80,
+      "srcRow": 80,
+      "block": "game",
+      "date": "2021-08-28",
+      "rawLabel": "08/28/2021(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 80.0,
+        "Pauli": -40.0,
+        "Kev": -20.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 4500.0,
+        "Pauli": 9000.0,
+        "Kev": 5500.0,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": 8000.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 1.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 81,
+      "srcRow": 81,
+      "block": "game",
+      "date": "2021-09-19",
+      "rawLabel": "09/19/2021 (game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": 100.0,
+        "Caoimh": -40.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 4500.0,
+        "Pauli": 9000.0,
+        "Kev": 5500.0,
+        "Caoimh": 7000.0,
+        "Dave": 8500.0,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 1.0,
+        "Dave": 0.0,
+        "Fran": null
+      }
+    },
+    {
+      "id": 82,
+      "srcRow": 82,
+      "block": "game",
+      "date": "2021-09-19",
+      "rawLabel": "09/19/2021(game)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 20.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 83,
+      "srcRow": 83,
+      "block": "game",
+      "date": "2021-09-25",
+      "rawLabel": "09/25/2021 (game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 120.0,
+        "Kev": -60.0,
+        "Caoimh": 0.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 4500.0,
+        "Pauli": 9500.0,
+        "Kev": 5000.0,
+        "Caoimh": 7000.0,
+        "Dave": 8500.0,
+        "Fran": 8000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 2.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 84,
+      "srcRow": 84,
+      "block": "game",
+      "date": "2021-09-25",
+      "rawLabel": "09/25/2021(game)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 15.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 85,
+      "srcRow": 85,
+      "block": "game",
+      "date": "2021-10-09",
+      "rawLabel": "10/09/2021(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -40.0,
+        "Pauli": -60.0,
+        "Kev": 140.0,
+        "Caoimh": 0.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 4500.0,
+        "Pauli": 9000.0,
+        "Kev": 5500.0,
+        "Caoimh": 7500.0,
+        "Dave": 9000.0,
+        "Fran": 8000.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 2.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 86,
+      "srcRow": 86,
+      "block": "game",
+      "date": "2021-10-09",
+      "rawLabel": "10/09/2021(game)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 25.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 87,
+      "srcRow": 87,
+      "block": "game",
+      "date": "2021-10-30",
+      "rawLabel": "10/30/2021(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 0.0,
+        "Kev": 80.0,
+        "Caoimh": 0.0,
+        "Dave": -40.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5000.0,
+        "Pauli": null,
+        "Kev": 5000.0,
+        "Caoimh": null,
+        "Dave": 9000.0,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 1.0,
+        "Caoimh": 0.0,
+        "Dave": 1.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 88,
+      "srcRow": 88,
+      "block": "game",
+      "date": "2021-10-30",
+      "rawLabel": "10/30/2021(game)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 0.0,
+        "Kev": 15.0,
+        "Caoimh": 0.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 89,
+      "srcRow": 89,
+      "block": "game",
+      "date": "2021-11-13",
+      "rawLabel": "11/13/2021(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": -40.0,
+        "Caoimh": 100.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 5000.0,
+        "Pauli": 9500.0,
+        "Kev": 4500.0,
+        "Caoimh": 7500.0,
+        "Dave": 9500.0,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 1.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 90,
+      "srcRow": 90,
+      "block": "game",
+      "date": "2021-11-13",
+      "rawLabel": "11/13/2021(game)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": 25.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 91,
+      "srcRow": 91,
+      "block": "game",
+      "date": "2021-11-20",
+      "rawLabel": "11/20/21(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": -40.0,
+        "Caoimh": 100.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": 9500.0,
+        "Kev": 4500.0,
+        "Caoimh": 7000.0,
+        "Dave": null,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 1.0,
+        "Caoimh": 1.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 92,
+      "srcRow": 92,
+      "block": "game",
+      "date": "2021-11-20",
+      "rawLabel": "11/20/21(game)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 20.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 93,
+      "srcRow": 93,
+      "block": "game",
+      "date": "2021-12-04",
+      "rawLabel": "12/04/21(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 80.0,
+        "Kev": 0.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": 9500.0,
+        "Kev": 5000.0,
+        "Caoimh": 6500.0,
+        "Dave": 9500.0,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 94,
+      "srcRow": 94,
+      "block": "game",
+      "date": "2021-12-04",
+      "rawLabel": "12/04/21(game)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 20.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 95,
+      "srcRow": 95,
+      "block": "game",
+      "date": "2021-12-30",
+      "rawLabel": "12/30/21(in person)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": -20.0,
+        "Kev": 60.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": null,
+        "Pauli": 9000.0,
+        "Kev": 5000.0,
+        "Caoimh": 6500.0,
+        "Dave": 9500.0,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": null
+      }
+    },
+    {
+      "id": 96,
+      "srcRow": 96,
+      "block": "game",
+      "date": "2021-12-30",
+      "rawLabel": "12/30/21(in person)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 60.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": null,
+        "Pauli": 9000.0,
+        "Kev": 4500.0,
+        "Caoimh": 6500.0,
+        "Dave": 9500.0,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": null
+      }
+    },
+    {
+      "id": 97,
+      "srcRow": 97,
+      "block": "game",
+      "date": "2022-01-15",
+      "rawLabel": "1/15/22(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -40.0,
+        "Pauli": -40.0,
+        "Kev": -20.0,
+        "Caoimh": 120.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": 8500.0,
+        "Kev": 4500.0,
+        "Caoimh": 7000.0,
+        "Dave": null,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 1.0,
+        "Kev": 0.0,
+        "Caoimh": 1.0,
+        "Dave": null,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 98,
+      "srcRow": 98,
+      "block": "game",
+      "date": "2022-01-15",
+      "rawLabel": "1/15/22(game)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 20.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 99,
+      "srcRow": 99,
+      "block": "game",
+      "date": "2022-01-29",
+      "rawLabel": "1/29/22(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -40.0,
+        "Pauli": -20.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 80.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 8500.0,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": 10000.0,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 0.0,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 100,
+      "srcRow": 100,
+      "block": "game",
+      "date": "2022-01-29",
+      "rawLabel": "1/29/22(game)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 0.0,
+        "Dave": -5.0,
+        "Fran": 20.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 101,
+      "srcRow": 101,
+      "block": "game",
+      "date": "2022-02-05",
+      "rawLabel": "2/5/2022(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 80.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6500.0,
+        "Pauli": 8500.0,
+        "Kev": 4500.0,
+        "Caoimh": 6500.0,
+        "Dave": 9500.0,
+        "Fran": 9500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": null,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 102,
+      "srcRow": 102,
+      "block": "game",
+      "date": "2022-02-05",
+      "rawLabel": "2/5/2022(game)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 20.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 103,
+      "srcRow": 103,
+      "block": "game",
+      "date": "2022-03-05",
+      "rawLabel": "3/5/2022(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -40.0,
+        "Kev": -20.0,
+        "Caoimh": 120.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6500.0,
+        "Pauli": 8000.0,
+        "Kev": 5000.0,
+        "Caoimh": 6500.0,
+        "Dave": 9500.0,
+        "Fran": 9500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 1.0,
+        "Kev": 1.0,
+        "Caoimh": 1.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 104,
+      "srcRow": 104,
+      "block": "game",
+      "date": "2022-03-05",
+      "rawLabel": "3/5/2022(game)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 25.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 105,
+      "srcRow": 105,
+      "block": "game",
+      "date": "2022-03-26",
+      "rawLabel": "3/26/2022(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 0.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": 80.0
+      },
+      "chips": {
+        "Dec": 6500.0,
+        "Pauli": null,
+        "Kev": 5000.0,
+        "Caoimh": 6000.0,
+        "Dave": 9500.0,
+        "Fran": 9500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": null,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 106,
+      "srcRow": 106,
+      "block": "game",
+      "date": "2022-04-30",
+      "rawLabel": "04/30/2022(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 0.0,
+        "Kev": -40.0,
+        "Caoimh": 80.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 7000.0,
+        "Pauli": null,
+        "Kev": 5500.0,
+        "Caoimh": 6000.0,
+        "Dave": 10000.0,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": null,
+        "Kev": 1.0,
+        "Caoimh": 0.0,
+        "Dave": null,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 107,
+      "srcRow": 107,
+      "block": "game",
+      "date": "2022-04-30",
+      "rawLabel": "04/30/2022(game 2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 0.0,
+        "Kev": -5.0,
+        "Caoimh": 15.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 108,
+      "srcRow": 108,
+      "block": "game",
+      "date": "2022-06-04",
+      "rawLabel": "06/04/2022(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 100.0,
+        "Kev": -40.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 7000.0,
+        "Pauli": null,
+        "Kev": 5500.0,
+        "Caoimh": 5500.0,
+        "Dave": null,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 1.0,
+        "Kev": 1.0,
+        "Caoimh": 0.0,
+        "Dave": null,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 109,
+      "srcRow": 109,
+      "block": "game",
+      "date": "2022-06-04",
+      "rawLabel": "06/04/2022(game 2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 20.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 110,
+      "srcRow": 110,
+      "block": "game",
+      "date": "2022-08-20",
+      "rawLabel": "08/20/2022(game)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -10.0,
+        "Kev": 20.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 111,
+      "srcRow": 111,
+      "block": "game",
+      "date": "2022-08-20",
+      "rawLabel": "08/20/2022(game2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 10.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 112,
+      "srcRow": 112,
+      "block": "game",
+      "date": "2022-08-20",
+      "rawLabel": "08/20/2022(game3)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 10.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 113,
+      "srcRow": 113,
+      "block": "game",
+      "date": "2022-08-20",
+      "rawLabel": "08/20/2022(game4)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 10.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 114,
+      "srcRow": 114,
+      "block": "game",
+      "date": "2022-09-03",
+      "rawLabel": "09/03/2022(game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -40.0,
+        "Kev": 60.0,
+        "Caoimh": 60.0,
+        "Dave": -20.0,
+        "Fran": -40.0
+      },
+      "chips": {
+        "Dec": 7000.0,
+        "Pauli": 7500.0,
+        "Kev": 6000.0,
+        "Caoimh": 5500.0,
+        "Dave": 10000.0,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 1.0,
+        "Kev": 1.0,
+        "Caoimh": 1.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 115,
+      "srcRow": 115,
+      "block": "game",
+      "date": "2022-09-03",
+      "rawLabel": "09/03/2022(game 2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 25.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 116,
+      "srcRow": 116,
+      "block": "game",
+      "date": "2022-10-22",
+      "rawLabel": "2022-10-22T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 120.0,
+        "Pauli": -40.0,
+        "Kev": -40.0,
+        "Caoimh": 0.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 7500.0,
+        "Pauli": 7500.0,
+        "Kev": 5500.0,
+        "Caoimh": 5000.0,
+        "Dave": 10000.0,
+        "Fran": 9500.0
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 117,
+      "srcRow": 117,
+      "block": "game",
+      "date": "2022-10-22",
+      "rawLabel": "10/22/2022(game2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 0.0,
+        "Dave": 20.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 118,
+      "srcRow": 118,
+      "block": "game",
+      "date": "2022-11-20",
+      "rawLabel": "2022-11-20T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 15.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 119,
+      "srcRow": 119,
+      "block": "game",
+      "date": "2022-11-20",
+      "rawLabel": "11/20/2022(game 2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 20.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -10.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 120,
+      "srcRow": 120,
+      "block": "game",
+      "date": "2022-12-03",
+      "rawLabel": "12/03/2022 (game)",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": -20.0,
+        "Caoimh": -40.0,
+        "Dave": 0.0,
+        "Fran": 100.0
+      },
+      "chips": {
+        "Dec": 7500.0,
+        "Pauli": 7500.0,
+        "Kev": 5500.0,
+        "Caoimh": 5000.0,
+        "Dave": null,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 1.0,
+        "Dave": null,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 121,
+      "srcRow": 121,
+      "block": "game",
+      "date": "2022-12-03",
+      "rawLabel": "12/03/2022(game 2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 20.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 122,
+      "srcRow": 122,
+      "block": "game",
+      "date": "2023-01-07",
+      "rawLabel": "2023-01-07T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 60.0,
+        "Pauli": 0.0,
+        "Kev": -20.0,
+        "Caoimh": 0.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 7000.0,
+        "Pauli": null,
+        "Kev": 5500.0,
+        "Caoimh": null,
+        "Dave": 10000.0,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": null,
+        "Kev": 0.0,
+        "Caoimh": null,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 123,
+      "srcRow": 123,
+      "block": "game",
+      "date": "2023-01-07",
+      "rawLabel": "01/07/2023(game2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 15.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 124,
+      "srcRow": 124,
+      "block": "game",
+      "date": "2023-01-14",
+      "rawLabel": "2023-01-14T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 100.0,
+        "Pauli": 0.0,
+        "Kev": -40.0,
+        "Caoimh": -40.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6500.0,
+        "Pauli": null,
+        "Kev": 6000.0,
+        "Caoimh": 5500.0,
+        "Dave": null,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": null,
+        "Kev": 1.0,
+        "Caoimh": 1.0,
+        "Dave": null,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 125,
+      "srcRow": 125,
+      "block": "game",
+      "date": "2023-01-14",
+      "rawLabel": "01/14/2023(game2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 0.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 15.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 126,
+      "srcRow": 126,
+      "block": "game",
+      "date": "2023-01-21",
+      "rawLabel": "2023-01-21T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 60.0,
+        "Kev": -20.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6500.0,
+        "Pauli": 7000.0,
+        "Kev": 6000.0,
+        "Caoimh": 5500.0,
+        "Dave": null,
+        "Fran": 9500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 127,
+      "srcRow": 127,
+      "block": "game",
+      "date": "2023-01-21",
+      "rawLabel": "01/21/2023(game2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -10.0,
+        "Kev": -5.0,
+        "Caoimh": 30.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 128,
+      "srcRow": 128,
+      "block": "game",
+      "date": "2023-02-18",
+      "rawLabel": "2023-02-18T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 120.0,
+        "Pauli": 0.0,
+        "Kev": -20.0,
+        "Caoimh": -60.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6500.0,
+        "Pauli": null,
+        "Kev": 6500.0,
+        "Caoimh": 6000.0,
+        "Dave": 10000.0,
+        "Fran": 9500.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": null,
+        "Kev": 0.0,
+        "Caoimh": 2.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 129,
+      "srcRow": 129,
+      "block": "game",
+      "date": "2023-02-18",
+      "rawLabel": "02/18/2023 (game 2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 0.0,
+        "Kev": 20.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 130,
+      "srcRow": 130,
+      "block": "game",
+      "date": "2023-02-25",
+      "rawLabel": "02/25/2023 (game 1)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 15.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 131,
+      "srcRow": 131,
+      "block": "game",
+      "date": "2023-02-25",
+      "rawLabel": "02/25/2023 (game 2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 15.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 132,
+      "srcRow": 132,
+      "block": "game",
+      "date": "2023-02-25",
+      "rawLabel": "02/25/2023 (game 3)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 20.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 133,
+      "srcRow": 133,
+      "block": "game",
+      "date": "2023-03-25",
+      "rawLabel": "2023-03-25T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 100.0,
+        "Pauli": -20.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": -40.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 7000.0,
+        "Kev": 6500.0,
+        "Caoimh": 6000.0,
+        "Dave": 10000.0,
+        "Fran": 10000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": null,
+        "Fran": 1.0
+      }
+    },
+    {
+      "id": 134,
+      "srcRow": 134,
+      "block": "game",
+      "date": "2023-03-25",
+      "rawLabel": "03/25/2023 (game 2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 20.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 135,
+      "srcRow": 135,
+      "block": "game",
+      "date": "2023-04-01",
+      "rawLabel": "2023-04-01T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 60.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 7000.0,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": 9500.0,
+        "Fran": 10000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 136,
+      "srcRow": 136,
+      "block": "game",
+      "date": "2023-04-01",
+      "rawLabel": "04/01/2023 (game 2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": -5.0,
+        "Fran": 15.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 137,
+      "srcRow": 137,
+      "block": "game",
+      "date": "2023-04-15",
+      "rawLabel": "2023-04-15T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 140.0,
+        "Pauli": -20.0,
+        "Kev": -40.0,
+        "Caoimh": -40.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": 7500.0,
+        "Kev": 7000.0,
+        "Caoimh": 6500.0,
+        "Dave": 9500.0,
+        "Fran": 10000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 1.0,
+        "Kev": 1.0,
+        "Caoimh": 1.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 138,
+      "srcRow": 138,
+      "block": "game",
+      "date": "2023-04-15",
+      "rawLabel": "04/15/2023 (game 2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 25.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 139,
+      "srcRow": 139,
+      "block": "game",
+      "date": "2023-04-15",
+      "rawLabel": "04/15/2023 (game 2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 15.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 140,
+      "srcRow": 140,
+      "block": "game",
+      "date": "2023-05-06",
+      "rawLabel": "2023-05-06T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": 80.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5000.0,
+        "Pauli": 7500.0,
+        "Kev": 7000.0,
+        "Caoimh": 6500.0,
+        "Dave": 9500.0,
+        "Fran": 10000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": null,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 141,
+      "srcRow": 141,
+      "block": "game",
+      "date": "2023-05-06",
+      "rawLabel": "05/06/2023 (game 2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": 25.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 142,
+      "srcRow": 142,
+      "block": "game",
+      "date": "2023-05-20",
+      "rawLabel": "2023-05-20T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 100.0,
+        "Kev": 0.0,
+        "Caoimh": -40.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5000.0,
+        "Pauli": 7000.0,
+        "Kev": 7500.0,
+        "Caoimh": 7000.0,
+        "Dave": 10000.0,
+        "Fran": 10000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 1.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 143,
+      "srcRow": 143,
+      "block": "game",
+      "date": "2023-05-20",
+      "rawLabel": "05/20/2023 (game 2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 25.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 144,
+      "srcRow": 144,
+      "block": "game",
+      "date": "2023-06-11",
+      "rawLabel": "2023-06-11T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": -20.0,
+        "Caoimh": 60.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 5000.0,
+        "Pauli": 7000.0,
+        "Kev": 7500.0,
+        "Caoimh": 6500.0,
+        "Dave": null,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 145,
+      "srcRow": 145,
+      "block": "game",
+      "date": "2023-06-11",
+      "rawLabel": "06/11/2023 (game 2)",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 15.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 146,
+      "srcRow": 146,
+      "block": "game",
+      "date": null,
+      "rawLabel": "125#",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 15.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 147,
+      "srcRow": 147,
+      "block": "game",
+      "date": null,
+      "rawLabel": "125#",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 15.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 148,
+      "srcRow": 148,
+      "block": "game",
+      "date": null,
+      "rawLabel": "125#",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 15.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 149,
+      "srcRow": 149,
+      "block": "game",
+      "date": null,
+      "rawLabel": "125#",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 15.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 150,
+      "srcRow": 150,
+      "block": "game",
+      "date": "2023-07-20",
+      "rawLabel": "07/20/23 (in person)",
+      "type": "in_person",
+      "note": "",
+      "deltas": {
+        "Dec": -10.0,
+        "Pauli": -10.0,
+        "Kev": 30.0,
+        "Caoimh": -10.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 151,
+      "srcRow": 151,
+      "block": "game",
+      "date": "2023-07-20",
+      "rawLabel": "07/20/23 (in person)",
+      "type": "in_person",
+      "note": "",
+      "deltas": {
+        "Dec": -10.0,
+        "Pauli": -10.0,
+        "Kev": 30.0,
+        "Caoimh": -10.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 152,
+      "srcRow": 152,
+      "block": "game",
+      "date": "2023-07-20",
+      "rawLabel": "07/20/23 (in person)",
+      "type": "in_person",
+      "note": "",
+      "deltas": {
+        "Dec": -10.0,
+        "Pauli": 30.0,
+        "Kev": -10.0,
+        "Caoimh": -10.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 153,
+      "srcRow": 153,
+      "block": "game",
+      "date": "2023-07-20",
+      "rawLabel": "07/20/23 (in person)",
+      "type": "in_person",
+      "note": "",
+      "deltas": {
+        "Dec": -10.0,
+        "Pauli": -10.0,
+        "Kev": -10.0,
+        "Caoimh": 30.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 154,
+      "srcRow": 154,
+      "block": "game",
+      "date": "2023-08-12",
+      "rawLabel": "2023-08-12T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 60.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": 6500.0,
+        "Kev": 7500.0,
+        "Caoimh": 6500.0,
+        "Dave": null,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 155,
+      "srcRow": 155,
+      "block": "game",
+      "date": "2023-08-26",
+      "rawLabel": "2023-08-26T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": 60.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": 6500.0,
+        "Kev": 7000.0,
+        "Caoimh": 6500.0,
+        "Dave": null,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 156,
+      "srcRow": 156,
+      "block": "game",
+      "date": "2023-08-26",
+      "rawLabel": "08/26/2023 #2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 15.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 157,
+      "srcRow": 157,
+      "block": "game",
+      "date": "2023-09-09",
+      "rawLabel": "2023-09-09T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 120.0,
+        "Pauli": 0.0,
+        "Kev": -40.0,
+        "Caoimh": -40.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 5000.0,
+        "Pauli": null,
+        "Kev": 7000.0,
+        "Caoimh": 7000.0,
+        "Dave": 10000.0,
+        "Fran": 10000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 1.0,
+        "Caoimh": 1.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 158,
+      "srcRow": 158,
+      "block": "game",
+      "date": "2023-10-07",
+      "rawLabel": "2023-10-07T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 15.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 0.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 159,
+      "srcRow": 159,
+      "block": "game",
+      "date": "2023-10-28",
+      "rawLabel": "2023-10-28T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -40.0,
+        "Kev": -40.0,
+        "Caoimh": 100.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 5000.0,
+        "Pauli": 7000.0,
+        "Kev": 7500.0,
+        "Caoimh": 6500.0,
+        "Dave": 10000.0,
+        "Fran": 10000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 1.0,
+        "Kev": 1.0,
+        "Caoimh": 1.0,
+        "Dave": null,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 160,
+      "srcRow": 160,
+      "block": "game",
+      "date": "2023-10-28",
+      "rawLabel": "2023-10-28T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -10.0,
+        "Pauli": -10.0,
+        "Kev": -10.0,
+        "Caoimh": -10.0,
+        "Dave": 0.0,
+        "Fran": 40.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 161,
+      "srcRow": 161,
+      "block": "game",
+      "date": "2023-10-28",
+      "rawLabel": "2023-10-28T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 20.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 162,
+      "srcRow": 162,
+      "block": "game",
+      "date": "2023-11-04",
+      "rawLabel": "2023-11-04T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -40.0,
+        "Pauli": -40.0,
+        "Kev": 120.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": 7000.0,
+        "Kev": 7000.0,
+        "Caoimh": 6500.0,
+        "Dave": 10000.0,
+        "Fran": 9500.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 1.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": null
+      }
+    },
+    {
+      "id": 163,
+      "srcRow": 163,
+      "block": "game",
+      "date": "2023-11-04",
+      "rawLabel": "2023-11-04T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 20.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 164,
+      "srcRow": 164,
+      "block": "game",
+      "date": "2023-11-04",
+      "rawLabel": "2023-11-04T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 20.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 165,
+      "srcRow": 165,
+      "block": "game",
+      "date": "2023-11-18",
+      "rawLabel": "2023-11-18T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -40.0,
+        "Pauli": -40.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": 120.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 7500.0,
+        "Kev": 7000.0,
+        "Caoimh": 7000.0,
+        "Dave": 9500.0,
+        "Fran": 9500.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 1.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 166,
+      "srcRow": 166,
+      "block": "game",
+      "date": "2023-11-18",
+      "rawLabel": "11/18/2023 #2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -10.0,
+        "Kev": 30.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 167,
+      "srcRow": 167,
+      "block": "game",
+      "date": "2023-11-18",
+      "rawLabel": "11/18/2023 #3",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 25.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 168,
+      "srcRow": 168,
+      "block": "game",
+      "date": "2023-12-02",
+      "rawLabel": "2023-12-02T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 140.0,
+        "Pauli": -20.0,
+        "Kev": -60.0,
+        "Caoimh": -40.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": 7500.0,
+        "Kev": 7500.0,
+        "Caoimh": 7000.0,
+        "Dave": 9500.0,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 0.0,
+        "Kev": 2.0,
+        "Caoimh": 1.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 169,
+      "srcRow": 169,
+      "block": "game",
+      "date": "2023-12-02",
+      "rawLabel": "12/02/2023 #1",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -10.0,
+        "Kev": -5.0,
+        "Caoimh": 25.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 170,
+      "srcRow": 170,
+      "block": "game",
+      "date": "2023-12-29",
+      "rawLabel": "2023-12-29T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -10.0,
+        "Pauli": 0.0,
+        "Kev": 40.0,
+        "Caoimh": -10.0,
+        "Dave": -10.0,
+        "Fran": -10.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 171,
+      "srcRow": 171,
+      "block": "game",
+      "date": "2023-12-29",
+      "rawLabel": "2023-12-29T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": -10.0,
+        "Kev": -10.0,
+        "Caoimh": -10.0,
+        "Dave": -10.0,
+        "Fran": 40.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 172,
+      "srcRow": 172,
+      "block": "game",
+      "date": "2024-01-13",
+      "rawLabel": "2024-01-13T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": -40.0,
+        "Caoimh": 50.0,
+        "Dave": 0.0,
+        "Fran": 30.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": 8000.0,
+        "Kev": 8000.0,
+        "Caoimh": 6500.0,
+        "Dave": null,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 1.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 1.0
+      }
+    },
+    {
+      "id": 173,
+      "srcRow": 173,
+      "block": "game",
+      "date": "2024-01-13",
+      "rawLabel": "01/13/2024#1",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 20.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 174,
+      "srcRow": 174,
+      "block": "game",
+      "date": "2024-02-17",
+      "rawLabel": "2024-02-17T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 0.0,
+        "Kev": -20.0,
+        "Caoimh": 0.0,
+        "Dave": -20.0,
+        "Fran": 60.0
+      },
+      "chips": {
+        "Dec": 5500.0,
+        "Pauli": null,
+        "Kev": 8000.0,
+        "Caoimh": null,
+        "Dave": 9500.0,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": null,
+        "Kev": 0.0,
+        "Caoimh": null,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 175,
+      "srcRow": 175,
+      "block": "game",
+      "date": "2024-02-17",
+      "rawLabel": "02/17/2024#2",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 0.0,
+        "Kev": 60.0,
+        "Caoimh": 0.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": null,
+        "Kev": 8000.0,
+        "Caoimh": null,
+        "Dave": 10000.0,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": null,
+        "Kev": 0.0,
+        "Caoimh": null,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 176,
+      "srcRow": 176,
+      "block": "game",
+      "date": "2024-02-24",
+      "rawLabel": "2024-02-24T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 15.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": 7500.0,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 177,
+      "srcRow": 177,
+      "block": "game",
+      "date": "2024-02-24",
+      "rawLabel": "02/24/2024#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 15.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 178,
+      "srcRow": 178,
+      "block": "game",
+      "date": "2024-02-25",
+      "rawLabel": "2024-02-25T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 20.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 179,
+      "srcRow": 179,
+      "block": "game",
+      "date": "2024-02-25",
+      "rawLabel": "02/25/2024#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 20.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 180,
+      "srcRow": 180,
+      "block": "game",
+      "date": "2024-03-02",
+      "rawLabel": "2024-03-02T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": 60.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 8000.0,
+        "Kev": 7500.0,
+        "Caoimh": 6500.0,
+        "Dave": null,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": 0.0,
+        "Caoimh": 0.0,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 181,
+      "srcRow": 181,
+      "block": "game",
+      "date": "2024-03-02",
+      "rawLabel": "03/02/2024#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 15.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 182,
+      "srcRow": 182,
+      "block": "game",
+      "date": "2024-03-02",
+      "rawLabel": "03/02/2024#3",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 15.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 183,
+      "srcRow": 183,
+      "block": "game",
+      "date": "2024-05-18",
+      "rawLabel": "2024-05-18T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -40.0,
+        "Kev": 90.0,
+        "Caoimh": -40.0,
+        "Dave": 30.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 8000.0,
+        "Kev": 7500.0,
+        "Caoimh": 6500.0,
+        "Dave": null,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": 0.0,
+        "Pauli": 1.0,
+        "Kev": 0.0,
+        "Caoimh": 1.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      }
+    },
+    {
+      "id": 184,
+      "srcRow": 184,
+      "block": "game",
+      "date": "2024-05-18",
+      "rawLabel": "05/18/2024#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 0.0,
+        "Caoimh": 20.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 185,
+      "srcRow": 185,
+      "block": "game",
+      "date": "2024-06-08",
+      "rawLabel": "2024-06-08T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 80.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 6500.0,
+        "Pauli": 8500.0,
+        "Kev": 7000.0,
+        "Caoimh": 7000.0,
+        "Dave": 9000.0,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 186,
+      "srcRow": 186,
+      "block": "game",
+      "date": "2024-06-08",
+      "rawLabel": "06/08/2024#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 20.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 187,
+      "srcRow": 187,
+      "block": "game",
+      "date": "2024-06-08",
+      "rawLabel": "06/08/2024#3",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 15.0,
+        "Kev": -5.0,
+        "Caoimh": 0.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 188,
+      "srcRow": 188,
+      "block": "game",
+      "date": "2024-07-13",
+      "rawLabel": "2024-07-13T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 40.0,
+        "Pauli": -10.0,
+        "Kev": -20.0,
+        "Caoimh": -10.0,
+        "Dave": 10.0,
+        "Fran": -10.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 189,
+      "srcRow": 189,
+      "block": "game",
+      "date": "2024-08-17",
+      "rawLabel": "2024-08-17T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 60.0,
+        "Pauli": -20.0,
+        "Kev": -20.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6500.0,
+        "Pauli": 8000.0,
+        "Kev": 7000.0,
+        "Caoimh": null,
+        "Dave": 9000.0,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 190,
+      "srcRow": 190,
+      "block": "game",
+      "date": "2024-08-17",
+      "rawLabel": "08/17/2024#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 15.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 191,
+      "srcRow": 191,
+      "block": "game",
+      "date": "2024-08-24",
+      "rawLabel": "2024-08-24T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 40.0,
+        "Pauli": -40.0,
+        "Kev": 60.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 8000.0,
+        "Kev": 7000.0,
+        "Caoimh": null,
+        "Dave": 9000.0,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": 1.0,
+        "Pauli": 1.0,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 192,
+      "srcRow": 192,
+      "block": "game",
+      "date": "2024-08-24",
+      "rawLabel": "08/24/2024#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 10.0,
+        "Pauli": -5.0,
+        "Kev": 10.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 193,
+      "srcRow": 193,
+      "block": "game",
+      "date": "2024-08-24",
+      "rawLabel": "08/24/2024#3",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 20.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 194,
+      "srcRow": 194,
+      "block": "game",
+      "date": "2024-08-24",
+      "rawLabel": "08/24/2024#sflush",
+      "type": "bonus",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 25.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 195,
+      "srcRow": 195,
+      "block": "game",
+      "date": "2024-09-07",
+      "rawLabel": "2024-09-07T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 100.0,
+        "Pauli": -20.0,
+        "Kev": -40.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 8500.0,
+        "Kev": 6500.0,
+        "Caoimh": 7000.0,
+        "Dave": 9000.0,
+        "Fran": 9000.0
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 196,
+      "srcRow": 196,
+      "block": "game",
+      "date": "2024-09-07",
+      "rawLabel": "09/07/2024#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 20.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 197,
+      "srcRow": 197,
+      "block": "game",
+      "date": "2024-09-07",
+      "rawLabel": "09/07/2024#3",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 20.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 198,
+      "srcRow": 198,
+      "block": "game",
+      "date": "2024-09-15",
+      "rawLabel": "2024-09-15T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 100.0,
+        "Pauli": -40.0,
+        "Kev": -40.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 8500.0,
+        "Kev": 6500.0,
+        "Caoimh": 7000.0,
+        "Dave": null,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": 1.0,
+        "Kev": 1.0,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 199,
+      "srcRow": 199,
+      "block": "game",
+      "date": "2024-09-15",
+      "rawLabel": "09/15/2024#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -10.0,
+        "Pauli": -10.0,
+        "Kev": -10.0,
+        "Caoimh": 30.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 200,
+      "srcRow": 200,
+      "block": "game",
+      "date": "2024-09-15",
+      "rawLabel": "09/15/2024#3",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 15.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 201,
+      "srcRow": 201,
+      "block": "game",
+      "date": "2024-09-15",
+      "rawLabel": "09/15/2024#sflush",
+      "type": "bonus",
+      "note": "",
+      "deltas": {
+        "Dec": 15.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 202,
+      "srcRow": 202,
+      "block": "game",
+      "date": "2024-09-28",
+      "rawLabel": "2024-09-28T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": -20.0,
+        "Caoimh": 0.0,
+        "Dave": 60.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 9000.0,
+        "Kev": 7000.0,
+        "Caoimh": 7500.0,
+        "Dave": 8500.0,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 203,
+      "srcRow": 203,
+      "block": "game",
+      "date": "2024-10-12",
+      "rawLabel": "2024-10-12T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -40.0,
+        "Kev": 100.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 204,
+      "srcRow": 204,
+      "block": "game",
+      "date": "2024-10-12",
+      "rawLabel": "2024-10-12T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 15.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": 6500.0,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 205,
+      "srcRow": 205,
+      "block": "game",
+      "date": "2024-10-12",
+      "rawLabel": "2024-10-12T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 15.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 206,
+      "srcRow": 206,
+      "block": "game",
+      "date": "2024-10-26",
+      "rawLabel": "2024-10-26T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 60.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 207,
+      "srcRow": 207,
+      "block": "game",
+      "date": "2024-11-02",
+      "rawLabel": "2024-11-02T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -40.0,
+        "Kev": -20.0,
+        "Caoimh": 0.0,
+        "Dave": -20.0,
+        "Fran": 100.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 8500.0,
+        "Kev": 6500.0,
+        "Caoimh": 7500.0,
+        "Dave": null,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": 1.0,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 208,
+      "srcRow": 208,
+      "block": "game",
+      "date": "2024-11-02",
+      "rawLabel": "11/02/2024#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": 20.0,
+        "Caoimh": 0.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 209,
+      "srcRow": 209,
+      "block": "game",
+      "date": "2024-11-09",
+      "rawLabel": "2024-11-09T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 100.0,
+        "Pauli": -40.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6500.0,
+        "Pauli": 8500.0,
+        "Kev": 6500.0,
+        "Caoimh": null,
+        "Dave": 8500.0,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": 1.0,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 210,
+      "srcRow": 210,
+      "block": "game",
+      "date": "2024-11-09",
+      "rawLabel": "11/09/2024#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 20.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 211,
+      "srcRow": 211,
+      "block": "game",
+      "date": "2024-11-09",
+      "rawLabel": "11/09/2024#3",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 15.0,
+        "Dave": 0.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 212,
+      "srcRow": 212,
+      "block": "game",
+      "date": "2024-11-16",
+      "rawLabel": "2024-11-16T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": 80.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 9000.0,
+        "Kev": 7000.0,
+        "Caoimh": 8000.0,
+        "Dave": null,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 213,
+      "srcRow": 213,
+      "block": "game",
+      "date": "2024-11-16",
+      "rawLabel": "11/16/2024#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 20.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 214,
+      "srcRow": 214,
+      "block": "game",
+      "date": "2024-11-23",
+      "rawLabel": "2024-11-23T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": 80.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 9000.0,
+        "Kev": 7000.0,
+        "Caoimh": 8000.0,
+        "Dave": 8500.0,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 215,
+      "srcRow": 215,
+      "block": "game",
+      "date": "2024-11-23",
+      "rawLabel": "11/23/2024#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 20.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 216,
+      "srcRow": 216,
+      "block": "game",
+      "date": "2025-02-01",
+      "rawLabel": "2025-02-01T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": -40.0,
+        "Caoimh": 40.0,
+        "Dave": 60.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6000.0,
+        "Pauli": 9000.0,
+        "Kev": 7000.0,
+        "Caoimh": 8000.0,
+        "Dave": 9000.0,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": 1.0,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 217,
+      "srcRow": 217,
+      "block": "game",
+      "date": "2025-02-01",
+      "rawLabel": "2/1/2025#2",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 25.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 218,
+      "srcRow": 218,
+      "block": "game",
+      "date": "2025-02-16",
+      "rawLabel": "2025-02-16T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 30.0,
+        "Kev": 30.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 6500.0,
+        "Pauli": 9000.0,
+        "Kev": 7500.0,
+        "Caoimh": 8500.0,
+        "Dave": null,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 219,
+      "srcRow": 219,
+      "block": "game",
+      "date": "2025-02-16",
+      "rawLabel": "2025-02-16T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": 20.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 220,
+      "srcRow": 220,
+      "block": "game",
+      "date": "2025-02-16",
+      "rawLabel": "2025-02-16T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 25.0,
+        "Pauli": -10.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 221,
+      "srcRow": 221,
+      "block": "game",
+      "date": "2025-03-01",
+      "rawLabel": "2025-03-01T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -20.0,
+        "Kev": -20.0,
+        "Caoimh": 100.0,
+        "Dave": 0.0,
+        "Fran": -40.0
+      },
+      "chips": {
+        "Dec": 6500.0,
+        "Pauli": 8500.0,
+        "Kev": 7500.0,
+        "Caoimh": 8500.0,
+        "Dave": null,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": 1.0,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": 1.0
+      }
+    },
+    {
+      "id": 222,
+      "srcRow": 222,
+      "block": "game",
+      "date": "2025-03-01",
+      "rawLabel": "2025-03-01T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 20.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 223,
+      "srcRow": 223,
+      "block": "game",
+      "date": "2025-03-01",
+      "rawLabel": "2025-03-01T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 20.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 224,
+      "srcRow": 224,
+      "block": "game",
+      "date": "2025-08-03",
+      "rawLabel": "2025-08-03T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": -60.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": 0.0,
+        "Fran": 120.0
+      },
+      "chips": {
+        "Dec": 6500.0,
+        "Pauli": 9000.0,
+        "Kev": 7500.0,
+        "Caoimh": 8000.0,
+        "Dave": null,
+        "Fran": 8500.0
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 225,
+      "srcRow": 225,
+      "block": "game",
+      "date": "2025-08-03",
+      "rawLabel": "2025-08-03T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 20.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 226,
+      "srcRow": 226,
+      "block": "game",
+      "date": "2025-08-03",
+      "rawLabel": "2025-08-03T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": -5.0,
+        "Kev": 15.0,
+        "Caoimh": -5.0,
+        "Dave": 0.0,
+        "Fran": -5.0
+      },
+      "chips": {
+        "Dec": 7000.0,
+        "Pauli": null,
+        "Kev": 8000.0,
+        "Caoimh": 8000.0,
+        "Dave": null,
+        "Fran": 8000.0
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 227,
+      "srcRow": 227,
+      "block": "game",
+      "date": "2025-03-22",
+      "rawLabel": "22/03/2025",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 50.0,
+        "Pauli": -20.0,
+        "Kev": -60.0,
+        "Caoimh": -40.0,
+        "Dave": -20.0,
+        "Fran": 90.0
+      },
+      "chips": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": 8500.0,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 228,
+      "srcRow": 228,
+      "block": "game",
+      "date": "2025-03-22",
+      "rawLabel": "22/03/2025",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 20.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 0.0,
+        "Dave": -5.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 229,
+      "srcRow": 229,
+      "block": "game",
+      "date": "2025-03-22",
+      "rawLabel": "22/03/2025",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": 0.0,
+        "Dave": 20.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 230,
+      "srcRow": 230,
+      "block": "game",
+      "date": "2025-05-04",
+      "rawLabel": "2025-05-04T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -10.0,
+        "Pauli": 0.0,
+        "Kev": 30.0,
+        "Caoimh": -5.0,
+        "Dave": -10.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 231,
+      "srcRow": 231,
+      "block": "game",
+      "date": "2025-04-19",
+      "rawLabel": "2025-04-19T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 0.0,
+        "Kev": 15.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 232,
+      "srcRow": 232,
+      "block": "game",
+      "date": "2025-08-23",
+      "rawLabel": "2025-08-23T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 30.0,
+        "Pauli": -10.0,
+        "Kev": -10.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": -10.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 233,
+      "srcRow": 233,
+      "block": "game",
+      "date": "2025-08-23",
+      "rawLabel": "2025-08-23T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -10.0,
+        "Pauli": -10.0,
+        "Kev": -10.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": 30.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 234,
+      "srcRow": 234,
+      "block": "game",
+      "date": "2025-08-23",
+      "rawLabel": "2025-08-23T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -10.0,
+        "Pauli": 30.0,
+        "Kev": -10.0,
+        "Caoimh": 0.0,
+        "Dave": 0.0,
+        "Fran": -10.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 235,
+      "srcRow": 235,
+      "block": "game",
+      "date": "2025-09-27",
+      "rawLabel": "2025-09-27T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 50.0,
+        "Pauli": 90.0,
+        "Kev": -40.0,
+        "Caoimh": -40.0,
+        "Dave": -20.0,
+        "Fran": -40.0
+      },
+      "chips": {
+        "Dec": 7000.0,
+        "Pauli": 8500.0,
+        "Kev": 8000.0,
+        "Caoimh": 8000.0,
+        "Dave": 8500.0,
+        "Fran": 8000.0
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 236,
+      "srcRow": 236,
+      "block": "game",
+      "date": "2025-09-27",
+      "rawLabel": "2025-09-27T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": -5.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": 25.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 237,
+      "srcRow": 237,
+      "block": "game",
+      "date": "2025-09-27",
+      "rawLabel": "2025-09-27T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": -5.0,
+        "Kev": 25.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": -10.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 238,
+      "srcRow": 238,
+      "block": "game",
+      "date": "2026-01-31",
+      "rawLabel": "2026-01-31T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": -20.0,
+        "Pauli": 0.0,
+        "Kev": 80.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": -20.0
+      },
+      "chips": {
+        "Dec": 7000.0,
+        "Pauli": null,
+        "Kev": 8000.0,
+        "Caoimh": 8500.0,
+        "Dave": 8500.0,
+        "Fran": 8000.0
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 239,
+      "srcRow": 239,
+      "block": "game",
+      "date": "2026-01-31",
+      "rawLabel": "2026-01-31T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": 0.0,
+        "Pauli": 0.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": 15.0,
+        "Fran": -5.0
+      },
+      "chips": null,
+      "buyins": null
+    },
+    {
+      "id": 240,
+      "srcRow": 240,
+      "block": "game",
+      "date": "2026-06-20",
+      "rawLabel": "2026-06-20T00:00:00",
+      "type": "main",
+      "note": "",
+      "deltas": {
+        "Dec": 80.0,
+        "Pauli": -20.0,
+        "Kev": -20.0,
+        "Caoimh": -20.0,
+        "Dave": -20.0,
+        "Fran": 0.0
+      },
+      "chips": {
+        "Dec": 7500.0,
+        "Pauli": 8500.0,
+        "Kev": 7500.0,
+        "Caoimh": 8500.0,
+        "Dave": 9000.0,
+        "Fran": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Pauli": null,
+        "Kev": null,
+        "Caoimh": null,
+        "Dave": null,
+        "Fran": null
+      }
+    },
+    {
+      "id": 241,
+      "srcRow": 241,
+      "block": "game",
+      "date": "2026-06-20",
+      "rawLabel": "2026-06-20T00:00:00",
+      "type": "after",
+      "note": "",
+      "deltas": {
+        "Dec": -5.0,
+        "Pauli": 20.0,
+        "Kev": -5.0,
+        "Caoimh": -5.0,
+        "Dave": -5.0,
+        "Fran": 0.0
+      },
+      "chips": null,
+      "buyins": null
+    }
+  ]
+}

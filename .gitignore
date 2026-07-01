@@ -1,0 +1,24 @@
+# Secrets — never commit
+.env
+.env.*
+*.secret
+*secret*
+supabase-keys*
+credentials*
+
+# Node
+node_modules/
+dist/
+.vite/
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
