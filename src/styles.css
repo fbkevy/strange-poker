@@ -122,3 +122,61 @@ button.primary {
 button.primary:disabled { opacity: .4; cursor: not-allowed; }
 .error { color: var(--neg); }
 h3 { font-size: 1rem; margin: 1rem 0 .5rem; }
+
+/* --- nav as its own row (mobile) --- */
+nav { margin-bottom: 1rem; }
+
+/* --- horizontal scroll for wide tables --- */
+.tablewrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tablewrap table { min-width: 560px; }
+
+/* --- bars (owed / chips) --- */
+.bars { display: flex; flex-direction: column; gap: .35rem; margin: .75rem 0; }
+.bar-row { display: grid; grid-template-columns: 3.6rem 1fr 4.6rem; gap: .5rem; align-items: center; }
+.bar-label { color: var(--muted); font-size: .85rem; }
+.bar-val { text-align: right; font-size: .85rem; font-variant-numeric: tabular-nums; }
+.bar-track { display: flex; height: 14px; border-radius: 7px; background: var(--panel); overflow: hidden; }
+.bar-track.single { display: block; }
+.bar-half { flex: 1; position: relative; }
+.bar-half:first-child { display: flex; justify-content: flex-end; border-right: 1px solid var(--line); }
+.bar { height: 100%; border-radius: 2px; }
+.pos-bar { background: var(--pos); }
+.neg-bar { background: var(--neg); }
+.chip-bar { min-width: 2px; }
+
+/* --- charts / legend --- */
+.chart { width: 100%; height: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+.legend { display: flex; flex-wrap: wrap; gap: .5rem .9rem; margin: .5rem 0 1rem; }
+.legend-item { color: var(--muted); font-size: .85rem; display: inline-flex; gap: .35rem; align-items: center; }
+.dot { width: .6rem; height: .6rem; border-radius: 50%; display: inline-block; margin-right: .35rem; }
+
+/* --- chip change in preview --- */
+.chip-change s { text-decoration-color: var(--muted); }
+.chip-change .delta { font-size: .85em; }
+
+/* --- forms --- */
+.form-col { display: flex; flex-direction: column; gap: .6rem; margin: .75rem 0; max-width: 420px; }
+.form-col label { display: flex; justify-content: space-between; align-items: center; gap: .75rem; color: var(--muted); }
+.form-col input, .form-col select {
+  background: var(--panel); color: var(--text); border: 1px solid var(--line);
+  border-radius: 8px; padding: .35rem .5rem;
+}
+input.num-wide { width: 7rem; }
+.cfg-row span { flex: 1; }
+
+/* --- rules list --- */
+.rules-list { list-style: none; padding: 0; margin: .5rem 0; display: flex; flex-direction: column; gap: .4rem; }
+.rules-list li {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+  padding: .5rem .65rem; display: flex; justify-content: space-between; gap: .75rem;
+  align-items: center; font-size: .9rem; line-height: 1.35;
+}
+
+/* --- compact tables on phones --- */
+@media (max-width: 480px) {
+  .app { padding: .6rem; }
+  .grid th, .grid td { padding: .35rem .4rem; font-size: .82rem; }
+  header h1 { font-size: 1.15rem; }
+  nav button { padding: .35rem .55rem; font-size: .85rem; }
+  .note { max-width: 140px; }
+}

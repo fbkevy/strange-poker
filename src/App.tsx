@@ -1,11 +1,16 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import type { GameInputs, PokerData } from "./types";
+import type { Config, GameInputs, PokerData } from "./types";
 import { LocalStore } from "./store/local";
 import { money, signedMoney, chips as fmtChips, date } from "./format";
 import { outstanding, pokerPnl, gameYears, history } from "./engine/selectors";
 import { proposeNextChips, buildGameEvent, type Env } from "./engine/replay";
 
-type Tab = "dashboard" | "history" | "pnl" | "chips" | "newgame";
+type Tab = "dashboard" | "history" | "pnl" | "chips" | "newgame" | "pay" | "rules";
+
+/** Stable per-player colors for charts. */
+const PALETTE = ["#d9a441", "#6ea8fe", "#3fb56b", "#b087e0", "#e0884d", "#e0604d"];
+export const playerColor = (players: string[], p: string) =>
+  PALETTE[players.indexOf(p) % PALETTE.length];
 
 export function App() {
   const [env, setEnv] = useState<Env>(
@@ -24,6 +29,11 @@ export function App() {
   }, [env, reload]);
 
   if (!data) return <div className="loading">Loading Strange Poker…</div>;
+
+  const TABS: [Tab, string][] = [
+    ["dashboard", "Home"], ["history", "History"], ["pnl", "P&L"],
+    ["chips", "Chips"], ["newgame", "+ Game"], ["pay", "Pay"], ["rules", "Rules"],
+  ];
 
   return (
     <div className={`app env-${env}`}>
@@ -44,13 +54,6 @@ export function App() {
       )}
       <header>
         <h1>Strange Poker</h1>
-        <nav>
-          {(["dashboard", "history", "pnl", "chips", "newgame"] as Tab[]).map((t) => (
-            <button key={t} className={t === tab ? "active" : ""} onClick={() => setTab(t)}>
-              {t === "pnl" ? "P&L" : t === "newgame" ? "+ Game" : t[0].toUpperCase() + t.slice(1)}
-            </button>
-          ))}
-        </nav>
         <label className="env-toggle">
           <select value={env} onChange={(e) => setEnv(e.target.value as Env)}>
             <option value="prod">Prod</option>
@@ -58,6 +61,13 @@ export function App() {
           </select>
         </label>
       </header>
+      <nav>
+        {TABS.map(([t, label]) => (
+          <button key={t} className={t === tab ? "active" : ""} onClick={() => setTab(t)}>
+            {label}
+          </button>
+        ))}
+      </nav>
       <main>
         {tab === "dashboard" && <Dashboard data={data} />}
         {tab === "history" && <History data={data} env={env} onChange={reload} />}
@@ -66,6 +76,10 @@ export function App() {
         {tab === "newgame" && (
           <NewGame data={data} env={env} onSaved={() => { reload(); setTab("chips"); }} />
         )}
+        {tab === "pay" && (
+          <Pay data={data} env={env} onSaved={() => { reload(); setTab("dashboard"); }} />
+        )}
+        {tab === "rules" && <Rules data={data} env={env} onChange={reload} />}
       </main>
       <footer>
         {data.events.filter((e) => !e.deletedAt).length} events · SP · {env}
@@ -74,50 +88,80 @@ export function App() {
   );
 }
 
-function StatRow({ label, values, players }: {
-  label: string;
-  values: Record<string, number>;
-  players: string[];
-}) {
-  return (
-    <tr>
-      <th>{label}</th>
-      {players.map((p) => (
-        <td key={p} className={values[p] > 0 ? "pos" : values[p] < 0 ? "neg" : ""}>
-          {signedMoney(values[p])}
-        </td>
-      ))}
-    </tr>
-  );
-}
+// ---------------------------------------------------------------------------
+// Dashboard — transposed for mobile: one row per player
+// ---------------------------------------------------------------------------
 
 function Dashboard({ data }: { data: PokerData }) {
   const out = useMemo(() => outstanding(data), [data]);
   const thisYear = new Date().getFullYear();
   const ytd = useMemo(() => pokerPnl(data, thisYear), [data, thisYear]);
   const allTime = useMemo(() => pokerPnl(data), [data]);
-  const players = data.players;
+  // Sensible order: biggest creditor first.
+  const players = [...data.players].sort((a, b) => out[b] - out[a]);
+  const maxAbs = Math.max(1, ...players.map((p) => Math.abs(out[p])));
 
   return (
     <section>
       <h2>Standings</h2>
       <table className="grid">
         <thead>
-          <tr><th></th>{players.map((p) => <th key={p}>{p}</th>)}</tr>
+          <tr><th>Player</th><th>Owed</th><th>{thisYear} P&L</th><th>All-time</th></tr>
         </thead>
         <tbody>
-          <StatRow label="Outstanding" values={out} players={players} />
-          <StatRow label={`P&L ${thisYear} (YTD)`} values={ytd} players={players} />
-          <StatRow label="P&L all-time" values={allTime} players={players} />
+          {players.map((p) => (
+            <tr key={p}>
+              <th><span className="dot" style={{ background: playerColor(data.players, p) }} />{p}</th>
+              <Cell v={out[p]} />
+              <Cell v={ytd[p]} />
+              <Cell v={allTime[p]} />
+            </tr>
+          ))}
         </tbody>
       </table>
+
+      <h3>Who's owed what</h3>
+      <div className="bars">
+        {players.map((p) => (
+          <div key={p} className="bar-row">
+            <span className="bar-label">{p}</span>
+            <div className="bar-track">
+              <div className="bar-half">
+                {out[p] < 0 && (
+                  <div className="bar neg-bar"
+                    style={{ width: `${(Math.abs(out[p]) / maxAbs) * 100}%` }} />
+                )}
+              </div>
+              <div className="bar-half">
+                {out[p] > 0 && (
+                  <div className="bar pos-bar"
+                    style={{ width: `${(out[p] / maxAbs) * 100}%` }} />
+                )}
+              </div>
+            </div>
+            <span className={`bar-val ${out[p] > 0 ? "pos" : out[p] < 0 ? "neg" : ""}`}>
+              {signedMoney(out[p])}
+            </span>
+          </div>
+        ))}
+      </div>
       <p className="hint">
-        <strong>Outstanding</strong> = net owed across everything (games + side
-        debts + settlements). <strong>P&L</strong> = poker games only.
+        <strong>Owed</strong> = net position across everything (games, side bets,
+        settlements). <strong>P&L</strong> = poker games only.
       </p>
     </section>
   );
 }
+
+function Cell({ v }: { v: number }) {
+  return (
+    <td className={v > 0 ? "pos" : v < 0 ? "neg" : ""}>{signedMoney(v)}</td>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// History — undo kept on-screen (column right after date), scrollable table
+// ---------------------------------------------------------------------------
 
 const TYPE_LABEL: Record<string, string> = {
   main: "€20 game", after: "€5 game", in_person: "In person",
@@ -156,98 +200,170 @@ function History({ data, env, onChange }: {
         </select>
         <label className="chk">
           <input type="checkbox" checked={showDeleted}
-            onChange={(e) => setShowDeleted(e.target.checked)} /> show undone
+            onChange={(e) => setShowDeleted(e.target.checked)} /> undone
         </label>
-        <span className="count">{filtered.length} rows</span>
+        <span className="count">{filtered.length}</span>
       </div>
-      <table className="grid history">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Type</th>
-            {data.players.map((p) => <th key={p}>{p}</th>)}
-            <th>Note</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {filtered.map((r) => (
-            <tr key={r.id} className={r.deletedAt ? "deleted" : ""}>
-              <td className="nowrap">{date(r.date)}</td>
-              <td><span className={`tag t-${r.type}`}>{TYPE_LABEL[r.type] ?? r.type}</span></td>
-              {data.players.map((p) => {
-                const v = r.deltas[p];
-                return (
-                  <td key={p} className={v > 0 ? "pos" : v < 0 ? "neg" : "muted"}>
-                    {v ? signedMoney(v) : "·"}
-                  </td>
-                );
-              })}
-              <td className="note">{r.note}</td>
-              <td className="actions">
-                {r.deletedAt ? (
-                  <button className="mini" onClick={async () => {
-                    await LocalStore.restoreEvent(String(r.id), env); onChange();
-                  }}>restore</button>
-                ) : (
-                  <button className="mini" onClick={async () => {
-                    if (confirm("Undo this entry? All chip calcs and totals recompute without it.")) {
-                      await LocalStore.deleteEvent(String(r.id), env); onChange();
-                    }
-                  }}>undo</button>
-                )}
-              </td>
+      <div className="tablewrap">
+        <table className="grid history">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Date</th>
+              <th>Type</th>
+              {data.players.map((p) => <th key={p}>{p}</th>)}
+              <th>Note</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {filtered.map((r) => (
+              <tr key={r.id} className={r.deletedAt ? "deleted" : ""}>
+                <td className="actions">
+                  {r.deletedAt ? (
+                    <button className="mini" onClick={async () => {
+                      await LocalStore.restoreEvent(String(r.id), env); onChange();
+                    }}>↩ redo</button>
+                  ) : (
+                    <button className="mini" onClick={async () => {
+                      if (confirm("Undo this entry? All chip calcs and totals recompute without it.")) {
+                        await LocalStore.deleteEvent(String(r.id), env); onChange();
+                      }
+                    }}>undo</button>
+                  )}
+                </td>
+                <td className="nowrap">{date(r.date)}</td>
+                <td><span className={`tag t-${r.type}`}>{TYPE_LABEL[r.type] ?? r.type}</span></td>
+                {data.players.map((p) => {
+                  const v = r.deltas[p];
+                  return (
+                    <td key={p} className={v > 0 ? "pos" : v < 0 ? "neg" : "muted"}>
+                      {v ? signedMoney(v) : "·"}
+                    </td>
+                  );
+                })}
+                <td className="note">{r.note}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </section>
   );
 }
 
+// ---------------------------------------------------------------------------
+// P&L — cumulative line chart + compact per-year table
+// ---------------------------------------------------------------------------
+
 function Pnl({ data }: { data: PokerData }) {
-  const years = gameYears(data);
+  const years = [...gameYears(data)].sort((a, b) => a - b);
   const players = data.players;
-  const perYear = years.map((y) => ({ y, vals: pokerPnl(data, y) }));
+  const perYear = years.map((y) => pokerPnl(data, y));
   const allTime = pokerPnl(data);
+
+  // Cumulative series per player across years.
+  const series = players.map((p) => {
+    let acc = 0;
+    return { p, points: perYear.map((vals) => (acc += vals[p])) };
+  });
+  const flat = series.flatMap((s) => s.points);
+  const lo = Math.min(0, ...flat), hi = Math.max(0, ...flat);
+  const W = 360, H = 200, PAD = 8;
+  const x = (i: number) => PAD + (i * (W - 2 * PAD)) / Math.max(1, years.length - 1);
+  const y = (v: number) => H - PAD - ((v - lo) * (H - 2 * PAD)) / Math.max(1, hi - lo);
 
   return (
     <section>
       <h2>Profit &amp; Loss</h2>
-      <table className="grid">
-        <thead>
-          <tr><th>Year</th>{players.map((p) => <th key={p}>{p}</th>)}</tr>
-        </thead>
-        <tbody>
-          {perYear.map(({ y, vals }) => (
-            <StatRow key={y} label={String(y)} values={vals} players={players} />
-          ))}
-          <tr className="total">
-            <th>All-time</th>
-            {players.map((p) => (
-              <td key={p} className={allTime[p] > 0 ? "pos" : allTime[p] < 0 ? "neg" : ""}>
-                {signedMoney(allTime[p])}
-              </td>
-            ))}
-          </tr>
-        </tbody>
-      </table>
-      <p className="hint">Poker games only; side bets and settlements excluded.</p>
+
+      <svg className="chart" viewBox={`0 0 ${W} ${H}`} role="img"
+        aria-label="Cumulative P&L per player over the years">
+        <line x1={PAD} x2={W - PAD} y1={y(0)} y2={y(0)} stroke="#2a323c" strokeDasharray="3 3" />
+        {series.map((s) => (
+          <polyline key={s.p} fill="none" stroke={playerColor(players, s.p)}
+            strokeWidth="2"
+            points={s.points.map((v, i) => `${x(i)},${y(v)}`).join(" ")} />
+        ))}
+        {series.map((s) => (
+          <circle key={s.p} cx={x(s.points.length - 1)} cy={y(s.points[s.points.length - 1])}
+            r="3" fill={playerColor(players, s.p)} />
+        ))}
+      </svg>
+      <div className="legend">
+        {players.map((p) => (
+          <span key={p} className="legend-item">
+            <span className="dot" style={{ background: playerColor(players, p) }} />
+            {p} <b className={allTime[p] > 0 ? "pos" : allTime[p] < 0 ? "neg" : ""}>
+              {signedMoney(allTime[p])}
+            </b>
+          </span>
+        ))}
+      </div>
+
+      <div className="tablewrap">
+        <table className="grid compact">
+          <thead>
+            <tr><th>Year</th>{players.map((p) => <th key={p}>{p}</th>)}</tr>
+          </thead>
+          <tbody>
+            {[...years].reverse().map((yr, ri) => {
+              const vals = perYear[years.length - 1 - ri];
+              return (
+                <tr key={yr}>
+                  <th>{yr}</th>
+                  {players.map((p) => <Cell key={p} v={vals[p]} />)}
+                </tr>
+              );
+            })}
+            <tr className="total">
+              <th>All</th>
+              {players.map((p) => <Cell key={p} v={allTime[p]} />)}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="hint">Cumulative poker P&L by year (chart) — side bets and settlements excluded.</p>
     </section>
   );
 }
 
+// ---------------------------------------------------------------------------
+// Chips — sorted lowest stack first
+// ---------------------------------------------------------------------------
+
 function Chips({ data }: { data: PokerData }) {
   const proposal = useMemo(() => proposeNextChips(data), [data]);
+  const players = [...data.players].sort(
+    (a, b) => (proposal.chips[a] ?? Infinity) - (proposal.chips[b] ?? Infinity)
+  );
+  const max = Math.max(1, ...players.map((p) => proposal.chips[p] ?? 0));
+
   return (
     <section>
       <h2>Chips for the next game</h2>
+      <div className="bars">
+        {players.map((p) => (
+          <div key={p} className="bar-row">
+            <span className="bar-label">{p}</span>
+            <div className="bar-track single">
+              <div className="bar chip-bar"
+                style={{
+                  width: `${((proposal.chips[p] ?? 0) / max) * 100}%`,
+                  background: playerColor(data.players, p),
+                }} />
+            </div>
+            <span className="bar-val">
+              {proposal.chips[p] == null ? "—" : fmtChips(proposal.chips[p])}
+            </span>
+          </div>
+        ))}
+      </div>
       <table className="grid">
         <thead>
-          <tr><th>Player</th><th>Stack</th><th>Loss streak</th><th>Why</th></tr>
+          <tr><th>Player</th><th>Stack</th><th>Streak</th><th>Why</th></tr>
         </thead>
         <tbody>
-          {data.players.map((p) => (
+          {players.map((p) => (
             <tr key={p}>
               <th>{p}</th>
               <td>{proposal.chips[p] == null ? "—" : fmtChips(proposal.chips[p])}</td>
@@ -258,14 +374,16 @@ function Chips({ data }: { data: PokerData }) {
         </tbody>
       </table>
       <p className="hint">
-        Derived by replaying every recorded game — undo any past result and this
-        recomputes. Band {fmtChips(data.config.chipMin)}–{fmtChips(data.config.chipMax)};
-        win −{data.config.winDecrement}, 2nd −{data.config.secondDecrement},
-        lose-{data.config.lossStreakForIncrement} +{data.config.lossIncrement}.
+        Lowest stack first. Derived by replaying every recorded game — undo any
+        past result and this recomputes.
       </p>
     </section>
   );
 }
+
+// ---------------------------------------------------------------------------
+// New game — preview shows chips before → after
+// ---------------------------------------------------------------------------
 
 function NewGame({ data, env, onSaved }: {
   data: PokerData; env: Env; onSaved: () => void;
@@ -295,14 +413,14 @@ function NewGame({ data, env, onSaved }: {
     noShows: noShows.length ? noShows : undefined,
   } : null;
 
+  const before = useMemo(() => proposeNextChips(data), [data]);
   const preview = useMemo(() => {
     if (!inputs) return null;
     try {
       const e = buildGameEvent(inputs, {
         id: "preview", date: gameDate, config: data.config, players, env,
       });
-      const next = proposeNextChips(
-        { ...data, events: [...data.events, e] });
+      const next = proposeNextChips({ ...data, events: [...data.events, e] });
       return { deltas: e.deltas, next };
     } catch {
       return null;
@@ -342,7 +460,7 @@ function NewGame({ data, env, onSaved }: {
 
       <table className="grid">
         <thead>
-          <tr><th>Player</th><th>Playing</th>{kind === "main" && <th>Rebuys</th>}<th>1st</th>
+          <tr><th>Player</th><th>In</th>{kind === "main" && <th>Rebuys</th>}<th>1st</th>
             {kind === "main" && entrants.length === 6 && <th>2nd</th>}</tr>
         </thead>
         <tbody>
@@ -377,19 +495,38 @@ function NewGame({ data, env, onSaved }: {
         <>
           <h3>Preview</h3>
           <table className="grid">
-            <thead><tr><th></th>{players.map((p) => <th key={p}>{p}</th>)}</tr></thead>
+            <thead>
+              <tr><th>Player</th><th>Money</th>{kind === "main" && <th>Chips next game</th>}</tr>
+            </thead>
             <tbody>
-              <StatRow label="Money" values={
-                Object.fromEntries(players.map((p) => [p, preview.deltas[p] ?? 0]))
-              } players={players} />
-              {kind === "main" && (
-                <tr>
-                  <th>Next chips</th>
-                  {players.map((p) => (
-                    <td key={p}>{preview.next.chips[p] == null ? "—" : fmtChips(preview.next.chips[p])}</td>
-                  ))}
-                </tr>
-              )}
+              {players.map((p) => {
+                const d = preview.deltas[p] ?? 0;
+                const b = before.chips[p], a = preview.next.chips[p];
+                const changed = kind === "main" && b != null && a != null && a !== b;
+                return (
+                  <tr key={p}>
+                    <th>{p}</th>
+                    <td className={d > 0 ? "pos" : d < 0 ? "neg" : "muted"}>
+                      {d ? signedMoney(d) : "·"}
+                    </td>
+                    {kind === "main" && (
+                      <td>
+                        {a == null ? "—" : changed ? (
+                          <span className="chip-change">
+                            <s className="muted">{fmtChips(b!)}</s>{" → "}
+                            <b className={a < b! ? "neg" : "pos"}>{fmtChips(a)}</b>
+                            <span className={`delta ${a < b! ? "neg" : "pos"}`}>
+                              {" "}({a < b! ? "−" : "+"}{fmtChips(Math.abs(a - b!))})
+                            </span>
+                          </span>
+                        ) : (
+                          <span className="muted">{fmtChips(a)}</span>
+                        )}
+                      </td>
+                    )}
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </>
@@ -402,9 +539,184 @@ function NewGame({ data, env, onSaved }: {
         </button>
       </div>
       <p className="hint">
-        Split 1st = tick multiple winners. {money(data.config.mainEntry)} entry per
-        buy-in; pot and payouts ({entrants.length === 6 ? "65/35" : "winner takes all"})
+        Split 1st = tick multiple winners. Pot and payouts
+        ({entrants.length === 6 && kind === "main" ? "65/35" : "winner takes all"})
         are computed automatically. Everything saved here can be undone from History.
+      </p>
+    </section>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Pay — record real money changing hands (settlement)
+// ---------------------------------------------------------------------------
+
+function Pay({ data, env, onSaved }: {
+  data: PokerData; env: Env; onSaved: () => void;
+}) {
+  const players = data.players;
+  const out = useMemo(() => outstanding(data), [data]);
+  const [payer, setPayer] = useState(players[0]);
+  const [payee, setPayee] = useState(players[1]);
+  const [amount, setAmount] = useState("");
+  const [payDate, setPayDate] = useState(() => new Date().toISOString().slice(0, 10));
+  const [err, setErr] = useState("");
+
+  const amt = Number(amount);
+  const valid = payer !== payee && amt > 0 && Number.isFinite(amt);
+
+  async function save() {
+    if (!valid) { setErr("Pick two different players and a positive amount."); return; }
+    await LocalStore.addEvent({
+      id: crypto.randomUUID(),
+      env,
+      date: payDate,
+      type: "settle",
+      block: "ledger",
+      note: `${payer} paid ${payee}`,
+      // Cash settles debt: the payer's balance rises, the payee's falls.
+      deltas: Object.fromEntries(players.map((p) =>
+        [p, p === payer ? amt : p === payee ? -amt : 0])),
+      chips: null,
+      buyins: null,
+    }, env);
+    onSaved();
+  }
+
+  return (
+    <section>
+      <h2>Record a payment {env === "test" && <span className="tag t-settle">test</span>}</h2>
+      <div className="form-col">
+        <label>Who paid{" "}
+          <select value={payer} onChange={(e) => setPayer(e.target.value)}>
+            {players.map((p) => (
+              <option key={p} value={p}>{p} ({signedMoney(out[p])})</option>
+            ))}
+          </select>
+        </label>
+        <label>Who received{" "}
+          <select value={payee} onChange={(e) => setPayee(e.target.value)}>
+            {players.map((p) => (
+              <option key={p} value={p}>{p} ({signedMoney(out[p])})</option>
+            ))}
+          </select>
+        </label>
+        <label>Amount €{" "}
+          <input type="number" min="0" step="5" className="num-wide" value={amount}
+            inputMode="decimal" onChange={(e) => setAmount(e.target.value)} />
+        </label>
+        <label>Date{" "}
+          <input type="date" value={payDate} onChange={(e) => setPayDate(e.target.value)} />
+        </label>
+      </div>
+      {valid && (
+        <p className="hint">
+          {payer} pays {payee} {money(amt)} → {payer}'s balance{" "}
+          {signedMoney(out[payer])} → <b>{signedMoney(out[payer] + amt)}</b>,{" "}
+          {payee}: {signedMoney(out[payee])} → <b>{signedMoney(out[payee] - amt)}</b>.
+        </p>
+      )}
+      {err && <p className="error">{err}</p>}
+      <div className="form-row">
+        <button className="primary" onClick={save} disabled={!valid}>
+          Save payment{env === "test" ? " (test)" : ""}
+        </button>
+      </div>
+      <p className="hint">
+        Payments don't touch P&L — they only settle who owes whom. Undoable from History.
+      </p>
+    </section>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Rules — mechanical game settings (editable) + house rules (editable text)
+// ---------------------------------------------------------------------------
+
+const CONFIG_FIELDS: [keyof Config, string][] = [
+  ["mainEntry", "Main game entry (€)"],
+  ["afterEntry", "After-game entry (€)"],
+  ["secondPlaceShare", "2nd place share of pot (6 players)"],
+  ["winDecrement", "Chips off next game for winning"],
+  ["secondDecrement", "Chips off next game for 2nd"],
+  ["lossIncrement", "Chips added after losing streak"],
+  ["lossStreakForIncrement", "Losses in a row to trigger it"],
+  ["chipMin", "Minimum stack"],
+  ["chipMax", "Maximum stack"],
+];
+
+function Rules({ data, env, onChange }: {
+  data: PokerData; env: Env; onChange: () => void;
+}) {
+  const [cfg, setCfg] = useState<Config>(data.config);
+  const [rules, setRules] = useState<string[]>([]);
+  const [newRule, setNewRule] = useState("");
+  const [saved, setSaved] = useState(false);
+
+  useEffect(() => { LocalStore.getRules(env).then(setRules); }, [env]);
+  useEffect(() => { setCfg(data.config); }, [data.config]);
+
+  async function saveConfig() {
+    await LocalStore.saveConfig(cfg, env);
+    setSaved(true);
+    setTimeout(() => setSaved(false), 1500);
+    onChange();
+  }
+
+  async function saveRules(next: string[]) {
+    setRules(next);
+    await LocalStore.saveRules(next, env);
+  }
+
+  return (
+    <section>
+      <h2>Game settings {env === "test" && <span className="tag t-settle">test</span>}</h2>
+      <div className="form-col">
+        {CONFIG_FIELDS.map(([key, label]) => (
+          <label key={key} className="cfg-row">
+            <span>{label}</span>
+            <input type="number" step="any" className="num-wide"
+              value={cfg[key]}
+              onChange={(e) => setCfg({ ...cfg, [key]: Number(e.target.value) })} />
+          </label>
+        ))}
+      </div>
+      <div className="form-row">
+        <button className="primary" onClick={saveConfig}>Save settings</button>
+        {saved && <span className="pos">✓ saved</span>}
+      </div>
+      <p className="hint">
+        These drive the payout and handicap engine{env === "test"
+          ? " — in test mode, so experiment freely."
+          : ". Changing them affects future games only (history is stored, not recomputed)."}
+      </p>
+
+      <h2>House rules</h2>
+      <ul className="rules-list">
+        {rules.map((r, i) => (
+          <li key={i}>
+            <span>{r}</span>
+            <button className="mini" onClick={() => saveRules(rules.filter((_, j) => j !== i))}>
+              remove
+            </button>
+          </li>
+        ))}
+      </ul>
+      <div className="form-row">
+        <input className="wide" placeholder="Add a house rule…" value={newRule}
+          onChange={(e) => setNewRule(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && newRule.trim()) {
+              saveRules([...rules, newRule.trim()]); setNewRule("");
+            }
+          }} />
+        <button className="mini" onClick={() => {
+          if (newRule.trim()) { saveRules([...rules, newRule.trim()]); setNewRule(""); }
+        }}>add</button>
+      </div>
+      <p className="hint">
+        Informational reminders (bonuses, table etiquette). The mechanical ones
+        above are what the app actually computes with.
       </p>
     </section>
   );

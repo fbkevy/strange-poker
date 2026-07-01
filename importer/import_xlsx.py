@@ -100,6 +100,39 @@ def parse_date(label):
     return None  # e.g. "7/4 (settle)" year unknown, or "bet"
 
 
+# The sheet's own per-year P&L formulas define which rows belong to which year.
+# Used to infer the year for early labels like "6/20 (game)" that omit it.
+YEAR_ROW_RANGES = [(43, 57, 2020), (58, 96, 2021), (97, 121, 2022),
+                   (122, 170, 2023), (171, 215, 2024), (216, 237, 2025)]
+
+
+def infer_year(row):
+    for lo, hi, y in YEAR_ROW_RANGES:
+        if lo <= row <= hi:
+            return y
+    return None
+
+
+def parse_date_with_row(label, row):
+    """parse_date, falling back to mm/dd + year inferred from the row block."""
+    d = parse_date(label)
+    if d:
+        return d
+    y = infer_year(row)
+    if y is None:
+        return None
+    s = str(label)
+    m = re.search(r"(\d{1,2})/(\d{1,2})", s)
+    if m:
+        a, b = int(m.group(1)), int(m.group(2))
+        mo, dy = (a, b) if a <= 12 else (b, a)
+        try:
+            return date(y, mo, dy).isoformat()
+        except ValueError:
+            pass
+    return f"{y}-01-01"  # year known, day unknown: pin to Jan 1
+
+
 def main():
     src = Path(sys.argv[1]) if len(sys.argv) > 1 else Path.home() / "Downloads" / "Poker fund.xlsx"
     out = Path(sys.argv[2]) if len(sys.argv) > 2 else Path(__file__).resolve().parents[1] / "data" / "data.json"
@@ -149,7 +182,7 @@ def main():
             "srcRow": r,
             # The sheet splits P&L vs other-debts positionally at row 43.
             "block": "game" if r >= 43 else "ledger",
-            "date": parse_date(label),
+            "date": parse_date_with_row(label, r),
             "rawLabel": label_str,
             "type": etype,
             "note": (str(ws.cell(r, COL_NOTE).value).strip()

@@ -12,6 +12,18 @@ import type { Env } from "../engine/replay";
 
 const eventsKey = (env: Env) => `sp.${env}.events`;
 const tombKey = (env: Env) => `sp.${env}.tombstones`;
+const configKey = (env: Env) => `sp.${env}.config`;
+const rulesKey = (env: Env) => `sp.${env}.rules`;
+
+/** House rules (informational, editable). Seeded from the sheet's notes. */
+export const DEFAULT_HOUSE_RULES: string[] = [
+  "Playing with 6: 2nd place gets 35% of the pot. €5 game: no 2nd place (just money back for 2nd).",
+  "When achieving 2nd: decrement 250 chips next game.",
+  "Splitting a place splits its decrement (e.g. 500 → 250 each).",
+  "First 2-7 of the session wins a bonus 500 chips from every other player (must show, hole cards only). 1,000 in the €5 game. Counts as a split for the handicap.",
+  "Straight flush with the winning hand = €5 from each player.",
+  "Unique royal flush to one person winning the hand: everyone at the table gives €10 each (even if not in the hand).",
+];
 
 function read<T>(key: string, fallback: T): T {
   try {
@@ -34,6 +46,7 @@ export const LocalStore = {
     const base = seed as unknown as PokerData;
     const overlay = read<LedgerEvent[]>(eventsKey(env), []);
     const tombs = read<Tombstones>(tombKey(env), {});
+    const config = { ...base.config, ...read(configKey(env), {}) };
 
     const events = [
       ...base.events.map((e) =>
@@ -43,7 +56,19 @@ export const LocalStore = {
         tombs[String(e.id)] ? { ...e, deletedAt: tombs[String(e.id)] } : e
       ),
     ];
-    return { ...base, events };
+    return { ...base, config, events };
+  },
+
+  async getRules(env: Env = "prod"): Promise<string[]> {
+    return read<string[]>(rulesKey(env), DEFAULT_HOUSE_RULES);
+  },
+
+  async saveRules(rules: string[], env: Env = "prod"): Promise<void> {
+    write(rulesKey(env), rules);
+  },
+
+  async saveConfig(config: Partial<PokerData["config"]>, env: Env = "prod"): Promise<void> {
+    write(configKey(env), config);
   },
 
   async addEvent(e: LedgerEvent, env: Env = "prod"): Promise<void> {
@@ -66,10 +91,12 @@ export const LocalStore = {
     write(tombKey(env), tombs);
   },
 
-  /** Wipe everything the test env has diverged by (added events + undos). */
+  /** Wipe everything the test env has diverged by (events, undos, settings). */
   async resetTest(): Promise<void> {
     localStorage.removeItem(eventsKey("test"));
     localStorage.removeItem(tombKey("test"));
+    localStorage.removeItem(configKey("test"));
+    localStorage.removeItem(rulesKey("test"));
   },
 };
 
