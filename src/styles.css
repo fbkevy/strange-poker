@@ -28,12 +28,23 @@ h1, h2, h3 {
 
 .loading { padding: 3rem; text-align: center; color: var(--muted); }
 
-.app { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+:root { --pad: 1rem; }
+.app { max-width: 1000px; margin: 0 auto; padding: var(--pad); padding-top: 0; }
+
+/* frozen title + tab bar */
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  margin: 0 calc(-1 * var(--pad));
+  padding: .6rem var(--pad) 0;
+  background: #0c1d12;
+  border-bottom: 1px solid var(--rail);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .35);
+}
 
 header {
   display: flex; align-items: center; justify-content: space-between;
-  gap: 1rem; flex-wrap: wrap; border-bottom: 1px solid var(--line);
-  padding-bottom: .75rem; margin-bottom: 1rem;
+  gap: 1rem; flex-wrap: wrap;
+  padding-bottom: .4rem;
 }
 header h1 {
   font-size: 1.4rem; margin: 0; letter-spacing: .5px;
@@ -95,7 +106,7 @@ footer { color: var(--muted); font-size: .8rem; margin-top: 2rem; text-align: ce
 /* --- test mode --- */
 .test-banner {
   background: #5a3b12; color: #ffd699; border: 1px solid #8a5a1a;
-  padding: .5rem .75rem; border-radius: 8px; margin-bottom: .75rem;
+  padding: .5rem .75rem; border-radius: 8px; margin: .6rem 0 .75rem;
   font-size: .9rem; display: flex; align-items: center; gap: .75rem;
   justify-content: space-between;
 }
@@ -137,8 +148,9 @@ button.primary:disabled { opacity: .4; cursor: not-allowed; }
 .error { color: var(--neg); }
 h3 { font-size: 1rem; margin: 1rem 0 .5rem; }
 
-/* --- nav as its own row (mobile) --- */
-nav { margin-bottom: 1rem; }
+/* --- nav inside the frozen topbar --- */
+nav { padding-bottom: .5rem; }
+main { padding-top: 1rem; }
 
 /* --- horizontal scroll for wide tables --- */
 .tablewrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
@@ -199,7 +211,7 @@ footer .suits { letter-spacing: .35em; margin-left: .5em; color: #59705f; }
 
 /* --- compact tables on phones --- */
 @media (max-width: 480px) {
-  .app { padding: .6rem; }
+  :root { --pad: .6rem; }
   .grid th, .grid td { padding: .35rem .4rem; font-size: .82rem; }
   header h1 { font-size: 1.15rem; }
   nav button { padding: .35rem .55rem; font-size: .85rem; }

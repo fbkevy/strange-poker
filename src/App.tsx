@@ -52,22 +52,24 @@ export function App() {
           </button>
         </div>
       )}
-      <header>
-        <h1>Strange Poker</h1>
-        <label className="env-toggle">
-          <select value={env} onChange={(e) => setEnv(e.target.value as Env)}>
-            <option value="prod">Prod</option>
-            <option value="test">Test</option>
-          </select>
-        </label>
-      </header>
-      <nav>
-        {TABS.map(([t, label]) => (
-          <button key={t} className={t === tab ? "active" : ""} onClick={() => setTab(t)}>
-            {label}
-          </button>
-        ))}
-      </nav>
+      <div className="topbar">
+        <header>
+          <h1>Strange Poker</h1>
+          <label className="env-toggle">
+            <select value={env} onChange={(e) => setEnv(e.target.value as Env)}>
+              <option value="prod">Prod</option>
+              <option value="test">Test</option>
+            </select>
+          </label>
+        </header>
+        <nav>
+          {TABS.map(([t, label]) => (
+            <button key={t} className={t === tab ? "active" : ""} onClick={() => setTab(t)}>
+              {label}
+            </button>
+          ))}
+        </nav>
+      </div>
       <main>
         {tab === "dashboard" && <Dashboard data={data} />}
         {tab === "history" && <History data={data} env={env} onChange={reload} />}
