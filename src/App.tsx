@@ -230,9 +230,9 @@ function History({ data, env, onChange }: {
           <thead>
             <tr>
               {data.players.map((p) => <th key={p}>{p}</th>)}
-              <th>Note</th>
               <th>Date</th>
               <th>Type</th>
+              <th>Note</th>
               <th></th>
             </tr>
           </thead>
@@ -247,9 +247,9 @@ function History({ data, env, onChange }: {
                     </td>
                   );
                 })}
-                <td className="note">{r.note}</td>
                 <td className="nowrap">{date(r.date)}</td>
                 <td><span className={`tag t-${r.type}`}>{TYPE_LABEL[r.type] ?? r.type}</span></td>
+                <td className="note">{r.note}</td>
                 <td className="actions">
                   {r.deletedAt ? (
                     <button className="mini" onClick={async () => {
@@ -352,9 +352,9 @@ function Pnl({ data }: { data: PokerData }) {
 // Chips — sorted lowest stack first
 // ---------------------------------------------------------------------------
 
-/** Side-view stack of poker chips: one chip per 500, columns of 10. */
+/** Side-view stack of poker chips: one chip per 500, columns of 5. */
 function ChipStack({ count, color }: { count: number; color: string }) {
-  const CH = 7, CW = 30, COL = 10, GAP = 6;
+  const CH = 7, CW = 30, COL = 5, GAP = 6;
   const cols = Math.max(1, Math.ceil(count / COL));
   const W = cols * (CW + GAP);
   const H = COL * (CH + 1) + 2;

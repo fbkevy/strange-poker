@@ -30,10 +30,17 @@ jobs:
       - run: npm test
       - run: npm run build
         env:
-          SP_BASE: /strange-poker/
+          SP_BASE: /strange-poker/g-7f2ce1b09d4a4b6ea3d5c81f6e2a9b47/
+      # Serve the app from an unguessable subpath; the repo root stays blank.
+      - name: Stage site under GUID path
+        run: |
+          mkdir -p site/g-7f2ce1b09d4a4b6ea3d5c81f6e2a9b47
+          cp -r dist/* site/g-7f2ce1b09d4a4b6ea3d5c81f6e2a9b47/
+          printf '<!doctype html><title>Nothing here</title>' > site/index.html
+          printf '<!doctype html><title>Not found</title>' > site/404.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: site
       - id: deployment
         uses: actions/deploy-pages@v4

@@ -1,7 +1,7 @@
 :root {
-  --bg: #0b1d13;
-  --panel: #13291c;
-  --line: #2b4936;
+  --bg: #071009;
+  --panel: #0e1f14;
+  --line: #22392a;
   --rail: rgba(217, 164, 65, 0.28);
   --text: #e9ece7;
   --muted: #93a698;
@@ -17,7 +17,7 @@ body {
   color: var(--text);
   /* the felt: looking down at the table */
   background:
-    radial-gradient(1100px 700px at 50% -10%, #1d4a30 0%, #143423 45%, var(--bg) 100%)
+    radial-gradient(1100px 700px at 50% -10%, #143224 0%, #0d2115 45%, var(--bg) 100%)
     fixed var(--bg);
 }
 
@@ -60,7 +60,7 @@ table.grid {
   white-space: nowrap;
 }
 .grid thead th { color: var(--muted); font-weight: 600; text-align: right; }
-.grid tbody th, .grid td:first-child { text-align: left; color: var(--text); font-weight: 600; }
+.grid tbody th { text-align: left; color: var(--text); font-weight: 600; }
 .grid tr:last-child td, .grid tr:last-child th { border-bottom: none; }
 .grid tr.total th, .grid tr.total td { border-top: 2px solid var(--line); font-weight: 700; }
 
