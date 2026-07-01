@@ -1,17 +1,30 @@
 :root {
-  --bg: #0f1216;
-  --panel: #171c22;
-  --line: #2a323c;
-  --text: #e6e9ee;
-  --muted: #8b97a5;
-  --pos: #3fb56b;
+  --bg: #0b1d13;
+  --panel: #13291c;
+  --line: #2b4936;
+  --rail: rgba(217, 164, 65, 0.28);
+  --text: #e9ece7;
+  --muted: #93a698;
+  --pos: #4cc177;
   --neg: #e0604d;
   --accent: #d9a441;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--text); }
+body {
+  margin: 0;
+  color: var(--text);
+  /* the felt: looking down at the table */
+  background:
+    radial-gradient(1100px 700px at 50% -10%, #1d4a30 0%, #143423 45%, var(--bg) 100%)
+    fixed var(--bg);
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Palatino Linotype", "Times New Roman", serif;
+  letter-spacing: .4px;
+}
 
 .loading { padding: 3rem; text-align: center; color: var(--muted); }
 
@@ -38,8 +51,9 @@ h2 { font-size: 1.1rem; margin: .25rem 0 1rem; }
 
 table.grid {
   width: 100%; border-collapse: collapse; background: var(--panel);
-  border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+  border: 1px solid var(--rail); border-radius: 10px; overflow: hidden;
   font-variant-numeric: tabular-nums;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
 }
 .grid th, .grid td {
   padding: .5rem .6rem; text-align: right; border-bottom: 1px solid var(--line);
@@ -171,6 +185,17 @@ input.num-wide { width: 7rem; }
   padding: .5rem .65rem; display: flex; justify-content: space-between; gap: .75rem;
   align-items: center; font-size: .9rem; line-height: 1.35;
 }
+
+/* --- poker chips --- */
+.chip-rows { display: flex; flex-direction: column; gap: .7rem; margin: .9rem 0 1.2rem; }
+.chip-row { display: grid; grid-template-columns: 3.6rem 1fr 4.6rem; gap: .5rem; align-items: end; }
+.chipstack { display: block; }
+.chart { border-color: var(--rail); }
+.rules-list li { border-color: var(--rail); }
+
+/* --- suit accents --- */
+nav button { letter-spacing: .2px; }
+footer .suits { letter-spacing: .35em; margin-left: .5em; color: #59705f; }
 
 /* --- compact tables on phones --- */
 @media (max-width: 480px) {

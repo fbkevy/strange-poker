@@ -8,7 +8,7 @@ import { proposeNextChips, buildGameEvent, type Env } from "./engine/replay";
 type Tab = "dashboard" | "history" | "pnl" | "chips" | "newgame" | "pay" | "rules";
 
 /** Stable per-player colors for charts. */
-const PALETTE = ["#d9a441", "#6ea8fe", "#3fb56b", "#b087e0", "#e0884d", "#e0604d"];
+const PALETTE = ["#d9a441", "#6ea8fe", "#3fb56b", "#b087e0", "#ff8c1a", "#e0604d"];
 export const playerColor = (players: string[], p: string) =>
   PALETTE[players.indexOf(p) % PALETTE.length];
 
@@ -31,8 +31,8 @@ export function App() {
   if (!data) return <div className="loading">Loading Strange Poker…</div>;
 
   const TABS: [Tab, string][] = [
-    ["dashboard", "Home"], ["history", "History"], ["pnl", "P&L"],
-    ["chips", "Chips"], ["newgame", "+ Game"], ["pay", "Pay"], ["rules", "Rules"],
+    ["dashboard", "♠ Home"], ["history", "♣ History"], ["pnl", "♦ P&L"],
+    ["chips", "♥ Chips"], ["newgame", "+ Game"], ["pay", "€ Pay"], ["rules", "Rules"],
   ];
 
   return (
@@ -83,6 +83,7 @@ export function App() {
       </main>
       <footer>
         {data.events.filter((e) => !e.deletedAt).length} events · SP · {env}
+        <span className="suits">♠♥♦♣</span>
       </footer>
     </div>
   );
@@ -184,6 +185,25 @@ function History({ data, env, onChange }: {
     return true;
   });
 
+  function downloadCsv() {
+    const esc = (s: string) =>
+      /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+    const head = ["date", "type", ...data.players, "note", "undone"];
+    const lines = [head.join(",")].concat(
+      filtered.map((r) => [
+        r.date ?? "", r.type,
+        ...data.players.map((p) => r.deltas[p] ?? 0),
+        esc(r.note ?? ""), r.deletedAt ? "yes" : "",
+      ].join(","))
+    );
+    const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `strange-poker-history-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
   return (
     <section>
       <h2>History</h2>
@@ -203,21 +223,33 @@ function History({ data, env, onChange }: {
             onChange={(e) => setShowDeleted(e.target.checked)} /> undone
         </label>
         <span className="count">{filtered.length}</span>
+        <button className="mini" onClick={downloadCsv}>⬇ CSV</button>
       </div>
       <div className="tablewrap">
         <table className="grid history">
           <thead>
             <tr>
-              <th></th>
-              <th>Date</th>
-              <th>Type</th>
               {data.players.map((p) => <th key={p}>{p}</th>)}
               <th>Note</th>
+              <th>Date</th>
+              <th>Type</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
             {filtered.map((r) => (
               <tr key={r.id} className={r.deletedAt ? "deleted" : ""}>
+                {data.players.map((p) => {
+                  const v = r.deltas[p];
+                  return (
+                    <td key={p} className={v > 0 ? "pos" : v < 0 ? "neg" : "muted"}>
+                      {v ? signedMoney(v) : "·"}
+                    </td>
+                  );
+                })}
+                <td className="note">{r.note}</td>
+                <td className="nowrap">{date(r.date)}</td>
+                <td><span className={`tag t-${r.type}`}>{TYPE_LABEL[r.type] ?? r.type}</span></td>
                 <td className="actions">
                   {r.deletedAt ? (
                     <button className="mini" onClick={async () => {
@@ -231,17 +263,6 @@ function History({ data, env, onChange }: {
                     }}>undo</button>
                   )}
                 </td>
-                <td className="nowrap">{date(r.date)}</td>
-                <td><span className={`tag t-${r.type}`}>{TYPE_LABEL[r.type] ?? r.type}</span></td>
-                {data.players.map((p) => {
-                  const v = r.deltas[p];
-                  return (
-                    <td key={p} className={v > 0 ? "pos" : v < 0 ? "neg" : "muted"}>
-                      {v ? signedMoney(v) : "·"}
-                    </td>
-                  );
-                })}
-                <td className="note">{r.note}</td>
               </tr>
             ))}
           </tbody>
@@ -331,27 +352,51 @@ function Pnl({ data }: { data: PokerData }) {
 // Chips — sorted lowest stack first
 // ---------------------------------------------------------------------------
 
+/** Side-view stack of poker chips: one chip per 500, columns of 10. */
+function ChipStack({ count, color }: { count: number; color: string }) {
+  const CH = 7, CW = 30, COL = 10, GAP = 6;
+  const cols = Math.max(1, Math.ceil(count / COL));
+  const W = cols * (CW + GAP);
+  const H = COL * (CH + 1) + 2;
+  return (
+    <svg className="chipstack" viewBox={`0 0 ${W} ${H}`}
+      style={{ width: W, height: H }} aria-label={`${count} chips`}>
+      {Array.from({ length: count }, (_, i) => {
+        const col = Math.floor(i / COL);
+        const row = i % COL;
+        const x = col * (CW + GAP);
+        const y = H - (row + 1) * (CH + 1);
+        return (
+          <g key={i}>
+            <rect x={x} y={y} width={CW} height={CH} rx={CH / 2} fill={color} />
+            {/* edge stripes */}
+            {[0.2, 0.5, 0.8].map((f) => (
+              <rect key={f} x={x + CW * f - 1.5} y={y + 1} width={3}
+                height={CH - 2} rx={1} fill="rgba(255,255,255,.55)" />
+            ))}
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
 function Chips({ data }: { data: PokerData }) {
   const proposal = useMemo(() => proposeNextChips(data), [data]);
   const players = [...data.players].sort(
     (a, b) => (proposal.chips[a] ?? Infinity) - (proposal.chips[b] ?? Infinity)
   );
-  const max = Math.max(1, ...players.map((p) => proposal.chips[p] ?? 0));
 
   return (
     <section>
       <h2>Chips for the next game</h2>
-      <div className="bars">
+      <div className="chip-rows">
         {players.map((p) => (
-          <div key={p} className="bar-row">
+          <div key={p} className="chip-row">
             <span className="bar-label">{p}</span>
-            <div className="bar-track single">
-              <div className="bar chip-bar"
-                style={{
-                  width: `${((proposal.chips[p] ?? 0) / max) * 100}%`,
-                  background: playerColor(data.players, p),
-                }} />
-            </div>
+            <ChipStack
+              count={Math.round((proposal.chips[p] ?? 0) / 500)}
+              color={playerColor(data.players, p)} />
             <span className="bar-val">
               {proposal.chips[p] == null ? "—" : fmtChips(proposal.chips[p])}
             </span>
