@@ -82,6 +82,26 @@ current stack, for the *next* main game —
 > pot, 2nd usually breaking even, and per-player stack ranges wider than 6k–9k.
 > The user chose the written rules over historical behaviour.
 
+## Core principles (added 2026-07-01)
+
+1. **Event sourcing — the event log is the only state.** Chips, loss streaks,
+   Outstanding, and P&L are never stored; they are derived by replaying the
+   ledger through the rules engine. New game entries store the *inputs* (who
+   played, rebuys, finishing order, manual overrides), not computed results.
+   Legacy imported rows keep their sheet snapshots as recorded history.
+2. **Perfect undo.** Every input is undoable: undo soft-deletes the event
+   (`deleted_at` + audit note, never a hard delete) and all derived state
+   recomputes on replay — including next-game chip proposals affected by, e.g.,
+   un-declaring a winner. An "Undo history" view can restore deleted events.
+3. **Test vs prod mode.** Two isolated datasets so trying things can't corrupt
+   history. Mode is explicit and visible (banner + color). Test mode can be
+   seeded with a copy of prod at any time. Locally: separate localStorage
+   namespaces; on Supabase: an `env` column ('prod' | 'test') on `events`
+   filtered by every query (simple, one DB).
+4. **TDD within reason.** Pure logic (engine, selectors, replay/undo, store
+   filtering) is written test-first with vitest. Thin UI wiring is not
+   test-first, but every bug fix gets a regression test.
+
 ## Architecture
 
 - **Static SPA**, **React + Vite + TypeScript**, deployed free (GitHub Pages or
@@ -99,7 +119,9 @@ current stack, for the *next* main game —
 
 ### Supabase schema
 - `players(id, name, active, sort)`
-- `events(id, date, type, block, note, deltas jsonb, chips jsonb, buyins jsonb, created_at)`
+- `events(id, env, date, type, block, note, deltas jsonb, chips jsonb, buyins jsonb,
+  inputs jsonb, deleted_at timestamptz, created_at)` — `env` ∈ {prod, test};
+  `inputs` holds the wizard's raw inputs for replay; `deleted_at` = soft delete (undo)
 - `config(key, value jsonb)` (single row of settings)
 - Simple RLS: a shared group passphrase / anon-key access (friends-only app,
   not sensitive). Finalize auth model when the project is created.

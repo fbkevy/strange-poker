@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/format.ts","./src/main.tsx","./src/types.ts","./src/engine/replay.test.ts","./src/engine/replay.ts","./src/engine/rules.test.ts","./src/engine/rules.ts","./src/engine/selectors.ts","./src/store/local.ts","./src/store/supabase.ts","./vite-env.d.ts"],"version":"5.9.3"}

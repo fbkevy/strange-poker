@@ -11,9 +11,20 @@ export type EventType =
   | "settle" // real money changing hands to clear balances
   | "misc"; // debts owed "for other reasons" (Rome, sweepstakes, …)
 
+/** Raw wizard inputs for a game — the source of truth for derived numbers. */
+export interface GameInputs {
+  kind: "main" | "after";
+  entrants: { player: PlayerId; rebuys: number }[];
+  first: PlayerId[]; // >1 = split of 1st
+  second?: PlayerId[]; // 6-player main games only
+  noShows?: PlayerId[]; // regulars absent (counts toward loss streak)
+  chipOverrides?: Record<PlayerId, number>; // manual stack corrections
+}
+
 /** A single zero-sum ledger row. `deltas` sums to 0 across all players. */
 export interface LedgerEvent {
   id: string;
+  env?: "prod" | "test"; // dataset; absent = prod (legacy import)
   date: string | null; // ISO date (UTC-safe). null when unknown (legacy rows)
   type: EventType;
   block: "game" | "ledger"; // poker-P&L vs other-debts (mirrors the sheet)
@@ -21,6 +32,10 @@ export interface LedgerEvent {
   deltas: Record<PlayerId, number>; // EUR
   chips: Record<PlayerId, number> | null; // main games: starting stacks
   buyins: Record<PlayerId, number> | null; // main games: rebuy counts
+  /** Present on app-created games; legacy sheet rows have snapshots only. */
+  inputs?: GameInputs;
+  /** Soft delete (undo). Deleted events are ignored by all derivations. */
+  deletedAt?: string | null;
 }
 
 export interface Config {
