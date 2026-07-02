@@ -1,0 +1,30 @@
+name: Backup Supabase to git
+
+on:
+  schedule:
+    - cron: "17 3 * * 1" # every Monday 03:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/export_supabase.mjs
+        env:
+          # Publishable key — already public in the site bundle.
+          SUPABASE_URL: https://pkauqxtldnaorajuephr.supabase.co
+          SUPABASE_ANON_KEY: sb_publishable_N4YUJRPsdrnj79gRO7HN7Q_3FehQYBJ
+      - name: Commit if changed
+        run: |
+          git config user.name "sp-backup-bot"
+          git config user.email "actions@github.com"
+          git add data/backup.json
+          git diff --cached --quiet || git commit -m "Backup Supabase ledger ($(date -u +%F))"
+          git push

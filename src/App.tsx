@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Config, GameInputs, PokerData } from "./types";
-import { LocalStore } from "./store/local";
+import { resolveStore, type Store } from "./store";
 import { money, signedMoney, chips as fmtChips, date } from "./format";
 import { outstanding, pokerPnl, gameYears, history } from "./engine/selectors";
 import { proposeNextChips, buildGameEvent, type Env } from "./engine/replay";
@@ -12,23 +12,46 @@ const PALETTE = ["#d9a441", "#6ea8fe", "#3fb56b", "#b087e0", "#ff8c1a", "#e0604d
 export const playerColor = (players: string[], p: string) =>
   PALETTE[players.indexOf(p) % PALETTE.length];
 
+/** Resolved once at startup; components receive it via prop. */
+let STORE: Store | null = null;
+
 export function App() {
   const [env, setEnv] = useState<Env>(
     () => (localStorage.getItem("sp.env") as Env) || "prod"
   );
   const [data, setData] = useState<PokerData | null>(null);
   const [tab, setTab] = useState<Tab>("dashboard");
+  const [storeMode, setStoreMode] = useState<"cloud" | "local" | null>(null);
 
   const reload = useCallback(() => {
-    LocalStore.getData(env).then(setData);
+    STORE?.getData(env).then(setData).catch((e) => console.error("[SP] load failed", e));
   }, [env]);
 
+  // Resolve the backend once, then load.
   useEffect(() => {
+    let cancelled = false;
+    resolveStore().then(({ store, mode }) => {
+      if (cancelled) return;
+      STORE = store;
+      setStoreMode(mode);
+    });
+    return () => { cancelled = true; };
+  }, []);
+
+  useEffect(() => {
+    if (!storeMode) return;
     localStorage.setItem("sp.env", env);
     reload();
-  }, [env, reload]);
+  }, [env, reload, storeMode]);
 
-  if (!data) return <div className="loading">Loading Strange Poker…</div>;
+  // Live sync: refresh whenever another phone writes.
+  useEffect(() => {
+    if (storeMode !== "cloud" || !STORE?.subscribe) return;
+    return STORE.subscribe(reload);
+  }, [storeMode, reload]);
+
+  if (!data || !STORE) return <div className="loading">Loading Strange Poker…</div>;
+  const store = STORE;
 
   const TABS: [Tab, string][] = [
     ["dashboard", "♠ Home"], ["history", "♣ History"], ["pnl", "♦ P&L"],
@@ -44,7 +67,7 @@ export function App() {
           <button
             onClick={async () => {
               if (confirm("Reset test data back to a clean copy of prod?")) {
-                await LocalStore.resetTest();
+                await store.resetTest();
                 reload();
               }
             }}
@@ -73,22 +96,23 @@ export function App() {
       </div>
       <main>
         {tab === "dashboard" && <Dashboard data={data} />}
-        {tab === "history" && <History data={data} env={env} onChange={reload} />}
+        {tab === "history" && <History data={data} env={env} store={store} onChange={reload} />}
         {tab === "pnl" && <Pnl data={data} />}
         {tab === "chips" && <Chips data={data} />}
         {tab === "newgame" && (
-          <NewGame data={data} env={env} onSaved={() => { reload(); setTab("chips"); }} />
+          <NewGame data={data} env={env} store={store} onSaved={() => { reload(); setTab("chips"); }} />
         )}
         {tab === "pay" && (
-          <Pay data={data} env={env} onSaved={() => { reload(); setTab("dashboard"); }} />
+          <Pay data={data} env={env} store={store} onSaved={() => { reload(); setTab("dashboard"); }} />
         )}
         {tab === "bet" && (
-          <Bet data={data} env={env} onSaved={() => { reload(); setTab("history"); }} />
+          <Bet data={data} env={env} store={store} onSaved={() => { reload(); setTab("history"); }} />
         )}
-        {tab === "rules" && <Rules data={data} env={env} onChange={reload} />}
+        {tab === "rules" && <Rules data={data} env={env} store={store} onChange={reload} />}
       </main>
       <footer>
-        {data.events.filter((e) => !e.deletedAt).length} events · SP · {env}
+        {data.events.filter((e) => !e.deletedAt).length} events · SP · {env} ·{" "}
+        {storeMode === "cloud" ? "☁ live" : "this device only"}
         <span className="suits">♠♥♦♣</span>
       </footer>
     </div>
@@ -175,8 +199,8 @@ const TYPE_LABEL: Record<string, string> = {
   bet: "Side bet", bonus: "Bonus", settle: "Settle", misc: "Misc",
 };
 
-function History({ data, env, onChange }: {
-  data: PokerData; env: Env; onChange: () => void;
+function History({ data, env, store, onChange }: {
+  data: PokerData; env: Env; store: Store; onChange: () => void;
 }) {
   const rows = useMemo(() => history(data), [data]);
   const [type, setType] = useState<string>("all");
@@ -259,12 +283,12 @@ function History({ data, env, onChange }: {
                 <td className="actions">
                   {r.deletedAt ? (
                     <button className="mini" onClick={async () => {
-                      await LocalStore.restoreEvent(String(r.id), env); onChange();
+                      await store.restoreEvent(String(r.id), env); onChange();
                     }}>↩ redo</button>
                   ) : (
                     <button className="mini" onClick={async () => {
                       if (confirm("Undo this entry? All chip calcs and totals recompute without it.")) {
-                        await LocalStore.deleteEvent(String(r.id), env); onChange();
+                        await store.deleteEvent(String(r.id), env); onChange();
                       }
                     }}>undo</button>
                   )}
@@ -436,8 +460,8 @@ function Chips({ data }: { data: PokerData }) {
 // New game — preview shows chips before → after
 // ---------------------------------------------------------------------------
 
-function NewGame({ data, env, onSaved }: {
-  data: PokerData; env: Env; onSaved: () => void;
+function NewGame({ data, env, store, onSaved }: {
+  data: PokerData; env: Env; store: Store; onSaved: () => void;
 }) {
   const players = data.players;
   const [kind, setKind] = useState<"main" | "after">("main");
@@ -486,7 +510,7 @@ function NewGame({ data, env, onSaved }: {
     const e = buildGameEvent(inputs, {
       id: crypto.randomUUID(), date: gameDate, config: data.config, players, env, note,
     });
-    await LocalStore.addEvent(e, env);
+    await store.addEvent(e, env);
     onSaved();
   }
 
@@ -602,8 +626,8 @@ function NewGame({ data, env, onSaved }: {
 // Pay — record real money changing hands (settlement)
 // ---------------------------------------------------------------------------
 
-function Pay({ data, env, onSaved }: {
-  data: PokerData; env: Env; onSaved: () => void;
+function Pay({ data, env, store, onSaved }: {
+  data: PokerData; env: Env; store: Store; onSaved: () => void;
 }) {
   const players = data.players;
   const out = useMemo(() => outstanding(data), [data]);
@@ -618,7 +642,7 @@ function Pay({ data, env, onSaved }: {
 
   async function save() {
     if (!valid) { setErr("Pick two different players and a positive amount."); return; }
-    await LocalStore.addEvent({
+    await store.addEvent({
       id: crypto.randomUUID(),
       env,
       date: payDate,
@@ -690,8 +714,8 @@ const BET_TYPES = [
   ["misc", "Misc owing (sweepstake, trip, …)"],
 ] as const;
 
-function Bet({ data, env, onSaved }: {
-  data: PokerData; env: Env; onSaved: () => void;
+function Bet({ data, env, store, onSaved }: {
+  data: PokerData; env: Env; store: Store; onSaved: () => void;
 }) {
   const players = data.players;
   const [betType, setBetType] = useState<"bet" | "bonus" | "misc">("bet");
@@ -736,7 +760,7 @@ function Bet({ data, env, onSaved }: {
 
   async function save() {
     if (!deltas) return;
-    await LocalStore.addEvent({
+    await store.addEvent({
       id: crypto.randomUUID(),
       env,
       date: betDate,
@@ -875,19 +899,19 @@ const CONFIG_FIELDS: [keyof Config, string][] = [
   ["chipMax", "Maximum stack"],
 ];
 
-function Rules({ data, env, onChange }: {
-  data: PokerData; env: Env; onChange: () => void;
+function Rules({ data, env, store, onChange }: {
+  data: PokerData; env: Env; store: Store; onChange: () => void;
 }) {
   const [cfg, setCfg] = useState<Config>(data.config);
   const [rules, setRules] = useState<string[]>([]);
   const [newRule, setNewRule] = useState("");
   const [saved, setSaved] = useState(false);
 
-  useEffect(() => { LocalStore.getRules(env).then(setRules); }, [env]);
+  useEffect(() => { store.getRules(env).then(setRules); }, [env, store]);
   useEffect(() => { setCfg(data.config); }, [data.config]);
 
   async function saveConfig() {
-    await LocalStore.saveConfig(cfg, env);
+    await store.saveConfig(cfg, env);
     setSaved(true);
     setTimeout(() => setSaved(false), 1500);
     onChange();
@@ -895,7 +919,7 @@ function Rules({ data, env, onChange }: {
 
   async function saveRules(next: string[]) {
     setRules(next);
-    await LocalStore.saveRules(next, env);
+    await store.saveRules(next, env);
   }
 
   return (

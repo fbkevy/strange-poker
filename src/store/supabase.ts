@@ -1,15 +1,15 @@
 // Supabase client for Strange Poker (SP).
-// The anon/publishable key is browser-safe by design; access is governed by RLS
-// (see supabase/schema.sql). Requires `npm i @supabase/supabase-js`.
+// The publishable (anon) key is browser-safe by design and ships in the site
+// bundle regardless, so committing it here adds no exposure. Access control is
+// RLS (currently open to the key — friends-only app; see supabase/schema.sql).
 
 import { createClient } from "@supabase/supabase-js";
 
-const url = import.meta.env.VITE_SUPABASE_URL as string;
-const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
+const url =
+  (import.meta.env.VITE_SUPABASE_URL as string | undefined) ??
+  "https://pkauqxtldnaorajuephr.supabase.co";
+const anonKey =
+  (import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined) ??
+  "sb_publishable_N4YUJRPsdrnj79gRO7HN7Q_3FehQYBJ";
 
-if (!url || !anonKey) {
-  // Falls back to LocalStore in the app when unset.
-  console.warn("[SP] Supabase env not set; using local store.");
-}
-
-export const supabase = url && anonKey ? createClient(url, anonKey) : null;
+export const supabase = createClient(url, anonKey);
