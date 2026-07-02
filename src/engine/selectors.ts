@@ -45,6 +45,6 @@ export interface HistoryRow extends LedgerEvent {}
 export function history(data: PokerData): HistoryRow[] {
   return [...data.events].sort((a, b) => {
     const d = (b.date ?? "").localeCompare(a.date ?? "");
-    return d !== 0 ? d : ((b as any).srcRow ?? 0) - ((a as any).srcRow ?? 0);
+    return d !== 0 ? d : (b.srcRow ?? 0) - (a.srcRow ?? 0);
   });
 }

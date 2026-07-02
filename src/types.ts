@@ -36,6 +36,8 @@ export interface LedgerEvent {
   inputs?: GameInputs;
   /** Soft delete (undo). Deleted events are ignored by all derivations. */
   deletedAt?: string | null;
+  /** Row number in the original sheet (legacy imported events only). */
+  srcRow?: number;
 }
 
 export interface Config {

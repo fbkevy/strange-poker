@@ -5,10 +5,9 @@
 
 import { LocalStore } from "./local";
 import { SupabaseStore } from "./remote";
+import type { Store } from "./types";
 
-export type Store = typeof LocalStore & {
-  subscribe?: (onChange: () => void) => () => void;
-};
+export type { Store } from "./types";
 
 export interface ResolvedStore {
   store: Store;
@@ -19,11 +18,11 @@ export async function resolveStore(): Promise<ResolvedStore> {
   try {
     const probe = await SupabaseStore.getData("prod");
     if (probe.events.length > 0) {
-      return { store: SupabaseStore as unknown as Store, mode: "cloud" };
+      return { store: SupabaseStore, mode: "cloud" };
     }
     console.warn("[SP] Supabase reachable but empty — run the seed script; using local store.");
   } catch (err) {
     console.warn("[SP] Supabase unavailable, using local store:", err);
   }
-  return { store: LocalStore as Store, mode: "local" };
+  return { store: LocalStore, mode: "local" };
 }

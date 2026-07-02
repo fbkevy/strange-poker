@@ -12,6 +12,7 @@ import type { Config, LedgerEvent, PokerData } from "../types";
 import type { Env } from "../engine/replay";
 import { supabase } from "./supabase";
 import { DEFAULT_HOUSE_RULES } from "./local";
+import { applyTombstones, type Store, type Tombstones } from "./types";
 
 type Row = {
   id: string; env: "prod" | "test"; date: string | null; type: string;
@@ -31,14 +32,14 @@ function fromRow(r: Row): LedgerEvent {
     block: r.block, note: r.note, deltas: r.deltas, chips: r.chips,
     buyins: r.buyins, inputs: r.inputs ?? undefined, deletedAt: r.deleted_at,
     ...(r.src_row != null ? { srcRow: r.src_row } : {}),
-  } as LedgerEvent;
+  };
 }
 
 function toRow(e: LedgerEvent, env: Env): Partial<Row> {
   return {
     id: String(e.id), env, date: e.date, type: e.type, block: e.block,
     note: e.note, deltas: e.deltas, chips: e.chips, buyins: e.buyins,
-    inputs: e.inputs ?? null, src_row: (e as any).srcRow ?? null,
+    inputs: e.inputs ?? null, src_row: e.srcRow ?? null,
     deleted_at: e.deletedAt ?? null,
   };
 }
@@ -54,7 +55,7 @@ async function setConfigValue(key: string, value: unknown): Promise<void> {
   if (error) throw error;
 }
 
-export const SupabaseStore = {
+export const SupabaseStore: Store = {
   async getData(env: Env = "prod"): Promise<PokerData> {
     const query = supabase.from("events").select("*");
     const { data: rows, error } = env === "prod"
@@ -67,14 +68,12 @@ export const SupabaseStore = {
       ...seedData.config,
       ...((await getConfigValue<Partial<Config>>(`${env}.config`)) ?? {}),
     };
-    const tombs = env === "test"
-      ? (await getConfigValue<Record<string, string>>("test.tombstones")) ?? {}
+    const tombs: Tombstones = env === "test"
+      ? (await getConfigValue<Tombstones>("test.tombstones")) ?? {}
       : {};
 
-    const events = (rows as Row[]).map(fromRow).map((e) =>
-      tombs[String(e.id)] ? { ...e, deletedAt: tombs[String(e.id)] } : e
-    );
-    events.sort((a, b) => ((a as any).srcRow ?? 1e9) - ((b as any).srcRow ?? 1e9));
+    const events = applyTombstones((rows as Row[]).map(fromRow), tombs);
+    events.sort((a, b) => (a.srcRow ?? 1e9) - (b.srcRow ?? 1e9));
     return { players, config, events };
   },
 
