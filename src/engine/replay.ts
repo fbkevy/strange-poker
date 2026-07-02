@@ -150,11 +150,20 @@ export function proposeNextChips(data: PokerData, env?: Env): ChipProposal {
     const firstCount = Object.values(finishes).filter((f) => f === "win").length;
     const secondCount = Object.values(finishes).filter((f) => f === "second").length;
 
+    // Rebuys count as loss-strikes: from wizard inputs, or legacy buyin columns.
+    const rebuys: Record<PlayerId, number> = {};
+    if (e.inputs) {
+      for (const en of e.inputs.entrants) rebuys[en.player] = en.rebuys;
+    } else if (e.buyins) {
+      for (const [p, n] of Object.entries(e.buyins)) rebuys[p] = Number(n) || 0;
+    }
+
     const out = applyHandicap(
       {
         currentChips: chips,
         finishes,
         lossStreaks: streaks,
+        rebuys,
         firstCount: Math.max(1, firstCount),
         secondCount: Math.max(1, secondCount),
       },

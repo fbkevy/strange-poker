@@ -88,6 +88,8 @@ export interface HandicapInput {
   finishes: Record<PlayerId, Finish>;
   /** Consecutive-loss streak per player BEFORE this game. */
   lossStreaks: Record<PlayerId, number>;
+  /** Rebuys taken this game; each counts as an extra loss-strike for losers. */
+  rebuys?: Record<PlayerId, number>;
   /** Number of players who split 1st / 2nd, for splitting the decrement. */
   firstCount: number;
   secondCount: number;
@@ -106,8 +108,9 @@ const clamp = (x: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, x
  * Apply one MAIN game's result to the handicap. €5/after games never call this.
  * - win: −winDecrement (shared if 1st was split).
  * - second: −secondDecrement (shared if 2nd was split).
- * - loss/absent: streak +1; on reaching lossStreakForIncrement, +lossIncrement
- *   and reset the streak. Winners and 2nd reset their streak to 0.
+ * - loss/absent: streak +1, plus +1 per rebuy taken; on reaching
+ *   lossStreakForIncrement, +lossIncrement and reset the streak.
+ *   Winners and 2nd reset their streak to 0 (rebuys don't count against them).
  * - every result is clamped to [chipMin, chipMax].
  */
 export function applyHandicap(input: HandicapInput, config: Config): HandicapOutput {
@@ -133,8 +136,8 @@ export function applyHandicap(input: HandicapInput, config: Config): HandicapOut
       streak = 0;
       reason = `2nd → −${dec}`;
     } else {
-      // loss or absent
-      streak += 1;
+      // loss or absent: the loss itself + one strike per rebuy taken
+      streak += 1 + Math.max(0, input.rebuys?.[p] ?? 0);
       if (streak >= config.lossStreakForIncrement) {
         next = cur + config.lossIncrement;
         streak = 0;

@@ -19,6 +19,7 @@ const rulesKey = (env: Env) => `sp.${env}.rules`;
 export const DEFAULT_HOUSE_RULES: string[] = [
   "Playing with 6: 2nd place gets 35% of the pot. €5 game: no 2nd place (just money back for 2nd).",
   "When achieving 2nd: decrement 250 chips next game.",
+  "Each main-game rebuy counts as an extra loss toward the 3-loss chip increment (winners are exempt).",
   "Splitting a place splits its decrement (e.g. 500 → 250 each).",
   "First 2-7 of the session wins a bonus 500 chips from every other player (must show, hole cards only). 1,000 in the €5 game. Counts as a split for the handicap.",
   "Straight flush with the winning hand = €5 from each player.",

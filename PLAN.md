@@ -76,6 +76,9 @@ current stack, for the *next* main game —
 - Payout: 6-player main = **65/35**; <6 main = winner-takes-all; €5 = 1st only.
 - Handicap: win **−500**; 2nd **−250**; a split of a place shares that place's
   decrement equally; lose-streak of **3** (no-shows count) = **+500**, then reset.
+- Rebuys (added 2026-07-02, validated against history — fits ~2× better than
+  losses-only): each main-game rebuy is an extra loss-strike for losers;
+  winners/2nd still reset regardless of rebuys.
 - Clamps: hard **6,000–9,000** for everyone going forward.
 
 > Empirical note (for reference): history actually shows winners taking the whole

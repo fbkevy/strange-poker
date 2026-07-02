@@ -91,6 +91,30 @@ describe("applyHandicap", () => {
     expect(out.nextStreaks.Dave).toBe(0);
   });
 
+  it("each rebuy counts as an extra loss toward the streak", () => {
+    const out = applyHandicap({
+      ...base,
+      currentChips: { Kev: 7000 },
+      finishes: { Kev: "loss" },
+      lossStreaks: { Kev: 0 },
+      rebuys: { Kev: 2 }, // loss + 2 rebuys = 3 strikes at once
+    }, config);
+    expect(out.nextChips.Kev).toBe(7500);
+    expect(out.nextStreaks.Kev).toBe(0);
+  });
+
+  it("rebuys don't count against a winner (win still resets)", () => {
+    const out = applyHandicap({
+      ...base,
+      currentChips: { Kev: 7000 },
+      finishes: { Kev: "win" },
+      lossStreaks: { Kev: 2 },
+      rebuys: { Kev: 3 },
+    }, config);
+    expect(out.nextChips.Kev).toBe(6500); // −500 for the win, nothing else
+    expect(out.nextStreaks.Kev).toBe(0);
+  });
+
   it("no-show counts as a loss toward the streak", () => {
     const out = applyHandicap({
       ...base,
