@@ -1,0 +1,6268 @@
+{
+  "exportedAt": "2026-07-02T18:50:09.052Z",
+  "config": [
+    {
+      "key": "players",
+      "value": [
+        "Dec",
+        "Pauli",
+        "Kev",
+        "Caoimh",
+        "Dave",
+        "Fran"
+      ],
+      "updated_at": "2026-07-02T18:48:20.324211+00:00"
+    },
+    {
+      "key": "prod.config",
+      "value": {
+        "chipMax": 9000,
+        "chipMin": 6000,
+        "mainEntry": 20,
+        "afterEntry": 5,
+        "winDecrement": 500,
+        "lossIncrement": 500,
+        "royalFlushBonus": 10,
+        "secondDecrement": 250,
+        "secondPlaceShare": 0.35,
+        "straightFlushBonus": 5,
+        "lossStreakForIncrement": 3
+      },
+      "updated_at": "2026-07-02T18:48:20.324211+00:00"
+    }
+  ],
+  "events": [
+    {
+      "id": "2",
+      "env": "prod",
+      "date": null,
+      "type": "settle",
+      "block": "ledger",
+      "note": "<-- Total buy-ins",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 0,
+        "Dave": 20,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 2,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "3",
+      "env": "prod",
+      "date": null,
+      "type": "settle",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": -60,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 60,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 3,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "4",
+      "env": "prod",
+      "date": null,
+      "type": "settle",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -130,
+        "Dave": 130,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 4,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "5",
+      "env": "prod",
+      "date": null,
+      "type": "settle",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": -100,
+        "Fran": 0,
+        "Pauli": 150,
+        "Caoimh": -50
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 5,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "6",
+      "env": "prod",
+      "date": null,
+      "type": "settle",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -140,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 140,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 6,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "7",
+      "env": "prod",
+      "date": null,
+      "type": "settle",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -155,
+        "Dave": 155,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 7,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "8",
+      "env": "prod",
+      "date": null,
+      "type": "settle",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": 60,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": -50
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 8,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "9",
+      "env": "prod",
+      "date": "2022-10-22",
+      "type": "settle",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 150,
+        "Pauli": -150,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 9,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "10",
+      "env": "prod",
+      "date": "2024-07-16",
+      "type": "settle",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": -210,
+        "Kev": 0,
+        "Dave": 210,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 10,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "11",
+      "env": "prod",
+      "date": "2025-05-06",
+      "type": "settle",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": -425,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 425,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 11,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "13",
+      "env": "prod",
+      "date": null,
+      "type": "bet",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 10,
+        "Kev": -10,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 13,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "14",
+      "env": "prod",
+      "date": null,
+      "type": "bet",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -10,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 10,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 14,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "15",
+      "env": "prod",
+      "date": null,
+      "type": "bet",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 10,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 15,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "16",
+      "env": "prod",
+      "date": null,
+      "type": "bet",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 10,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 16,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "17",
+      "env": "prod",
+      "date": null,
+      "type": "bet",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": 10,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 17,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "18",
+      "env": "prod",
+      "date": null,
+      "type": "bet",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 50,
+        "Caoimh": -50
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 18,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "19",
+      "env": "prod",
+      "date": null,
+      "type": "bonus",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": 15
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 19,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "20",
+      "env": "prod",
+      "date": null,
+      "type": "bonus",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": 15
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 20,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "21",
+      "env": "prod",
+      "date": "2021-07-13",
+      "type": "bet",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 80,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 21,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "22",
+      "env": "prod",
+      "date": null,
+      "type": "misc",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": -40,
+        "Kev": 0,
+        "Dave": 40,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 22,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "23",
+      "env": "prod",
+      "date": null,
+      "type": "bet",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": 10,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 23,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "24",
+      "env": "prod",
+      "date": null,
+      "type": "bet",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -10,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 10,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 24,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "25",
+      "env": "prod",
+      "date": null,
+      "type": "bet",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": 5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 25,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "26",
+      "env": "prod",
+      "date": null,
+      "type": "misc",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": -10,
+        "Dave": 50,
+        "Fran": -10,
+        "Pauli": -10,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 26,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "27",
+      "env": "prod",
+      "date": null,
+      "type": "bonus",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 25,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 27,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "28",
+      "env": "prod",
+      "date": null,
+      "type": "misc",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": 153,
+        "Dave": 0,
+        "Fran": -153,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 28,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "29",
+      "env": "prod",
+      "date": null,
+      "type": "misc",
+      "block": "ledger",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -68,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 68
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 29,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "43",
+      "env": "prod",
+      "date": "2020-06-20",
+      "type": "after",
+      "block": "game",
+      "note": "max 9,000",
+      "deltas": {
+        "Dec": 40,
+        "Kev": 0,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": -20
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 43,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "44",
+      "env": "prod",
+      "date": "2020-07-18",
+      "type": "after",
+      "block": "game",
+      "note": "Unique Royal flush to one person winning the hand, everyone at table gives 10 each (even if not in hand)",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 60,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 44,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "45",
+      "env": "prod",
+      "date": "2020-08-15",
+      "type": "after",
+      "block": "game",
+      "note": "No second place for €5 game",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 80,
+        "Dave": -40,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": -20
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 45,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "46",
+      "env": "prod",
+      "date": "2020-08-29",
+      "type": "after",
+      "block": "game",
+      "note": "First 2-7 of the session wins a bonus 500 from every other player, they must show. hold cards only. 1000 for 5e gamr",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 60,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 46,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "47",
+      "env": "prod",
+      "date": "2020-09-05",
+      "type": "after",
+      "block": "game",
+      "note": "Straight flush with the winning hand = 5 yoyo",
+      "deltas": {
+        "Dec": 100,
+        "Kev": -40,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 47,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "48",
+      "env": "prod",
+      "date": "2020-09-19",
+      "type": "main",
+      "block": "game",
+      "note": "when playing with 6. 2nd place gets 35% , 5e game just money back for 2nd",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 80,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6500,
+        "Kev": 4000,
+        "Dave": 8500,
+        "Fran": null,
+        "Pauli": 6500,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 48,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "49",
+      "env": "prod",
+      "date": "2020-09-19",
+      "type": "main",
+      "block": "game",
+      "note": "when achieving 2nd: decrement 250",
+      "deltas": {
+        "Dec": 40,
+        "Kev": -10,
+        "Dave": -10,
+        "Fran": 0,
+        "Pauli": -10,
+        "Caoimh": -10
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 4000,
+        "Dave": 8500,
+        "Fran": null,
+        "Pauli": 7000,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 49,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "50",
+      "env": "prod",
+      "date": "2020-10-03",
+      "type": "main",
+      "block": "game",
+      "note": "Or splitting decrements split (500",
+      "deltas": {
+        "Dec": -40,
+        "Kev": -40,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": 120
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 4000,
+        "Dave": 8000,
+        "Fran": null,
+        "Pauli": 6500,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 50,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "51",
+      "env": "prod",
+      "date": "2020-10-17",
+      "type": "main",
+      "block": "game",
+      "note": "2-7 does count as a split.",
+      "deltas": {
+        "Dec": 100,
+        "Kev": -40,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 4000,
+        "Dave": 9000,
+        "Fran": null,
+        "Pauli": 6500,
+        "Caoimh": 6000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 0,
+        "Fran": null,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 51,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "52",
+      "env": "prod",
+      "date": "2020-10-24",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -40,
+        "Kev": -40,
+        "Dave": 140,
+        "Fran": -20,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 5000,
+        "Kev": 4500,
+        "Dave": 8000,
+        "Fran": 8000,
+        "Pauli": 7000,
+        "Caoimh": 6000
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 1,
+        "Dave": 0,
+        "Fran": null,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 52,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "53",
+      "env": "prod",
+      "date": "2020-11-07",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": -60,
+        "Caoimh": 120
+      },
+      "chips": {
+        "Dec": 5000,
+        "Kev": 4500,
+        "Dave": 7500,
+        "Fran": 7500,
+        "Pauli": 7000,
+        "Caoimh": 6000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": null,
+        "Pauli": 2,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 53,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "54",
+      "env": "prod",
+      "date": "2020-11-21",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 80,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 5000,
+        "Dave": 7500,
+        "Fran": 7500,
+        "Pauli": 7500,
+        "Caoimh": 5500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": null,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 54,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "55",
+      "env": "prod",
+      "date": "2020-11-21",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 15
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 55,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "56",
+      "env": "prod",
+      "date": "2020-12-05",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 100,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 4500,
+        "Dave": 7500,
+        "Fran": 7500,
+        "Pauli": 7500,
+        "Caoimh": 5500
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 56,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "57",
+      "env": "prod",
+      "date": "2020-12-19",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 120,
+        "Dave": -40,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 4000,
+        "Dave": 7500,
+        "Fran": 8000,
+        "Pauli": null,
+        "Caoimh": 5500
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 0,
+        "Dave": 1,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 57,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "58",
+      "env": "prod",
+      "date": "2021-01-02",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 120,
+        "Kev": -40,
+        "Dave": -40,
+        "Fran": -20,
+        "Pauli": -20,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 3500,
+        "Dave": 8000,
+        "Fran": 8000,
+        "Pauli": 7500,
+        "Caoimh": 6000
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 1,
+        "Dave": 1,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 58,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "59",
+      "env": "prod",
+      "date": "2021-01-16",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -20,
+        "Dave": -40,
+        "Fran": -20,
+        "Pauli": -40,
+        "Caoimh": 120
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 3500,
+        "Dave": 8000,
+        "Fran": 8000,
+        "Pauli": 8000,
+        "Caoimh": 6000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 1,
+        "Fran": 0,
+        "Pauli": 1,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 59,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "60",
+      "env": "prod",
+      "date": "2021-01-31",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -40,
+        "Kev": 80,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 3500,
+        "Dave": 8000,
+        "Fran": 8500,
+        "Pauli": null,
+        "Caoimh": 5500
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 1,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 60,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "61",
+      "env": "prod",
+      "date": "2021-02-06",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 100,
+        "Kev": -20,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 3000,
+        "Dave": 8500,
+        "Fran": 8500,
+        "Pauli": null,
+        "Caoimh": 5500
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 61,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "62",
+      "env": "prod",
+      "date": "2021-02-20",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 100,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 5000,
+        "Kev": 3000,
+        "Dave": 8500,
+        "Fran": 8500,
+        "Pauli": 7998,
+        "Caoimh": 5500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 2,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 62,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "63",
+      "env": "prod",
+      "date": "2021-03-06",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -60,
+        "Kev": -60,
+        "Dave": -20,
+        "Fran": 160,
+        "Pauli": 0,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 5000,
+        "Kev": 3000,
+        "Dave": 8500,
+        "Fran": 9000,
+        "Pauli": 7997.5,
+        "Caoimh": 6000
+      },
+      "buyins": {
+        "Dec": 2,
+        "Kev": 2,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 63,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "64",
+      "env": "prod",
+      "date": "2021-03-20",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": 80,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 3500,
+        "Dave": 9000,
+        "Fran": 8000,
+        "Pauli": null,
+        "Caoimh": 6000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 1,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 64,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "65",
+      "env": "prod",
+      "date": "2021-04-03",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 80,
+        "Kev": -40,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 3500,
+        "Dave": null,
+        "Fran": 8000,
+        "Pauli": null,
+        "Caoimh": 6000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 65,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "66",
+      "env": "prod",
+      "date": "2021-04-17",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 120,
+        "Kev": -20,
+        "Dave": -40,
+        "Fran": -20,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 5000,
+        "Kev": 4000,
+        "Dave": 8000,
+        "Fran": 8000,
+        "Pauli": 8500,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 1,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 66,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "67",
+      "env": "prod",
+      "date": "2021-05-01",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": -40,
+        "Fran": -20,
+        "Pauli": 140,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 4500,
+        "Kev": 4000,
+        "Dave": 8000,
+        "Fran": 8500,
+        "Pauli": 8500,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 1,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 67,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "68",
+      "env": "prod",
+      "date": "2021-05-15",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 120,
+        "Kev": -60,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 4500,
+        "Kev": 4500,
+        "Dave": 8500,
+        "Fran": 8500,
+        "Pauli": 8000,
+        "Caoimh": 7000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 2,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 68,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "69",
+      "env": "prod",
+      "date": "2021-05-15",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 25,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 69,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "70",
+      "env": "prod",
+      "date": "2021-05-29",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -40,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": 100
+      },
+      "chips": {
+        "Dec": 4000,
+        "Kev": 5000,
+        "Dave": 8500,
+        "Fran": 8500,
+        "Pauli": null,
+        "Caoimh": 7000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 2,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 70,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "71",
+      "env": "prod",
+      "date": "2021-06-05",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -40,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": -20,
+        "Caoimh": 100
+      },
+      "chips": {
+        "Dec": 4000,
+        "Kev": 5000,
+        "Dave": null,
+        "Fran": 9000,
+        "Pauli": 8000,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 71,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "72",
+      "env": "prod",
+      "date": "2021-06-05",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": 20
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 72,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "73",
+      "env": "prod",
+      "date": "2021-06-19",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 140,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": -40,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 4500,
+        "Kev": 5500,
+        "Dave": 8500,
+        "Fran": 9000,
+        "Pauli": 8000,
+        "Caoimh": 6000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 1,
+        "Fran": 0,
+        "Pauli": 1,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 73,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "74",
+      "env": "prod",
+      "date": "2021-07-03",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": -20,
+        "Fran": 100,
+        "Pauli": 0,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 4500,
+        "Kev": 5000,
+        "Dave": 9000,
+        "Fran": 9000,
+        "Pauli": null,
+        "Caoimh": 6000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 74,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "75",
+      "env": "prod",
+      "date": "2021-07-03",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 20,
+        "Fran": -5,
+        "Pauli": 0,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 75,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "76",
+      "env": "prod",
+      "date": "2021-07-17",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -40,
+        "Kev": 0,
+        "Dave": 80,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 4500,
+        "Kev": 5000,
+        "Dave": 9000,
+        "Fran": 8500,
+        "Pauli": 8500,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 76,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "77",
+      "env": "prod",
+      "date": "2021-08-08",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 100,
+        "Kev": -40,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 5000,
+        "Kev": 5000,
+        "Dave": null,
+        "Fran": 8500,
+        "Pauli": 8499,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 77,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "78",
+      "env": "prod",
+      "date": "2021-08-14",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -40,
+        "Kev": -20,
+        "Dave": -20,
+        "Fran": 100,
+        "Pauli": 0,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 4500,
+        "Kev": 5500,
+        "Dave": 8500,
+        "Fran": 8500,
+        "Pauli": 8499,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 78,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "79",
+      "env": "prod",
+      "date": "2021-08-28",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 10,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 79,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "80",
+      "env": "prod",
+      "date": "2021-08-28",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 80,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": -40,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 4500,
+        "Kev": 5500,
+        "Dave": null,
+        "Fran": 8000,
+        "Pauli": 9000,
+        "Caoimh": null
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 1,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 80,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "81",
+      "env": "prod",
+      "date": "2021-09-19",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 100,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 4500,
+        "Kev": 5500,
+        "Dave": 8500,
+        "Fran": null,
+        "Pauli": 9000,
+        "Caoimh": 7000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": null,
+        "Pauli": 0,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 81,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "82",
+      "env": "prod",
+      "date": "2021-09-19",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 20,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 82,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "83",
+      "env": "prod",
+      "date": "2021-09-25",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -60,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": 120,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 4500,
+        "Kev": 5000,
+        "Dave": 8500,
+        "Fran": 8000,
+        "Pauli": 9500,
+        "Caoimh": 7000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 2,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 83,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "84",
+      "env": "prod",
+      "date": "2021-09-25",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": 15,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 84,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "85",
+      "env": "prod",
+      "date": "2021-10-09",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -40,
+        "Kev": 140,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": -60,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 4500,
+        "Kev": 5500,
+        "Dave": 9000,
+        "Fran": 8000,
+        "Pauli": 9000,
+        "Caoimh": 7500
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 2,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 85,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "86",
+      "env": "prod",
+      "date": "2021-10-09",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 25,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 86,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "87",
+      "env": "prod",
+      "date": "2021-10-30",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 80,
+        "Dave": -40,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 5000,
+        "Kev": 5000,
+        "Dave": 9000,
+        "Fran": 8500,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 1,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 87,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "88",
+      "env": "prod",
+      "date": "2021-10-30",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 15,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 88,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "89",
+      "env": "prod",
+      "date": "2021-11-13",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -40,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": 100
+      },
+      "chips": {
+        "Dec": 5000,
+        "Kev": 4500,
+        "Dave": 9500,
+        "Fran": null,
+        "Pauli": 9500,
+        "Caoimh": 7500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 89,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "90",
+      "env": "prod",
+      "date": "2021-11-13",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": 25,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 90,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "91",
+      "env": "prod",
+      "date": "2021-11-20",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -40,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": -20,
+        "Caoimh": 100
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 4500,
+        "Dave": null,
+        "Fran": 8500,
+        "Pauli": 9500,
+        "Caoimh": 7000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 91,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "92",
+      "env": "prod",
+      "date": "2021-11-20",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": 20,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 92,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "93",
+      "env": "prod",
+      "date": "2021-12-04",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 0,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": 80,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 5000,
+        "Dave": 9500,
+        "Fran": 8500,
+        "Pauli": 9500,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 93,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "94",
+      "env": "prod",
+      "date": "2021-12-04",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 20,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 94,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "95",
+      "env": "prod",
+      "date": "2021-12-30",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": 60,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": null,
+        "Kev": 5000,
+        "Dave": 9500,
+        "Fran": null,
+        "Pauli": 9000,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": null,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 95,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "96",
+      "env": "prod",
+      "date": "2021-12-30",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -20,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": 60,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": null,
+        "Kev": 4500,
+        "Dave": 9500,
+        "Fran": null,
+        "Pauli": 9000,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": null,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 96,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "97",
+      "env": "prod",
+      "date": "2022-01-15",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -40,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": -40,
+        "Caoimh": 120
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 4500,
+        "Dave": null,
+        "Fran": 9000,
+        "Pauli": 8500,
+        "Caoimh": 7000
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 0,
+        "Dave": null,
+        "Fran": 0,
+        "Pauli": 1,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 97,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "98",
+      "env": "prod",
+      "date": "2022-01-15",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": 20,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 98,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "99",
+      "env": "prod",
+      "date": "2022-01-29",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -40,
+        "Kev": 0,
+        "Dave": 80,
+        "Fran": -20,
+        "Pauli": -20,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": null,
+        "Dave": 10000,
+        "Fran": 9000,
+        "Pauli": 8500,
+        "Caoimh": null
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": null,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 99,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "100",
+      "env": "prod",
+      "date": "2022-01-29",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": 20,
+        "Pauli": -5,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 100,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "101",
+      "env": "prod",
+      "date": "2022-02-05",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": 80,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6500,
+        "Kev": 4500,
+        "Dave": 9500,
+        "Fran": 9500,
+        "Pauli": 8500,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": null,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 101,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "102",
+      "env": "prod",
+      "date": "2022-02-05",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": 20
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 102,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "103",
+      "env": "prod",
+      "date": "2022-03-05",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": -40,
+        "Caoimh": 120
+      },
+      "chips": {
+        "Dec": 6500,
+        "Kev": 5000,
+        "Dave": 9500,
+        "Fran": 9500,
+        "Pauli": 8000,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 1,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 103,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "104",
+      "env": "prod",
+      "date": "2022-03-05",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 25,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 104,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "105",
+      "env": "prod",
+      "date": "2022-03-26",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": -20,
+        "Fran": 80,
+        "Pauli": 0,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6500,
+        "Kev": 5000,
+        "Dave": 9500,
+        "Fran": 9500,
+        "Pauli": null,
+        "Caoimh": 6000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": null,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 105,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "106",
+      "env": "prod",
+      "date": "2022-04-30",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -40,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": 80
+      },
+      "chips": {
+        "Dec": 7000,
+        "Kev": 5500,
+        "Dave": 10000,
+        "Fran": 9000,
+        "Pauli": null,
+        "Caoimh": 6000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": null,
+        "Fran": 0,
+        "Pauli": null,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 106,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "107",
+      "env": "prod",
+      "date": "2022-04-30",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": 0,
+        "Caoimh": 15
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 107,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "108",
+      "env": "prod",
+      "date": "2022-06-04",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -40,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": 100,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 7000,
+        "Kev": 5500,
+        "Dave": null,
+        "Fran": 9000,
+        "Pauli": null,
+        "Caoimh": 5500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": null,
+        "Fran": 0,
+        "Pauli": 1,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 108,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "109",
+      "env": "prod",
+      "date": "2022-06-04",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": 20
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 109,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "110",
+      "env": "prod",
+      "date": "2022-08-20",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 20,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -10,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 110,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "111",
+      "env": "prod",
+      "date": "2022-08-20",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": 10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 111,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "112",
+      "env": "prod",
+      "date": "2022-08-20",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 10,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 112,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "113",
+      "env": "prod",
+      "date": "2022-08-20",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": 10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 113,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "114",
+      "env": "prod",
+      "date": "2022-09-03",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 60,
+        "Dave": -20,
+        "Fran": -40,
+        "Pauli": -40,
+        "Caoimh": 60
+      },
+      "chips": {
+        "Dec": 7000,
+        "Kev": 6000,
+        "Dave": 10000,
+        "Fran": 9000,
+        "Pauli": 7500,
+        "Caoimh": 5500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 1,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 114,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "115",
+      "env": "prod",
+      "date": "2022-09-03",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": 25,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 115,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.473925+00:00"
+    },
+    {
+      "id": "116",
+      "env": "prod",
+      "date": "2022-10-22",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 120,
+        "Kev": -40,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": -40,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 7500,
+        "Kev": 5500,
+        "Dave": 10000,
+        "Fran": 9500,
+        "Pauli": 7500,
+        "Caoimh": 5000
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 116,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "117",
+      "env": "prod",
+      "date": "2022-10-22",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 20,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 117,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "118",
+      "env": "prod",
+      "date": "2022-11-20",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 15,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 118,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "119",
+      "env": "prod",
+      "date": "2022-11-20",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 20,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 119,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "120",
+      "env": "prod",
+      "date": "2022-12-03",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": 100,
+        "Pauli": -20,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 7500,
+        "Kev": 5500,
+        "Dave": null,
+        "Fran": 9000,
+        "Pauli": 7500,
+        "Caoimh": 5000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": null,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 120,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "121",
+      "env": "prod",
+      "date": "2022-12-03",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 20,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 121,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "122",
+      "env": "prod",
+      "date": "2023-01-07",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 60,
+        "Kev": -20,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 7000,
+        "Kev": 5500,
+        "Dave": 10000,
+        "Fran": 9000,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 122,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "123",
+      "env": "prod",
+      "date": "2023-01-07",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": 15,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": 0,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 123,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "124",
+      "env": "prod",
+      "date": "2023-01-14",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 100,
+        "Kev": -40,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 6500,
+        "Kev": 6000,
+        "Dave": null,
+        "Fran": 9000,
+        "Pauli": null,
+        "Caoimh": 5500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": null,
+        "Fran": 0,
+        "Pauli": null,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 124,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "125",
+      "env": "prod",
+      "date": "2023-01-14",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 15,
+        "Pauli": 0,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 125,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "126",
+      "env": "prod",
+      "date": "2023-01-21",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": 60,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 6500,
+        "Kev": 6000,
+        "Dave": null,
+        "Fran": 9500,
+        "Pauli": 7000,
+        "Caoimh": 5500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": null,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 126,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "127",
+      "env": "prod",
+      "date": "2023-01-21",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": -10,
+        "Caoimh": 30
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 127,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "128",
+      "env": "prod",
+      "date": "2023-02-18",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 120,
+        "Kev": -20,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": -60
+      },
+      "chips": {
+        "Dec": 6500,
+        "Kev": 6500,
+        "Dave": 10000,
+        "Fran": 9500,
+        "Pauli": null,
+        "Caoimh": 6000
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": null,
+        "Caoimh": 2
+      },
+      "inputs": null,
+      "src_row": 128,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "129",
+      "env": "prod",
+      "date": "2023-02-18",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 20,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": 0,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 129,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "130",
+      "env": "prod",
+      "date": "2023-02-25",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 15,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 130,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "131",
+      "env": "prod",
+      "date": "2023-02-25",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 15,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 131,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "132",
+      "env": "prod",
+      "date": "2023-02-25",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 20,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 132,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "133",
+      "env": "prod",
+      "date": "2023-03-25",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 100,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": -40,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 6500,
+        "Dave": 10000,
+        "Fran": 10000,
+        "Pauli": 7000,
+        "Caoimh": 6000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": null,
+        "Fran": 1,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 133,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "134",
+      "env": "prod",
+      "date": "2023-03-25",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": 20,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 134,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "135",
+      "env": "prod",
+      "date": "2023-04-01",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 0,
+        "Dave": 60,
+        "Fran": -20,
+        "Pauli": -20,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": null,
+        "Dave": 9500,
+        "Fran": 10000,
+        "Pauli": 7000,
+        "Caoimh": null
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": null,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 135,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "136",
+      "env": "prod",
+      "date": "2023-04-01",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 0,
+        "Dave": -5,
+        "Fran": 15,
+        "Pauli": -5,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 136,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "137",
+      "env": "prod",
+      "date": "2023-04-15",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 140,
+        "Kev": -40,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": -20,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 7000,
+        "Dave": 9500,
+        "Fran": 10000,
+        "Pauli": 7500,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 1,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 137,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "138",
+      "env": "prod",
+      "date": "2023-04-15",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 25,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 138,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "139",
+      "env": "prod",
+      "date": "2023-04-15",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 15,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 139,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "140",
+      "env": "prod",
+      "date": "2023-05-06",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 80,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 5000,
+        "Kev": 7000,
+        "Dave": 9500,
+        "Fran": 10000,
+        "Pauli": 7500,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": null,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 140,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "141",
+      "env": "prod",
+      "date": "2023-05-06",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": 25,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 141,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "142",
+      "env": "prod",
+      "date": "2023-05-20",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 0,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": 100,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 5000,
+        "Kev": 7500,
+        "Dave": 10000,
+        "Fran": 10000,
+        "Pauli": 7000,
+        "Caoimh": 7000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 142,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "143",
+      "env": "prod",
+      "date": "2023-05-20",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": 25,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 143,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "144",
+      "env": "prod",
+      "date": "2023-06-11",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": 60
+      },
+      "chips": {
+        "Dec": 5000,
+        "Kev": 7500,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": 7000,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 144,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "145",
+      "env": "prod",
+      "date": "2023-06-11",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 15,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 145,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "146",
+      "env": "prod",
+      "date": "2023-01-01",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 15,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 146,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "147",
+      "env": "prod",
+      "date": "2023-01-01",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 15,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 147,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "148",
+      "env": "prod",
+      "date": "2023-01-01",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": 15
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 148,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "149",
+      "env": "prod",
+      "date": "2023-01-01",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 15,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 149,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "150",
+      "env": "prod",
+      "date": "2023-07-20",
+      "type": "in_person",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": 30,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -10,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 150,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "151",
+      "env": "prod",
+      "date": "2023-07-20",
+      "type": "in_person",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": 30,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -10,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 151,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "152",
+      "env": "prod",
+      "date": "2023-07-20",
+      "type": "in_person",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": -10,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 30,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 152,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "153",
+      "env": "prod",
+      "date": "2023-07-20",
+      "type": "in_person",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": -10,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -10,
+        "Caoimh": 30
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 153,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "154",
+      "env": "prod",
+      "date": "2023-08-12",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 60,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 7500,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": 6500,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 154,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "155",
+      "env": "prod",
+      "date": "2023-08-26",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 60,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 7000,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": 6500,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 155,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "156",
+      "env": "prod",
+      "date": "2023-08-26",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 15,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 156,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "157",
+      "env": "prod",
+      "date": "2023-09-09",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 120,
+        "Kev": -40,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 5000,
+        "Kev": 7000,
+        "Dave": 10000,
+        "Fran": 10000,
+        "Pauli": null,
+        "Caoimh": 7000
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 157,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "158",
+      "env": "prod",
+      "date": "2023-10-07",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 15,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 158,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "159",
+      "env": "prod",
+      "date": "2023-10-28",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -40,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -40,
+        "Caoimh": 100
+      },
+      "chips": {
+        "Dec": 5000,
+        "Kev": 7500,
+        "Dave": 10000,
+        "Fran": 10000,
+        "Pauli": 7000,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": null,
+        "Fran": 0,
+        "Pauli": 1,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 159,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "160",
+      "env": "prod",
+      "date": "2023-10-28",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": -10,
+        "Dave": 0,
+        "Fran": 40,
+        "Pauli": -10,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 160,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "161",
+      "env": "prod",
+      "date": "2023-10-28",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": 20
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 161,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "162",
+      "env": "prod",
+      "date": "2023-11-04",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -40,
+        "Kev": 120,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": -40,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 7000,
+        "Dave": 10000,
+        "Fran": 9500,
+        "Pauli": 7000,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": null,
+        "Pauli": 1,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 162,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "163",
+      "env": "prod",
+      "date": "2023-11-04",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 20,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 163,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "164",
+      "env": "prod",
+      "date": "2023-11-04",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 20,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 164,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "165",
+      "env": "prod",
+      "date": "2023-11-18",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -40,
+        "Kev": -20,
+        "Dave": 120,
+        "Fran": 0,
+        "Pauli": -40,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 7000,
+        "Dave": 9500,
+        "Fran": 9500,
+        "Pauli": 7500,
+        "Caoimh": 7000
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 1,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 165,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "166",
+      "env": "prod",
+      "date": "2023-11-18",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 30,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": -10,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 166,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "167",
+      "env": "prod",
+      "date": "2023-11-18",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 25,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 167,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "168",
+      "env": "prod",
+      "date": "2023-12-02",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 140,
+        "Kev": -60,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 7500,
+        "Dave": 9500,
+        "Fran": null,
+        "Pauli": 7500,
+        "Caoimh": 7000
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": 2,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 168,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "169",
+      "env": "prod",
+      "date": "2023-12-02",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": -10,
+        "Caoimh": 25
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 169,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "170",
+      "env": "prod",
+      "date": "2023-12-29",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": 40,
+        "Dave": -10,
+        "Fran": -10,
+        "Pauli": 0,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 170,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "171",
+      "env": "prod",
+      "date": "2023-12-29",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -10,
+        "Dave": -10,
+        "Fran": 40,
+        "Pauli": -10,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 171,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "172",
+      "env": "prod",
+      "date": "2024-01-13",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -40,
+        "Dave": 0,
+        "Fran": 30,
+        "Pauli": -20,
+        "Caoimh": 50
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 8000,
+        "Dave": null,
+        "Fran": 9000,
+        "Pauli": 8000,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 0,
+        "Fran": 1,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 172,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "173",
+      "env": "prod",
+      "date": "2024-01-13",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": 20,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 173,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "174",
+      "env": "prod",
+      "date": "2024-02-17",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": -20,
+        "Fran": 60,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 5500,
+        "Kev": 8000,
+        "Dave": 9500,
+        "Fran": 8500,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 174,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "175",
+      "env": "prod",
+      "date": "2024-02-17",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 60,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 8000,
+        "Dave": 10000,
+        "Fran": 8500,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 175,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "176",
+      "env": "prod",
+      "date": "2024-02-24",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": 15,
+        "Caoimh": -5
+      },
+      "chips": {
+        "Dec": null,
+        "Kev": 7500,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 176,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "177",
+      "env": "prod",
+      "date": "2024-02-24",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": 15
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 177,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "178",
+      "env": "prod",
+      "date": "2024-02-25",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 20,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 178,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "179",
+      "env": "prod",
+      "date": "2024-02-25",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 20,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 179,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "180",
+      "env": "prod",
+      "date": "2024-03-02",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 60,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 7500,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": 8000,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": 0,
+        "Caoimh": 0
+      },
+      "inputs": null,
+      "src_row": 180,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "181",
+      "env": "prod",
+      "date": "2024-03-02",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 15,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 181,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "182",
+      "env": "prod",
+      "date": "2024-03-02",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 15,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 182,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "183",
+      "env": "prod",
+      "date": "2024-05-18",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 90,
+        "Dave": 30,
+        "Fran": -20,
+        "Pauli": -40,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 7500,
+        "Dave": null,
+        "Fran": 8500,
+        "Pauli": 8000,
+        "Caoimh": 6500
+      },
+      "buyins": {
+        "Dec": 0,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 1,
+        "Caoimh": 1
+      },
+      "inputs": null,
+      "src_row": 183,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "184",
+      "env": "prod",
+      "date": "2024-05-18",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 0,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": 20
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 184,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "185",
+      "env": "prod",
+      "date": "2024-06-08",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": 80,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6500,
+        "Kev": 7000,
+        "Dave": 9000,
+        "Fran": 9000,
+        "Pauli": 8500,
+        "Caoimh": 7000
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 185,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "186",
+      "env": "prod",
+      "date": "2024-06-08",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 20,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 186,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "187",
+      "env": "prod",
+      "date": "2024-06-08",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": 15,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 187,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "188",
+      "env": "prod",
+      "date": "2024-07-13",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 40,
+        "Kev": -20,
+        "Dave": 10,
+        "Fran": -10,
+        "Pauli": -10,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 188,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "189",
+      "env": "prod",
+      "date": "2024-08-17",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 60,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": -20,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 6500,
+        "Kev": 7000,
+        "Dave": 9000,
+        "Fran": 9000,
+        "Pauli": 8000,
+        "Caoimh": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 189,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "190",
+      "env": "prod",
+      "date": "2024-08-17",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 15,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 190,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "191",
+      "env": "prod",
+      "date": "2024-08-24",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 40,
+        "Kev": 60,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": -40,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 7000,
+        "Dave": 9000,
+        "Fran": 9000,
+        "Pauli": 8000,
+        "Caoimh": null
+      },
+      "buyins": {
+        "Dec": 1,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": 1,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 191,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "192",
+      "env": "prod",
+      "date": "2024-08-24",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 10,
+        "Kev": 10,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 192,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "193",
+      "env": "prod",
+      "date": "2024-08-24",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": 20,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 193,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "194",
+      "env": "prod",
+      "date": "2024-08-24",
+      "type": "bonus",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": 25,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 194,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "195",
+      "env": "prod",
+      "date": "2024-09-07",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 100,
+        "Kev": -40,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 6500,
+        "Dave": 9000,
+        "Fran": 9000,
+        "Pauli": 8500,
+        "Caoimh": 7000
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 195,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "196",
+      "env": "prod",
+      "date": "2024-09-07",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 20,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 196,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "197",
+      "env": "prod",
+      "date": "2024-09-07",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 20,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 197,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "198",
+      "env": "prod",
+      "date": "2024-09-15",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 100,
+        "Kev": -40,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -40,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 6500,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": 8500,
+        "Caoimh": 7000
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": 1,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": 1,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 198,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "199",
+      "env": "prod",
+      "date": "2024-09-15",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": -10,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -10,
+        "Caoimh": 30
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 199,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "200",
+      "env": "prod",
+      "date": "2024-09-15",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": 15
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 200,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "201",
+      "env": "prod",
+      "date": "2024-09-15",
+      "type": "bonus",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 15,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 201,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "202",
+      "env": "prod",
+      "date": "2024-09-28",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": 60,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 7000,
+        "Dave": 8500,
+        "Fran": null,
+        "Pauli": 9000,
+        "Caoimh": 7500
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 202,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "203",
+      "env": "prod",
+      "date": "2024-10-12",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 100,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": -40,
+        "Caoimh": -20
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 203,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "204",
+      "env": "prod",
+      "date": "2024-10-12",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 15,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": {
+        "Dec": null,
+        "Kev": 6500,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 204,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "205",
+      "env": "prod",
+      "date": "2024-10-12",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 15,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 205,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "206",
+      "env": "prod",
+      "date": "2024-10-26",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 60,
+        "Caoimh": -20
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 206,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "207",
+      "env": "prod",
+      "date": "2024-11-02",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": -20,
+        "Fran": 100,
+        "Pauli": -40,
+        "Caoimh": 0
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 6500,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": 8500,
+        "Caoimh": 7500
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": 1,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 207,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "208",
+      "env": "prod",
+      "date": "2024-11-02",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 20,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 208,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "209",
+      "env": "prod",
+      "date": "2024-11-09",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 100,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": -40,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6500,
+        "Kev": 6500,
+        "Dave": 8500,
+        "Fran": 8500,
+        "Pauli": 8500,
+        "Caoimh": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": 1,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 209,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "210",
+      "env": "prod",
+      "date": "2024-11-09",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 20,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 210,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "211",
+      "env": "prod",
+      "date": "2024-11-09",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": 15
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 211,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "212",
+      "env": "prod",
+      "date": "2024-11-16",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": 80,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 7000,
+        "Dave": null,
+        "Fran": 8500,
+        "Pauli": 9000,
+        "Caoimh": 8000
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 212,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "213",
+      "env": "prod",
+      "date": "2024-11-16",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 20,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 213,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "214",
+      "env": "prod",
+      "date": "2024-11-23",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": 80,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 7000,
+        "Dave": 8500,
+        "Fran": null,
+        "Pauli": 9000,
+        "Caoimh": 8000
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 214,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "215",
+      "env": "prod",
+      "date": "2024-11-23",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": -5,
+        "Caoimh": 20
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 215,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.833804+00:00"
+    },
+    {
+      "id": "216",
+      "env": "prod",
+      "date": "2025-02-01",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -40,
+        "Dave": 60,
+        "Fran": -20,
+        "Pauli": -20,
+        "Caoimh": 40
+      },
+      "chips": {
+        "Dec": 6000,
+        "Kev": 7000,
+        "Dave": 9000,
+        "Fran": 8500,
+        "Pauli": 9000,
+        "Caoimh": 8000
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": 1,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 216,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "217",
+      "env": "prod",
+      "date": "2025-02-01",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": 25
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 217,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "218",
+      "env": "prod",
+      "date": "2025-02-16",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 30,
+        "Dave": 0,
+        "Fran": -20,
+        "Pauli": 30,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6500,
+        "Kev": 7500,
+        "Dave": null,
+        "Fran": 8500,
+        "Pauli": 9000,
+        "Caoimh": 8500
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 218,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "219",
+      "env": "prod",
+      "date": "2025-02-16",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": 20,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 219,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "220",
+      "env": "prod",
+      "date": "2025-02-16",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 25,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": -10,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 220,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "221",
+      "env": "prod",
+      "date": "2025-03-01",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": -40,
+        "Pauli": -20,
+        "Caoimh": 100
+      },
+      "chips": {
+        "Dec": 6500,
+        "Kev": 7500,
+        "Dave": null,
+        "Fran": 8500,
+        "Pauli": 8500,
+        "Caoimh": 8500
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": 1,
+        "Pauli": 1,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 221,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "222",
+      "env": "prod",
+      "date": "2025-03-01",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 20,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 222,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "223",
+      "env": "prod",
+      "date": "2025-03-01",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 20,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 223,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "224",
+      "env": "prod",
+      "date": "2025-08-03",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": 0,
+        "Fran": 120,
+        "Pauli": -60,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 6500,
+        "Kev": 7500,
+        "Dave": null,
+        "Fran": 8500,
+        "Pauli": 9000,
+        "Caoimh": 8000
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 224,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "225",
+      "env": "prod",
+      "date": "2025-08-03",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": 20,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 225,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "226",
+      "env": "prod",
+      "date": "2025-08-03",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": 15,
+        "Dave": 0,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": {
+        "Dec": 7000,
+        "Kev": 8000,
+        "Dave": null,
+        "Fran": 8000,
+        "Pauli": null,
+        "Caoimh": 8000
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 226,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "227",
+      "env": "prod",
+      "date": "2025-03-22",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 50,
+        "Kev": -60,
+        "Dave": -20,
+        "Fran": 90,
+        "Pauli": -20,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": 8500,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 227,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "228",
+      "env": "prod",
+      "date": "2025-03-22",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 20,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 228,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "229",
+      "env": "prod",
+      "date": "2025-03-22",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": 20,
+        "Fran": -5,
+        "Pauli": -5,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 229,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "230",
+      "env": "prod",
+      "date": "2025-05-04",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": 30,
+        "Dave": -10,
+        "Fran": -5,
+        "Pauli": 0,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 230,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "231",
+      "env": "prod",
+      "date": "2025-04-19",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": 15,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 231,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "232",
+      "env": "prod",
+      "date": "2025-08-23",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 30,
+        "Kev": -10,
+        "Dave": 0,
+        "Fran": -10,
+        "Pauli": -10,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 232,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "233",
+      "env": "prod",
+      "date": "2025-08-23",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": -10,
+        "Dave": 0,
+        "Fran": 30,
+        "Pauli": -10,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 233,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "234",
+      "env": "prod",
+      "date": "2025-08-23",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": -10,
+        "Dave": 0,
+        "Fran": -10,
+        "Pauli": 30,
+        "Caoimh": 0
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 234,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "235",
+      "env": "prod",
+      "date": "2025-09-27",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 50,
+        "Kev": -40,
+        "Dave": -20,
+        "Fran": -40,
+        "Pauli": 90,
+        "Caoimh": -40
+      },
+      "chips": {
+        "Dec": 7000,
+        "Kev": 8000,
+        "Dave": 8500,
+        "Fran": 8000,
+        "Pauli": 8500,
+        "Caoimh": 8000
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 235,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "236",
+      "env": "prod",
+      "date": "2025-09-27",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": 25,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 236,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "237",
+      "env": "prod",
+      "date": "2025-09-27",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": 25,
+        "Dave": -5,
+        "Fran": -10,
+        "Pauli": -5,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 237,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "238",
+      "env": "prod",
+      "date": "2026-01-31",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": 80,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": 0,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 7000,
+        "Kev": 8000,
+        "Dave": 8500,
+        "Fran": 8000,
+        "Pauli": null,
+        "Caoimh": 8500
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 238,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "239",
+      "env": "prod",
+      "date": "2026-01-31",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 0,
+        "Kev": -5,
+        "Dave": 15,
+        "Fran": -5,
+        "Pauli": 0,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 239,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "240",
+      "env": "prod",
+      "date": "2026-06-20",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 80,
+        "Kev": -20,
+        "Dave": -20,
+        "Fran": 0,
+        "Pauli": -20,
+        "Caoimh": -20
+      },
+      "chips": {
+        "Dec": 7500,
+        "Kev": 7500,
+        "Dave": 9000,
+        "Fran": null,
+        "Pauli": 8500,
+        "Caoimh": 8500
+      },
+      "buyins": {
+        "Dec": null,
+        "Kev": null,
+        "Dave": null,
+        "Fran": null,
+        "Pauli": null,
+        "Caoimh": null
+      },
+      "inputs": null,
+      "src_row": 240,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "241",
+      "env": "prod",
+      "date": "2026-06-20",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -5,
+        "Kev": -5,
+        "Dave": -5,
+        "Fran": 0,
+        "Pauli": 20,
+        "Caoimh": -5
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": 241,
+      "deleted_at": null,
+      "created_at": "2026-07-02T18:48:20.877427+00:00"
+    }
+  ]
+}
