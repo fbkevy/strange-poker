@@ -72,12 +72,15 @@ jobs:
           set -euo pipefail
           mkdir -p data
           date -u +'%G-W%V' > data/keepalive.txt
-          if ! git diff --quiet data/keepalive.txt 2>/dev/null; then
-            git config user.name "sp-keepalive-bot"
-            git config user.email "actions@github.com"
-            git add data/keepalive.txt
-            git commit -m "Keep-alive heartbeat $(date -u +'%G-W%V')"
-            git push
-          else
+          git config user.name "sp-keepalive-bot"
+          git config user.email "actions@github.com"
+          # Stage first: --cached also catches the file being brand new, which
+          # a plain `git diff` would miss (untracked files show no diff).
+          git add data/keepalive.txt
+          if git diff --cached --quiet; then
             echo "heartbeat unchanged this week"
+          else
+            git commit -m "Keep-alive heartbeat $(date -u +'%G-W%V')"
+            git pull --rebase --autostash origin main
+            git push
           fi
