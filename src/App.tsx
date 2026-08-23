@@ -2,7 +2,10 @@
 
 import { useCallback, useEffect, useState } from "react";
 import type { PokerData } from "./types";
-import { resolveStore, pendingLocal, pushPendingToCloud, type ResolvedStore } from "./store";
+import {
+  resolveStore, pendingLocal, clearPendingLocal, pushPendingToCloud,
+  type ResolvedStore,
+} from "./store";
 import type { Env } from "./engine/replay";
 import { Dashboard } from "./components/Dashboard";
 import { History } from "./components/History";
@@ -93,6 +96,16 @@ export function App() {
     }
   }
 
+  function discard() {
+    if (!confirm(
+      `Permanently delete the ${pending} unsynced entr${pending === 1 ? "y" : "ies"} ` +
+      `held on this device?\n\nOnly do this if they are already in the History — ` +
+      `otherwise they are gone for good.`
+    )) return;
+    clearPendingLocal(env);
+    reload();
+  }
+
   return (
     <div className={`app env-${env}`}>
       {offline && (
@@ -117,9 +130,18 @@ export function App() {
               : `${pending} entries on this device are not in the cloud`}
           </strong>
           <span>Recorded while the database was unavailable. Push them so everyone sees them.</span>
-          <button onClick={sync} disabled={offline || syncing}>
-            {syncing ? "Pushing…" : offline ? "Cloud still down" : "Push to cloud"}
-          </button>
+          <div className="banner-actions">
+            <button onClick={sync} disabled={offline || syncing}>
+              {syncing ? "Pushing…" : offline ? "Cloud still down" : "Push to cloud"}
+            </button>
+            <button className="ghost" onClick={discard} disabled={syncing}>
+              Discard
+            </button>
+          </div>
+          <span className="fineprint">
+            Discard only if these are already in the History below — someone may
+            have entered them another way.
+          </span>
         </div>
       )}
 

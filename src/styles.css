@@ -120,6 +120,9 @@ footer { color: var(--muted); font-size: .8rem; margin-top: 2rem; text-align: ce
   border-radius: 6px; padding: .35rem .8rem; cursor: pointer; font-weight: 600;
 }
 .alert-banner button:disabled, .warn-banner button:disabled { opacity: .5; cursor: not-allowed; }
+.banner-actions { display: flex; gap: .5rem; flex-wrap: wrap; }
+.banner-actions .ghost { background: transparent; font-weight: 400; opacity: .8; }
+.fineprint { font-size: .78rem; opacity: .75; }
 @keyframes sp-pulse {
   0%, 100% { box-shadow: 0 0 0 0 rgba(224, 96, 77, .0); }
   50% { box-shadow: 0 0 0 6px rgba(224, 96, 77, .25); }

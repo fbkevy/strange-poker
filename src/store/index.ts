@@ -95,4 +95,4 @@ export async function pushPendingToCloud(env: Env): Promise<SyncResult> {
   return { pushed, failed };
 }
 
-export { pendingLocal } from "./local";
+export { pendingLocal, clearPendingLocal } from "./local";
