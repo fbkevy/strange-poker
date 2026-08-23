@@ -1,0 +1,83 @@
+name: Keep Supabase awake
+
+# Supabase's free tier pauses a project after 7 days with no activity — that
+# pause silently cost us a night's poker results. This pings the database daily
+# (read + write) so the inactivity clock never gets near 7 days.
+#
+# Daily, not every 6 days, on purpose: GitHub's scheduled runs are best-effort
+# and can be delayed or skipped when the platform is busy, so a 6-day cadence
+# leaves no margin. A missed day here is harmless.
+#
+# It also commits a weekly heartbeat file. GitHub disables scheduled workflows
+# in repositories with no activity for 60 days, which would silently switch off
+# this very safeguard; the commit keeps the repo (and therefore the cron) alive.
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keepalive
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_URL: https://pkauqxtldnaorajuephr.supabase.co
+      # Publishable key — already public in the site bundle.
+      SUPABASE_ANON_KEY: sb_publishable_N4YUJRPsdrnj79gRO7HN7Q_3FehQYBJ
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ping database (read)
+        run: |
+          set -euo pipefail
+          code=$(curl -sS -o /tmp/read.json -w '%{http_code}' --max-time 30 \
+            "$SUPABASE_URL/rest/v1/events?select=id&limit=1" \
+            -H "apikey: $SUPABASE_ANON_KEY" \
+            -H "Authorization: Bearer $SUPABASE_ANON_KEY")
+          echo "read HTTP $code"
+          cat /tmp/read.json
+          if [ "$code" != "200" ]; then
+            echo "::error::Supabase read failed with HTTP $code — the project may be PAUSED. Resume it at https://supabase.com/dashboard/project/pkauqxtldnaorajuephr"
+            exit 1
+          fi
+
+      - name: Ping database (write)
+        run: |
+          set -euo pipefail
+          code=$(curl -sS -o /tmp/write.json -w '%{http_code}' --max-time 30 \
+            -X POST "$SUPABASE_URL/rest/v1/config" \
+            -H "apikey: $SUPABASE_ANON_KEY" \
+            -H "Authorization: Bearer $SUPABASE_ANON_KEY" \
+            -H "Content-Type: application/json" \
+            -H "Prefer: resolution=merge-duplicates" \
+            -d "[{\"key\":\"keepalive\",\"value\":{\"at\":\"$(date -u +%FT%TZ)\",\"by\":\"github-actions\"}}]")
+          echo "write HTTP $code"
+          if [ "$code" != "201" ] && [ "$code" != "200" ] && [ "$code" != "204" ]; then
+            echo "::error::Supabase write failed with HTTP $code"
+            cat /tmp/write.json
+            exit 1
+          fi
+
+      # Weekly commit so the repo never goes 60 days quiet (which would make
+      # GitHub disable these scheduled runs).
+      - name: Weekly heartbeat commit
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          date -u +'%G-W%V' > data/keepalive.txt
+          if ! git diff --quiet data/keepalive.txt 2>/dev/null; then
+            git config user.name "sp-keepalive-bot"
+            git config user.email "actions@github.com"
+            git add data/keepalive.txt
+            git commit -m "Keep-alive heartbeat $(date -u +'%G-W%V')"
+            git push
+          else
+            echo "heartbeat unchanged this week"
+          fi

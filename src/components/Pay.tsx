@@ -6,9 +6,10 @@ import type { Env } from "../engine/replay";
 import type { Store } from "../store";
 import { money, signedMoney } from "../format";
 import { outstanding } from "../engine/selectors";
+import { confirmOfflineSave, saveLabel } from "./shared";
 
-export function Pay({ data, env, store, onSaved }: {
-  data: PokerData; env: Env; store: Store; onSaved: () => void;
+export function Pay({ data, env, store, offline, onSaved }: {
+  data: PokerData; env: Env; store: Store; offline: boolean; onSaved: () => void;
 }) {
   const players = data.players;
   const out = useMemo(() => outstanding(data), [data]);
@@ -23,7 +24,9 @@ export function Pay({ data, env, store, onSaved }: {
 
   async function save() {
     if (!valid) { setErr("Pick two different players and a positive amount."); return; }
-    await store.addEvent({
+    if (!confirmOfflineSave(offline, "payment")) return;
+    try {
+      await store.addEvent({
       id: crypto.randomUUID(),
       env,
       date: payDate,
@@ -33,9 +36,13 @@ export function Pay({ data, env, store, onSaved }: {
       // Cash settles debt: the payer's balance rises, the payee's falls.
       deltas: Object.fromEntries(players.map((p) =>
         [p, p === payer ? amt : p === payee ? -amt : 0])),
-      chips: null,
-      buyins: null,
-    }, env);
+        chips: null,
+        buyins: null,
+      }, env);
+    } catch (ex) {
+      setErr(`SAVE FAILED — nothing was recorded: ${ex}`);
+      return;
+    }
     onSaved();
   }
 
@@ -74,8 +81,8 @@ export function Pay({ data, env, store, onSaved }: {
       )}
       {err && <p className="error">{err}</p>}
       <div className="form-row">
-        <button className="primary" onClick={save} disabled={!valid}>
-          Save payment{env === "test" ? " (test)" : ""}
+        <button className={`primary ${offline ? "danger" : ""}`} onClick={save} disabled={!valid}>
+          {saveLabel(offline, env, "Save payment")}
         </button>
       </div>
       <p className="hint">

@@ -3,6 +3,8 @@
 import type { Config, LedgerEvent, PokerData } from "../types";
 import type { Env } from "../engine/replay";
 
+export type ListName = "rules" | "tips";
+
 export interface Store {
   getData(env?: Env): Promise<PokerData>;
   addEvent(e: LedgerEvent, env?: Env): Promise<void>;
@@ -10,8 +12,9 @@ export interface Store {
   deleteEvent(id: string, env?: Env): Promise<void>;
   /** Restore a previously undone event. */
   restoreEvent(id: string, env?: Env): Promise<void>;
-  getRules(env?: Env): Promise<string[]>;
-  saveRules(rules: string[], env?: Env): Promise<void>;
+  /** Free-form editable lists: house rules, tips. */
+  getList(name: ListName, env?: Env): Promise<string[]>;
+  saveList(name: ListName, items: string[], env?: Env): Promise<void>;
   saveConfig(config: Partial<Config>, env?: Env): Promise<void>;
   /** Wipe everything the test env has diverged by. */
   resetTest(): Promise<void>;

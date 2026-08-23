@@ -11,8 +11,8 @@ import seed from "../../data/data.json";
 import type { Config, LedgerEvent, PokerData } from "../types";
 import type { Env } from "../engine/replay";
 import { supabase } from "./supabase";
-import { DEFAULT_HOUSE_RULES } from "./local";
-import { applyTombstones, type Store, type Tombstones } from "./types";
+import { LIST_DEFAULTS } from "./local";
+import { applyTombstones, type ListName, type Store, type Tombstones } from "./types";
 
 type Row = {
   id: string; env: "prod" | "test"; date: string | null; type: string;
@@ -110,12 +110,12 @@ export const SupabaseStore: Store = {
     }
   },
 
-  async getRules(env: Env = "prod"): Promise<string[]> {
-    return (await getConfigValue<string[]>(`${env}.rules`)) ?? DEFAULT_HOUSE_RULES;
+  async getList(name: ListName, env: Env = "prod"): Promise<string[]> {
+    return (await getConfigValue<string[]>(`${env}.${name}`)) ?? LIST_DEFAULTS[name];
   },
 
-  async saveRules(rules: string[], env: Env = "prod"): Promise<void> {
-    await setConfigValue(`${env}.rules`, rules);
+  async saveList(name: ListName, items: string[], env: Env = "prod"): Promise<void> {
+    await setConfigValue(`${env}.${name}`, items);
   },
 
   async saveConfig(config: Partial<Config>, env: Env = "prod"): Promise<void> {
@@ -126,7 +126,7 @@ export const SupabaseStore: Store = {
     const { error } = await supabase.from("events").delete().eq("env", "test");
     if (error) throw error;
     await supabase.from("config").delete().in("key",
-      ["test.config", "test.rules", "test.tombstones"]);
+      ["test.config", "test.rules", "test.tips", "test.tombstones"]);
   },
 
   /** Subscribe to remote changes; returns an unsubscribe fn. */

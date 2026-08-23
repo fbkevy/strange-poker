@@ -13,7 +13,10 @@ export type EventType =
 
 /** Raw wizard inputs for a game — the source of truth for derived numbers. */
 export interface GameInputs {
+  /** "after" is displayed as "Quick"; kept for history compatibility. */
   kind: "main" | "after";
+  /** Stake actually played for, when it differs from the configured default. */
+  entry?: number;
   entrants: { player: PlayerId; rebuys: number }[];
   first: PlayerId[]; // >1 = split of 1st
   second?: PlayerId[]; // 6-player main games only

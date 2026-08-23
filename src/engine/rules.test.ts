@@ -42,6 +42,22 @@ describe("computePayout", () => {
     expect(pot).toBe(20 * 1 + 20 * 3 + 20 * 1); // Dec 20, Kev 60, Dave 20
   });
 
+  it("quick game honours a per-game stake override (e.g. €10 night)", () => {
+    const { pot, deltas } = computePayout(
+      roster(["Dec", "Pauli", "Kev", "Caoimh"]),
+      { first: ["Caoimh"] }, "after", config, 10);
+    expect(pot).toBe(40); // 4 × €10, not 4 × €5
+    expect(deltas.Caoimh).toBe(30);
+    expect(deltas.Dec).toBe(-10);
+    expect(Object.values(deltas).reduce((a, b) => a + b, 0)).toBe(0);
+  });
+
+  it("stake override applies to rebuys too", () => {
+    const { pot } = computePayout(
+      roster(["Dec", "Kev"], { Kev: 1 }), { first: ["Dec"] }, "after", config, 10);
+    expect(pot).toBe(30); // Dec 10 + Kev 20
+  });
+
   it("€5 after-game: 1st only, no 2nd", () => {
     const { pot, deltas } = computePayout(
       roster(["Dec", "Pauli", "Kev", "Caoimh", "Dave", "Fran"]),

@@ -19,6 +19,13 @@ export interface GameResult {
   second?: PlayerId[];
 }
 
+/**
+ * "main" = the €20 tournament (drives the handicap).
+ * "after" = the short second game, shown in the UI as "Quick". Its stake is
+ * whatever the table agreed that night (€5, €10, …), so callers may override
+ * the configured default per game. The wire value stays "after" so existing
+ * history keeps loading.
+ */
 export type GameKind = "main" | "after";
 
 /** Round to the nearest `step` euros, defaulting to whole euros. */
@@ -38,9 +45,13 @@ export function computePayout(
   entrants: Entrant[],
   result: GameResult,
   kind: GameKind,
-  config: Config
+  config: Config,
+  /** Per-game stake; falls back to the configured default for the kind. */
+  entryOverride?: number
 ): { pot: number; deltas: Record<PlayerId, number> } {
-  const entry = kind === "main" ? config.mainEntry : config.afterEntry;
+  const entry = entryOverride && entryOverride > 0
+    ? entryOverride
+    : kind === "main" ? config.mainEntry : config.afterEntry;
   const outlay: Record<PlayerId, number> = {};
   for (const e of entrants) outlay[e.player] = entry * (1 + Math.max(0, e.rebuys));
   const pot = Object.values(outlay).reduce((a, b) => a + b, 0);

@@ -103,6 +103,29 @@ td.muted, .muted { color: var(--muted); }
 
 footer { color: var(--muted); font-size: .8rem; margin-top: 2rem; text-align: center; }
 
+/* --- loud failure banners --- */
+.alert-banner, .warn-banner {
+  display: flex; flex-direction: column; gap: .4rem; align-items: flex-start;
+  padding: .7rem .85rem; border-radius: 8px; margin: .6rem 0 .75rem;
+  font-size: .9rem; line-height: 1.35;
+}
+.alert-banner {
+  background: #4a1210; color: #ffd9d3; border: 2px solid #e0604d;
+  animation: sp-pulse 1.6s ease-in-out 3;
+}
+.warn-banner { background: #4a3a10; color: #ffe9b3; border: 2px solid #d9a441; }
+.alert-banner strong, .warn-banner strong { font-size: .95rem; letter-spacing: .3px; }
+.alert-banner button, .warn-banner button {
+  background: rgba(255, 255, 255, .12); color: inherit; border: 1px solid currentColor;
+  border-radius: 6px; padding: .35rem .8rem; cursor: pointer; font-weight: 600;
+}
+.alert-banner button:disabled, .warn-banner button:disabled { opacity: .5; cursor: not-allowed; }
+@keyframes sp-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(224, 96, 77, .0); }
+  50% { box-shadow: 0 0 0 6px rgba(224, 96, 77, .25); }
+}
+button.primary.danger { background: var(--neg); color: #2a0d08; }
+
 /* --- test mode --- */
 .test-banner {
   background: #5a3b12; color: #ffd699; border: 1px solid #8a5a1a;

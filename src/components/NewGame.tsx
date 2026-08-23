@@ -1,15 +1,15 @@
 // New game wizard — preview shows money deltas and chips before → after.
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { GameInputs, PokerData } from "../types";
 import type { Env } from "../engine/replay";
 import type { Store } from "../store";
 import { signedMoney, chips as fmtChips } from "../format";
 import { buildGameEvent, proposeNextChips } from "../engine/replay";
-import { signClass } from "./shared";
+import { confirmOfflineSave, saveLabel, signClass } from "./shared";
 
-export function NewGame({ data, env, store, onSaved }: {
-  data: PokerData; env: Env; store: Store; onSaved: () => void;
+export function NewGame({ data, env, store, offline, onSaved }: {
+  data: PokerData; env: Env; store: Store; offline: boolean; onSaved: () => void;
 }) {
   const players = data.players;
   const [kind, setKind] = useState<"main" | "after">("main");
@@ -24,21 +24,31 @@ export function NewGame({ data, env, store, onSaved }: {
   const [gameDate, setGameDate] = useState(() => new Date().toISOString().slice(0, 10));
   const [note, setNote] = useState("");
   const [err, setErr] = useState("");
+  // Stake for this game — defaults to the configured amount but the Quick game
+  // is often played for something else (€10 nights), so it is editable.
+  const [entry, setEntry] = useState<string>(String(data.config.mainEntry));
+
+  useEffect(() => {
+    setEntry(String(kind === "main" ? data.config.mainEntry : data.config.afterEntry));
+  }, [kind, data.config.mainEntry, data.config.afterEntry]);
 
   const entrants = players.filter((p) => playing[p]);
+  const entryNum = Number(entry);
 
   const inputs: GameInputs | null = useMemo(() => {
     if (first.length === 0) return null;
+    if (!(entryNum > 0)) return null;
     const ins = players.filter((p) => playing[p]);
     const outs = kind === "main" ? players.filter((p) => !playing[p]) : [];
     return {
       kind,
+      entry: entryNum,
       entrants: ins.map((p) => ({ player: p, rebuys: rebuys[p] ?? 0 })),
       first,
       second: kind === "main" && ins.length === 6 && second.length ? second : undefined,
       noShows: outs.length ? outs : undefined,
     };
-  }, [kind, playing, rebuys, first, second, players]);
+  }, [kind, entryNum, playing, rebuys, first, second, players]);
 
   const before = useMemo(() => proposeNextChips(data), [data]);
   const preview = useMemo(() => {
@@ -59,10 +69,16 @@ export function NewGame({ data, env, store, onSaved }: {
     if (first.some((p) => !playing[p]) || second.some((p) => !playing[p])) {
       setErr("Winner/2nd must be playing."); return;
     }
+    if (!confirmOfflineSave(offline, "game")) return;
     const e = buildGameEvent(inputs, {
       id: crypto.randomUUID(), date: gameDate, config: data.config, players, env, note,
     });
-    await store.addEvent(e, env);
+    try {
+      await store.addEvent(e, env);
+    } catch (ex) {
+      setErr(`SAVE FAILED — nothing was recorded: ${ex}`);
+      return;
+    }
     onSaved();
   }
 
@@ -76,9 +92,13 @@ export function NewGame({ data, env, store, onSaved }: {
       <div className="form-row">
         <label>Type{" "}
           <select value={kind} onChange={(e) => setKind(e.target.value as "main" | "after")}>
-            <option value="main">€20 main</option>
-            <option value="after">€5 after-game</option>
+            <option value="main">Main</option>
+            <option value="after">Quick</option>
           </select>
+        </label>
+        <label>Entry €{" "}
+          <input type="number" min="0" step="5" className="num" inputMode="decimal"
+            value={entry} onChange={(e) => setEntry(e.target.value)} />
         </label>
         <label>Date{" "}
           <input type="date" value={gameDate} onChange={(e) => setGameDate(e.target.value)} />
@@ -161,12 +181,13 @@ export function NewGame({ data, env, store, onSaved }: {
 
       {err && <p className="error">{err}</p>}
       <div className="form-row">
-        <button className="primary" onClick={save} disabled={!inputs}>
-          Save game{env === "test" ? " (test)" : ""}
+        <button className={`primary ${offline ? "danger" : ""}`} onClick={save} disabled={!inputs}>
+          {saveLabel(offline, env, "Save game")}
         </button>
       </div>
       <p className="hint">
-        Split 1st = tick multiple winners. Pot and payouts
+        Split 1st = tick multiple winners. Entry is per buy-in and editable —
+        set it to whatever the table played for that night. Pot and payouts
         ({entrants.length === 6 && kind === "main" ? "65/35" : "winner takes all"})
         are computed automatically. Everything saved here can be undone from History.
       </p>

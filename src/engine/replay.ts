@@ -62,7 +62,8 @@ export function buildGameEvent(inputs: GameInputs, ctx: BuildContext): LedgerEve
     inputs.entrants,
     { first: inputs.first, second: inputs.second },
     inputs.kind,
-    ctx.config
+    ctx.config,
+    inputs.entry
   );
   return {
     id: ctx.id,

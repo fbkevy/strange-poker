@@ -5,7 +5,7 @@ import type { PokerData } from "../types";
 import type { Env } from "../engine/replay";
 import type { Store } from "../store";
 import { money, signedMoney } from "../format";
-import { TYPE_LABEL, signClass } from "./shared";
+import { TYPE_LABEL, confirmOfflineSave, saveLabel, signClass } from "./shared";
 
 const BET_TYPES = [
   ["bet", "Side bet"],
@@ -13,8 +13,8 @@ const BET_TYPES = [
   ["misc", "Misc owing (sweepstake, trip, …)"],
 ] as const;
 
-export function Bet({ data, env, store, onSaved }: {
-  data: PokerData; env: Env; store: Store; onSaved: () => void;
+export function Bet({ data, env, store, offline, onSaved }: {
+  data: PokerData; env: Env; store: Store; offline: boolean; onSaved: () => void;
 }) {
   const players = data.players;
   const [betType, setBetType] = useState<"bet" | "bonus" | "misc">("bet");
@@ -36,6 +36,7 @@ export function Bet({ data, env, store, onSaved }: {
 
   // bonuses count toward poker P&L (like the sheet's flush rows); bets/misc don't
   const [inPnl, setInPnl] = useState(false);
+  const [err, setErr] = useState("");
   useEffect(() => setInPnl(betType === "bonus"), [betType]);
 
   let deltas: Record<string, number> | null = null;
@@ -59,17 +60,23 @@ export function Bet({ data, env, store, onSaved }: {
 
   async function save() {
     if (!deltas) return;
-    await store.addEvent({
+    if (!confirmOfflineSave(offline, "entry")) return;
+    try {
+      await store.addEvent({
       id: crypto.randomUUID(),
       env,
       date: betDate,
       type: betType,
       block: inPnl ? "game" : "ledger",
       note: note || (mode === "winner" ? `${winner} wins ${TYPE_LABEL[betType]?.toLowerCase() ?? betType}` : ""),
-      deltas,
-      chips: null,
-      buyins: null,
-    }, env);
+        deltas,
+        chips: null,
+        buyins: null,
+      }, env);
+    } catch (ex) {
+      setErr(`SAVE FAILED — nothing was recorded: ${ex}`);
+      return;
+    }
     onSaved();
   }
 
@@ -169,9 +176,10 @@ export function Bet({ data, env, store, onSaved }: {
         </p>
       )}
 
+      {err && <p className="error">{err}</p>}
       <div className="form-row">
-        <button className="primary" onClick={save} disabled={!deltas}>
-          Save{env === "test" ? " (test)" : ""}
+        <button className={`primary ${offline ? "danger" : ""}`} onClick={save} disabled={!deltas}>
+          {saveLabel(offline, env, "Save")}
         </button>
       </div>
       <p className="hint">

@@ -9,23 +9,31 @@
 import seed from "../../data/data.json";
 import type { LedgerEvent, PokerData } from "../types";
 import type { Env } from "../engine/replay";
-import { applyTombstones, type Store, type Tombstones } from "./types";
+import { applyTombstones, type ListName, type Store, type Tombstones } from "./types";
 
 const eventsKey = (env: Env) => `sp.${env}.events`;
 const tombKey = (env: Env) => `sp.${env}.tombstones`;
 const configKey = (env: Env) => `sp.${env}.config`;
-const rulesKey = (env: Env) => `sp.${env}.rules`;
+const listKey = (name: ListName, env: Env) => `sp.${env}.${name}`;
 
 /** House rules (informational, editable). Seeded from the sheet's notes. */
 export const DEFAULT_HOUSE_RULES: string[] = [
-  "Playing with 6: 2nd place gets 35% of the pot. €5 game: no 2nd place (just money back for 2nd).",
+  "Playing with 6: 2nd place gets 35% of the pot. Quick game: no 2nd place (just money back for 2nd).",
   "When achieving 2nd: decrement 250 chips next game.",
   "Each main-game rebuy counts as an extra loss toward the 3-loss chip increment (winners are exempt).",
   "Splitting a place splits its decrement (e.g. 500 → 250 each).",
-  "First 2-7 of the session wins a bonus 500 chips from every other player (must show, hole cards only). 1,000 in the €5 game. Counts as a split for the handicap.",
+  "First 2-7 of the session wins a bonus 500 chips from every other player (must show, hole cards only). 1,000 in the Quick game. Counts as a split for the handicap.",
   "Straight flush with the winning hand = €5 from each player.",
   "Unique royal flush to one person winning the hand: everyone at the table gives €10 each (even if not in the hand).",
 ];
+
+/** Tips — free-form advice, empty until the lads add their own. */
+export const DEFAULT_TIPS: string[] = [];
+
+export const LIST_DEFAULTS: Record<ListName, string[]> = {
+  rules: DEFAULT_HOUSE_RULES,
+  tips: DEFAULT_TIPS,
+};
 
 function read<T>(key: string, fallback: T): T {
   try {
@@ -38,6 +46,30 @@ function read<T>(key: string, fallback: T): T {
 
 function write(key: string, value: unknown): void {
   localStorage.setItem(key, JSON.stringify(value));
+}
+
+/**
+ * Events recorded on THIS DEVICE that were never written to the cloud, plus
+ * any undo tombstones. Non-empty means unsynced work is at risk of being lost.
+ */
+export function pendingLocal(env: Env): {
+  events: LedgerEvent[];
+  tombstones: Tombstones;
+  count: number;
+} {
+  const events = read<LedgerEvent[]>(eventsKey(env), []);
+  const tombstones = read<Tombstones>(tombKey(env), {});
+  return {
+    events,
+    tombstones,
+    count: events.length + Object.keys(tombstones).length,
+  };
+}
+
+/** Clear the local overlay after it has been successfully pushed to the cloud. */
+export function clearPendingLocal(env: Env): void {
+  localStorage.removeItem(eventsKey(env));
+  localStorage.removeItem(tombKey(env));
 }
 
 export const LocalStore: Store = {
@@ -71,12 +103,12 @@ export const LocalStore: Store = {
     write(tombKey(env), tombs);
   },
 
-  async getRules(env: Env = "prod"): Promise<string[]> {
-    return read<string[]>(rulesKey(env), DEFAULT_HOUSE_RULES);
+  async getList(name: ListName, env: Env = "prod"): Promise<string[]> {
+    return read<string[]>(listKey(name, env), LIST_DEFAULTS[name]);
   },
 
-  async saveRules(rules: string[], env: Env = "prod"): Promise<void> {
-    write(rulesKey(env), rules);
+  async saveList(name: ListName, items: string[], env: Env = "prod"): Promise<void> {
+    write(listKey(name, env), items);
   },
 
   async saveConfig(config, env: Env = "prod"): Promise<void> {
@@ -84,7 +116,8 @@ export const LocalStore: Store = {
   },
 
   async resetTest(): Promise<void> {
-    for (const k of [eventsKey("test"), tombKey("test"), configKey("test"), rulesKey("test")]) {
+    for (const k of [eventsKey("test"), tombKey("test"), configKey("test"),
+      listKey("rules", "test"), listKey("tips", "test")]) {
       localStorage.removeItem(k);
     }
   },

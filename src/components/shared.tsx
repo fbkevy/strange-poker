@@ -11,8 +11,29 @@ export const playerColor = (players: string[], p: string) =>
 export const signClass = (v: number, zero = "") =>
   v > 0 ? "pos" : v < 0 ? "neg" : zero;
 
+/**
+ * Gate a save when the cloud is down. Returns false if the user backs out.
+ * Deliberately obtrusive: a silent local save once cost a whole poker night.
+ */
+export function confirmOfflineSave(offline: boolean, what: string): boolean {
+  if (!offline) return true;
+  return confirm(
+    `⚠ THE CLOUD DATABASE IS DOWN.\n\n` +
+    `This ${what} will be saved on THIS DEVICE ONLY. Nobody else will see it, ` +
+    `and it is lost if you clear this browser.\n\n` +
+    `A banner will remind you to push it once the database is back.\n\n` +
+    `Save locally anyway?`
+  );
+}
+
+/** Label for a save button that reflects where the data is actually going. */
+export const saveLabel = (offline: boolean, env: string, base: string) =>
+  offline ? `${base} — THIS DEVICE ONLY` : `${base}${env === "test" ? " (test)" : ""}`;
+
+// "after" is the stored value for what everyone calls the Quick game; its
+// stake varies by night (€5, €10, …) so the label carries no amount.
 export const TYPE_LABEL: Record<string, string> = {
-  main: "€20 game", after: "€5 game", in_person: "In person",
+  main: "Main", after: "Quick", in_person: "In person",
   bet: "Side bet", bonus: "Bonus", settle: "Settle", misc: "Misc",
 };
 
