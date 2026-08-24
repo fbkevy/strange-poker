@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-07-13T06:30:28.758Z",
+  "exportedAt": "2026-08-24T04:05:25.239Z",
   "config": [
     {
       "key": "players",
@@ -29,6 +29,19 @@
         "lossStreakForIncrement": 3
       },
       "updated_at": "2026-07-02T18:48:20.324211+00:00"
+    },
+    {
+      "key": "prod.tips",
+      "value": [],
+      "updated_at": "2026-08-23T11:26:35.129+00:00"
+    },
+    {
+      "key": "keepalive",
+      "value": {
+        "at": "2026-08-23T11:33:31Z",
+        "by": "github-actions"
+      },
+      "updated_at": "2026-08-23T11:32:29.764532+00:00"
     }
   ],
   "events": [
@@ -6263,6 +6276,178 @@
       "src_row": 241,
       "deleted_at": null,
       "created_at": "2026-07-02T18:48:20.877427+00:00"
+    },
+    {
+      "id": "60ac34dd-d9ed-47fe-ae8a-eb6fd9e23a94",
+      "env": "prod",
+      "date": "2026-08-22",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": 40,
+        "Kev": -10,
+        "Dave": -10,
+        "Fran": 0,
+        "Pauli": -10,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": {
+        "kind": "after",
+        "entry": 10,
+        "first": [
+          "Dec"
+        ],
+        "entrants": [
+          {
+            "player": "Dec",
+            "rebuys": 0
+          },
+          {
+            "player": "Pauli",
+            "rebuys": 0
+          },
+          {
+            "player": "Kev",
+            "rebuys": 0
+          },
+          {
+            "player": "Caoimh",
+            "rebuys": 0
+          },
+          {
+            "player": "Dave",
+            "rebuys": 0
+          }
+        ]
+      },
+      "src_row": null,
+      "deleted_at": null,
+      "created_at": "2026-08-23T11:39:53.026868+00:00"
+    },
+    {
+      "id": "930a8be7-a76e-4f60-900b-33393c683121",
+      "env": "prod",
+      "date": "2026-08-22",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": -10,
+        "Dave": 40,
+        "Fran": 0,
+        "Pauli": -10,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": {
+        "kind": "after",
+        "entry": 10,
+        "first": [
+          "Dave"
+        ],
+        "entrants": [
+          {
+            "player": "Dec",
+            "rebuys": 0
+          },
+          {
+            "player": "Pauli",
+            "rebuys": 0
+          },
+          {
+            "player": "Kev",
+            "rebuys": 0
+          },
+          {
+            "player": "Caoimh",
+            "rebuys": 0
+          },
+          {
+            "player": "Dave",
+            "rebuys": 0
+          }
+        ]
+      },
+      "src_row": null,
+      "deleted_at": null,
+      "created_at": "2026-08-23T11:39:53.026868+00:00"
+    },
+    {
+      "id": "6442d39f-5a69-47e5-842d-852ab1aaa49c",
+      "env": "prod",
+      "date": "2026-08-22",
+      "type": "after",
+      "block": "game",
+      "note": "bollix",
+      "deltas": {
+        "Dec": 40,
+        "Kev": -10,
+        "Dave": -10,
+        "Fran": 0,
+        "Pauli": -10,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": {
+        "kind": "after",
+        "entry": 10,
+        "first": [
+          "Dec"
+        ],
+        "entrants": [
+          {
+            "player": "Dec",
+            "rebuys": 0
+          },
+          {
+            "player": "Pauli",
+            "rebuys": 0
+          },
+          {
+            "player": "Kev",
+            "rebuys": 0
+          },
+          {
+            "player": "Caoimh",
+            "rebuys": 0
+          },
+          {
+            "player": "Dave",
+            "rebuys": 0
+          }
+        ]
+      },
+      "src_row": null,
+      "deleted_at": null,
+      "created_at": "2026-08-23T11:39:53.026868+00:00"
+    },
+    {
+      "id": "a9e82c53-c854-4cff-bab5-e4d95084cc19",
+      "env": "prod",
+      "date": "2026-08-22",
+      "type": "settle",
+      "block": "ledger",
+      "note": "Caoimh paid Dec",
+      "deltas": {
+        "Dec": -200,
+        "Kev": 0,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 200
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": null,
+      "deleted_at": null,
+      "created_at": "2026-08-23T11:39:53.026868+00:00"
     }
   ]
 }
