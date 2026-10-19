@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-10-12T10:50:09.780Z",
+  "exportedAt": "2026-10-19T08:53:14.146Z",
   "config": [
     {
       "key": "players",
@@ -38,7 +38,7 @@
     {
       "key": "keepalive",
       "value": {
-        "at": "2026-10-11T12:10:19Z",
+        "at": "2026-10-18T10:27:46Z",
         "by": "github-actions"
       },
       "updated_at": "2026-08-23T11:32:29.764532+00:00"
@@ -6278,16 +6278,38 @@
       "created_at": "2026-07-02T18:48:20.877427+00:00"
     },
     {
-      "id": "60ac34dd-d9ed-47fe-ae8a-eb6fd9e23a94",
+      "id": "81d8f928-b03c-45c3-9997-ecd73a1dcf7f",
+      "env": "prod",
+      "date": "2026-07-21",
+      "type": "bet",
+      "block": "ledger",
+      "note": "World cup 2026",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -20,
+        "Dave": -20,
+        "Fran": -20,
+        "Pauli": 100,
+        "Caoimh": -20
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": null,
+      "src_row": null,
+      "deleted_at": null,
+      "created_at": "2026-10-17T19:57:30.92922+00:00"
+    },
+    {
+      "id": "930a8be7-a76e-4f60-900b-33393c683121",
       "env": "prod",
       "date": "2026-08-22",
       "type": "after",
       "block": "game",
       "note": "",
       "deltas": {
-        "Dec": 40,
+        "Dec": -10,
         "Kev": -10,
-        "Dave": -10,
+        "Dave": 40,
         "Fran": 0,
         "Pauli": -10,
         "Caoimh": -10
@@ -6298,7 +6320,7 @@
         "kind": "after",
         "entry": 10,
         "first": [
-          "Dec"
+          "Dave"
         ],
         "entrants": [
           {
@@ -6328,16 +6350,16 @@
       "created_at": "2026-08-23T11:39:53.026868+00:00"
     },
     {
-      "id": "930a8be7-a76e-4f60-900b-33393c683121",
+      "id": "60ac34dd-d9ed-47fe-ae8a-eb6fd9e23a94",
       "env": "prod",
       "date": "2026-08-22",
       "type": "after",
       "block": "game",
       "note": "",
       "deltas": {
-        "Dec": -10,
+        "Dec": 40,
         "Kev": -10,
-        "Dave": 40,
+        "Dave": -10,
         "Fran": 0,
         "Pauli": -10,
         "Caoimh": -10
@@ -6348,7 +6370,7 @@
         "kind": "after",
         "entry": 10,
         "first": [
-          "Dave"
+          "Dec"
         ],
         "entrants": [
           {
@@ -6448,6 +6470,178 @@
       "src_row": null,
       "deleted_at": null,
       "created_at": "2026-08-23T11:39:53.026868+00:00"
+    },
+    {
+      "id": "0ab36e91-11ad-4f9c-8206-fbb12f9a1aa4",
+      "env": "prod",
+      "date": "2026-10-17",
+      "type": "main",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -20,
+        "Kev": -40,
+        "Dave": 36,
+        "Fran": 84,
+        "Pauli": -20,
+        "Caoimh": -40
+      },
+      "chips": null,
+      "buyins": {
+        "Dec": 0,
+        "Kev": 1,
+        "Dave": 0,
+        "Fran": 0,
+        "Pauli": 0,
+        "Caoimh": 1
+      },
+      "inputs": {
+        "kind": "main",
+        "entry": 20,
+        "first": [
+          "Fran"
+        ],
+        "second": [
+          "Dave"
+        ],
+        "entrants": [
+          {
+            "player": "Dec",
+            "rebuys": 0
+          },
+          {
+            "player": "Pauli",
+            "rebuys": 0
+          },
+          {
+            "player": "Kev",
+            "rebuys": 1
+          },
+          {
+            "player": "Caoimh",
+            "rebuys": 1
+          },
+          {
+            "player": "Dave",
+            "rebuys": 0
+          },
+          {
+            "player": "Fran",
+            "rebuys": 0
+          }
+        ]
+      },
+      "src_row": null,
+      "deleted_at": null,
+      "created_at": "2026-10-17T21:33:35.400771+00:00"
+    },
+    {
+      "id": "83be4490-290b-4191-82e3-04d3c43b4f91",
+      "env": "prod",
+      "date": "2026-10-17",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": 50,
+        "Dave": -10,
+        "Fran": -10,
+        "Pauli": -10,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": {
+        "kind": "after",
+        "entry": 10,
+        "first": [
+          "Kev"
+        ],
+        "entrants": [
+          {
+            "player": "Dec",
+            "rebuys": 0
+          },
+          {
+            "player": "Pauli",
+            "rebuys": 0
+          },
+          {
+            "player": "Kev",
+            "rebuys": 0
+          },
+          {
+            "player": "Caoimh",
+            "rebuys": 0
+          },
+          {
+            "player": "Dave",
+            "rebuys": 0
+          },
+          {
+            "player": "Fran",
+            "rebuys": 0
+          }
+        ]
+      },
+      "src_row": null,
+      "deleted_at": null,
+      "created_at": "2026-10-17T22:28:23.917459+00:00"
+    },
+    {
+      "id": "89d5f58f-f9aa-4824-9410-fdc51e6cfe91",
+      "env": "prod",
+      "date": "2026-10-17",
+      "type": "after",
+      "block": "game",
+      "note": "",
+      "deltas": {
+        "Dec": -10,
+        "Kev": -10,
+        "Dave": -10,
+        "Fran": -10,
+        "Pauli": 50,
+        "Caoimh": -10
+      },
+      "chips": null,
+      "buyins": null,
+      "inputs": {
+        "kind": "after",
+        "entry": 10,
+        "first": [
+          "Pauli"
+        ],
+        "entrants": [
+          {
+            "player": "Dec",
+            "rebuys": 0
+          },
+          {
+            "player": "Pauli",
+            "rebuys": 0
+          },
+          {
+            "player": "Kev",
+            "rebuys": 0
+          },
+          {
+            "player": "Caoimh",
+            "rebuys": 0
+          },
+          {
+            "player": "Dave",
+            "rebuys": 0
+          },
+          {
+            "player": "Fran",
+            "rebuys": 0
+          }
+        ]
+      },
+      "src_row": null,
+      "deleted_at": null,
+      "created_at": "2026-10-17T23:21:59.953096+00:00"
     }
   ]
 }
