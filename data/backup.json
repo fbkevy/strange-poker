@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-10-19T08:53:14.146Z",
+  "exportedAt": "2026-10-26T08:55:41.478Z",
   "config": [
     {
       "key": "players",
@@ -38,7 +38,7 @@
     {
       "key": "keepalive",
       "value": {
-        "at": "2026-10-18T10:27:46Z",
+        "at": "2026-10-25T10:48:36Z",
         "by": "github-actions"
       },
       "updated_at": "2026-08-23T11:32:29.764532+00:00"
